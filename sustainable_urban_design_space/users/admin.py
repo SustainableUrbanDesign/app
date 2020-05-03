@@ -19,5 +19,7 @@ class CustomUserAdmin(UserAdmin):
             'fields': ('username', 'password1', 'password2'),
         }),
     )
+    list_display = ('username', 'email', 'is_staff')
+    search_fields = ('username', 'email')
 
 admin.site.register(User, CustomUserAdmin)
