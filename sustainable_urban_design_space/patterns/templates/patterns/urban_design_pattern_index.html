@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load wagtailcore_tags %}
+
+{% block content %}
+
+    <h1>{{ page.title }}</h1>
+
+    {% for design_pattern in design_patterns %}
+
+        <ul class="list-group">
+            <li class="list-group-item">
+                <a href="{% pageurl design_pattern %}">
+                    {{ design_pattern.title }}
+                </a>
+            </li>
+        </ul>
+
+    {% empty %}
+        </h1>No patterns found</h1>
+        <p>No design patterns found. Please add one.</p>
+    {% endfor %}
+
+{% endblock %}
