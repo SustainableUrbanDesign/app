@@ -28,3 +28,18 @@ class UrbanDesignPattern(Page):
         FieldPanel("description", classname="full"),
         FieldPanel("tags"),
     ]
+
+
+class UrbanDesignPatternTagIndex(Page):
+    max_count = 1
+
+    def get_context(self, request):
+        context = super().get_context(request)
+
+        # Get design patterns matching current tag
+        tag = request.GET.get("tag")
+        design_patterns = UrbanDesignPattern.objects.filter(tags__name=tag)
+
+        context["design_patterns"] = design_patterns
+
+        return context
