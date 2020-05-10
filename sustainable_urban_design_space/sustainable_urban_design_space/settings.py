@@ -29,6 +29,15 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# added for allauth-django
+AUTHENTICATION_BACKENDS = (
+    # Needed to login by username in Django admin, regardless of `allauth`
+    'django.contrib.auth.backends.ModelBackend',
+
+    # `allauth` specific authentication methods, such as login by e-mail
+    'allauth.account.auth_backends.AuthenticationBackend',
+)
+
 
 # Application definition
 
@@ -40,6 +49,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+    #allauth
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    # providers we are using.
+    'allauth.socialaccount.providers.github',
 ]
 
 MIDDLEWARE = [
@@ -65,10 +81,22 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.request',
             ],
         },
     },
 ]
+
+# Provider specific settings
+SOCIALACCOUNT_PROVIDERS = {
+   'github': {
+        'SCOPE': [
+            'user',
+            'repo',
+            'read:org',
+        ],
+    }
+}
 
 WSGI_APPLICATION = 'sustainable_urban_design_space.wsgi.application'
 
