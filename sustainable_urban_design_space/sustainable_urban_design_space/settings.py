@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    "patterns",
     "users",
     "django.contrib.admin",
     "django.contrib.auth",
@@ -135,4 +136,3 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 MEDIA_URL = "/media/"
 
 WAGTAIL_SITE_NAME = "Sustainable Urban Design Space"
-
