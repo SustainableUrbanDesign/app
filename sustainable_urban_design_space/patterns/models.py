@@ -43,3 +43,16 @@ class UrbanDesignPatternTagIndex(Page):
         context["design_patterns"] = design_patterns
 
         return context
+
+
+class UrbanDesignPatternIndex(Page):
+    max_count = 1
+
+    def get_context(self, request):
+        context = super().get_context(request)
+
+        design_patterns = UrbanDesignPattern.objects.all()
+
+        context["design_patterns"] = design_patterns
+
+        return context
