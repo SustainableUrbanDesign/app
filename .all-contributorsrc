@@ -23,6 +23,20 @@
       "contributions": [
         "translation"
       ]
+    },
+    {
+      "login": "brylie",
+      "name": "Brylie Christopher Oxley",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/17307?v=4",
+      "profile": "https://bryliechristopheroxley.info",
+      "contributions": [
+        "code",
+        "projectManagement",
+        "bug",
+        "doc",
+        "ideas",
+        "review"
+      ]
     }
   ],
   "contributorsPerLine": 7,
