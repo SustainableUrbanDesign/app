@@ -1,25 +1,52 @@
 {% load i18n %}
 
 <nav class="navbar navbar-light bg-light">
-    <a class="navbar-brand" href="#">Sustainable Urban Design Space</a>
+    <a class="navbar-brand" href="/">Sustainable Urban Design Space</a>
 
-    <form class="form-inline ml-auto mr-2">
-        <button class="btn btn-outline-success nav-item">{% trans "Login/Signup" %}</button>
-    </form>
+    <span class="navbar-text">{% trans "An Urban Designer's best friend." %}</span>
+    
 
-    <form action="{% url 'set_language' %}" method="post" class="form form-inline">{% csrf_token %}
-        <input name="next" type="hidden" value="{{ redirect_to }}">
-        <select name="language" class="form-control">
-            {% get_current_language as LANGUAGE_CODE %}
-            {% get_available_languages as LANGUAGES %}
-            {% get_language_info_list for LANGUAGES as languages %}
-            {% for language in languages %}
-            <option value="{{ language.code }}" {% if language.code == LANGUAGE_CODE %} selected{% endif %}>
-                {{ language.name_local }} ({{ language.code }})
-            </option>
-            {% endfor %}
-        </select>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse-section" aria-controls="navbarnavbar-collapse-sectionText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
-        <input type="submit" value="Go" class="btn btn-default">
-    </form>
+    <div class="collapse navbar-collapse" id="navbar-collapse-section">
+        {% if user.is_authenticated %}
+            {% load account %}
+
+            {% user_display user as user_display %}
+
+            <span class="navbar-text ml-auto">
+            {% blocktrans %}Welcome {{ user_display }}.{% endblocktrans %}
+            </span>
+            
+            <a
+                href="{% url 'account_logout' %}"
+                class="btn btn-outline-success ml-auto mr-2 mb-2">
+                {% trans "Logout" %}
+            </a>
+        {% else %}
+            <a
+                href="{% url 'account_login' %}"
+                class="btn btn-outline-success ml-auto mr-2 mb-2">
+                {% trans "Login/Signup" %}
+            </a>
+        {% endif %}
+
+        <form action="{% url 'set_language' %}" method="post" class="form form-inline">{% csrf_token %}
+            <input name="next" type="hidden" value="{{ redirect_to }}">
+            <select name="language" class="form-control">
+                {% get_current_language as LANGUAGE_CODE %}
+                {% get_available_languages as LANGUAGES %}
+                {% get_language_info_list for LANGUAGES as languages %}
+                {% for language in languages %}
+                <option value="{{ language.code }}" {% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+                    {{ language.name_local }} ({{ language.code }})
+                </option>
+                {% endfor %}
+            </select>
+
+            <input type="submit" value="Go" class="btn btn-default">
+        </form>
+    </div>
 </nav>
