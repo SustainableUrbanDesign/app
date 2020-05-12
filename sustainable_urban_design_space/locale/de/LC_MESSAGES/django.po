@@ -20,25 +20,25 @@ msgstr ""
 
 #: templates/navbar.html:6
 msgid "An Urban Designer's best friend."
-msgstr "Der beste Freund eines Stadtplaners"
+msgstr ""
 
 #: templates/navbar.html:20
 #, python-format
 msgid "Welcome %(user_display)s."
-msgstr "Willkommen %(user_display)s."
+msgstr ""
 
 #: templates/navbar.html:26
 msgid "Logout"
-msgstr "Ausloggen"
+msgstr ""
 
 #: templates/navbar.html:32
 msgid "Login/Signup"
-msgstr "Einloggen/Registrieren"
+msgstr ""
 
 #: users/admin.py:11
 msgid "Permissions"
-msgstr "Berechtigungen"
+msgstr ""
 
 #: users/admin.py:14
 msgid "Important dates"
-msgstr "Wichtige Termine"
+msgstr ""
