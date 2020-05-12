@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    'django.contrib.sites',
+    "django.contrib.sites",
     "wagtail.contrib.forms",
     "wagtail.contrib.redirects",
     "wagtail.embeds",
@@ -56,10 +56,10 @@ INSTALLED_APPS = [
     "wagtail.core",
     "modelcluster",
     "taggit",
-    'allauth', 
-    'allauth.account', 
-    'allauth.socialaccount', 
-    'allauth.socialaccount.providers.github', 
+    "allauth",
+    "allauth.account",
+    "allauth.socialaccount",
+    "allauth.socialaccount.providers.github",
 ]
 
 MIDDLEWARE = [
@@ -122,27 +122,34 @@ AUTHENTICATION_BACKENDS = (
     "allauth.account.auth_backends.AuthenticationBackend",
 )
 
-#DO NOT TOUCH THIS
+# DO NOT TOUCH THIS
 SITE_ID = 1
 
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
 
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = "/"
 
-LANGUAGE_CODE = "en-us"
+LANGUAGE_CODE = "en"
 
 TIME_ZONE = "UTC"
 
+# Translations
 USE_I18N = True
 
 USE_L10N = True
 
+LANGUAGES = (
+    ("en", u"English"),
+    ("zh-cn", u"简体中文"),
+)
+
 USE_TZ = True
 
-#Email Stuff For Django-AllAuth
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# Email Stuff For Django-AllAuth
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+
 
 
 # Static files (CSS, JavaScript, Images)
