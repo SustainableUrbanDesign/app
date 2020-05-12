@@ -143,6 +143,7 @@ USE_L10N = True
 LANGUAGES = (
     ("en", u"English"),
     ("zh-cn", u"简体中文"),
+    ('de', u"German"),
 )
 
 USE_TZ = True
