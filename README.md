@@ -1,6 +1,6 @@
 # Sustainable Urban design
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Prototype toolkit for sustainable urban design at the speed of thought.
@@ -66,6 +66,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="http://maxthakur.com"><img src="https://avatars1.githubusercontent.com/u/25856189?v=4" width="100px;" alt=""/><br /><sub><b>Max Thakur</b></sub></a><br /><a href="#translation-MaxThakurCodes" title="Translation">🌍</a> <a href="https://github.com/SustainableUrbanDesign/app/commits?author=MaxThakurCodes" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/Nowserep"><img src="https://avatars3.githubusercontent.com/u/65257460?v=4" width="100px;" alt=""/><br /><sub><b>Nowserep</b></sub></a><br /><a href="#translation-Nowserep" title="Translation">🌍</a></td>
+    <td align="center"><a href="https://bryliechristopheroxley.info"><img src="https://avatars1.githubusercontent.com/u/17307?v=4" width="100px;" alt=""/><br /><sub><b>Brylie Christopher Oxley</b></sub></a><br /><a href="https://github.com/SustainableUrbanDesign/app/commits?author=brylie" title="Code">💻</a> <a href="#projectManagement-brylie" title="Project Management">📆</a> <a href="https://github.com/SustainableUrbanDesign/app/issues?q=author%3Abrylie" title="Bug reports">🐛</a> <a href="https://github.com/SustainableUrbanDesign/app/commits?author=brylie" title="Documentation">📖</a> <a href="#ideas-brylie" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/SustainableUrbanDesign/app/pulls?q=is%3Apr+reviewed-by%3Abrylie" title="Reviewed Pull Requests">👀</a></td>
   </tr>
 </table>
 
