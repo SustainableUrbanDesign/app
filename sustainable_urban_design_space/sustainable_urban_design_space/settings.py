@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    "home",
     "patterns",
     "users",
     "django.contrib.admin",
@@ -59,7 +60,6 @@ INSTALLED_APPS = [
     'allauth.account', 
     'allauth.socialaccount', 
     'allauth.socialaccount.providers.github', 
-
 ]
 
 MIDDLEWARE = [
@@ -140,6 +140,9 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+#Email Stuff For Django-AllAuth
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 
 # Static files (CSS, JavaScript, Images)
