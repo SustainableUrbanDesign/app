@@ -2,6 +2,11 @@
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
+#Table of Contents
+* [Installation](#setting up & installing)
+* [Support](#need help?)
+* [License](#license)
+
 ## What is this?
 
 This project is an open-source, prototype toolkit for sustainable urban design. Go check out our [website](https://sustainableurbandesign.space/).
@@ -75,13 +80,13 @@ The server will now tell you that it's runnning on http://127.0.0.1:8000/
 
 You can connect to the admin interface at http://127.0.0.1:8000/admin with your newly created superuser account.
 
-## Have any issues?
+## Need help?
 
-Make an issue in [issues](github.com/SustainableUrbanDesign/app/issues), describing what you were doing and the error it gave you. Then, the team will look at the issue and make a fix.
+Make an issue in [issues](github.com/SustainableUrbanDesign/app/issues), check if you're having any issues like anyone else. If not then make an issue describing what happened, and what the error says.
 
 ### Contributors ✨
 
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+Thanks goes to these awesome people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
@@ -99,3 +104,6 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+
+# License
+[GNU Affero General Public License v3.0](https://github.com/SustainableUrbanDesign/app/blob/ReadmeUpdates/LICENSE)
