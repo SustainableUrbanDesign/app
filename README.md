@@ -80,7 +80,7 @@ The server will now tell you that it's runnning on http://127.0.0.1:8000/
 
 You can connect to the admin interface at http://127.0.0.1:8000/admin with your newly created superuser account.
 
-## Support
+# Support
 
 Make an issue in [issues](github.com/SustainableUrbanDesign/app/issues), check if you're having any issues like anyone else. If not then make an issue describing what happened, and what the error says.
 
