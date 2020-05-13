@@ -3,7 +3,7 @@
 [![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 #Table of Contents
-* [Installation](#settingup&installing)
+* [Installation](#Installation)
 * [Support](#needhelp?)
 * [License](#license)
 
@@ -20,7 +20,7 @@ Our team would love for people to help out in anyway they can, right now we're l
 ## If you dont have the latest version of python then do download it from [here](https://www.python.org/downloads/)
 
 
-## Setting up & Installing
+## Installation
 
 #### If you wish to keep the project's python environment separate from your global environment, you should create a [virtual environment](https://docs.python.org/3/library/venv.html)
 
