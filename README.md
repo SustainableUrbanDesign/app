@@ -2,7 +2,7 @@
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
-#Table of Contents
+## Table of Contents
 * [Installation](#Installation)
 * [Support](#Support)
 * [License](#license)
@@ -15,9 +15,9 @@ This project is an open-source, prototype toolkit for sustainable urban design. 
 
 Our team would love for people to help out in anyway they can, right now we're looking for translators and anyone willing to help out.
 
-# How to use and install:
+## How to use and install:
 
-## If you dont have the latest version of python then do download it from [here](https://www.python.org/downloads/)
+### If you dont have the latest version of python then do download it from [here](https://www.python.org/downloads/)
 
 
 ## Installation
