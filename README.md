@@ -2,28 +2,48 @@
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
+## What is this?
 
-Prototype toolkit for sustainable urban design at the speed of thought.
+This project is an open-source, prototype toolkit for sustainable urban design. Go check out our [website](https://sustainableurbandesign.space/).
 
-# Setting up
+## We your need help!
 
-If you wish to keep the project's python environment separate from your global environment, you should create a [virtual environment](https://docs.python.org/3/library/venv.html)
+Our team would love for people to help out in anyway they can, right now we're looking for translators and anyone willing to help out.
+
+# How to use and install:
+
+## If you dont have the latest version of python then do download it from [here](https://www.python.org/downloads/)
+
+
+## Setting up & Installing
+
+#### If you wish to keep the project's python environment separate from your global environment, you should create a [virtual environment](https://docs.python.org/3/library/venv.html)
 
 ```
 python3 -m venv env
 source env/bin/activate
 ```
 
-Use pip to install the requirements:
+#### Use [pip](https://pip.pypa.io/en/stable/installing/) to install the requirements:
 
 ```
 pip install -r requirements.txt
 ```
 
-Move into the Django folder and create a new super user account:
-
+#### Move into the Project Folder:
 ```
 cd sustainable_urban_design_space
+```
+
+#### Make manage.py excutable on Max OS X:
+
+```
+chmod +x manage.py
+```
+
+#### Move into the Django folder and create a new super user account:
+
+```
 ./manage.py createsuperuser
 Username: *your username*
 Email address: *your email*
@@ -33,9 +53,9 @@ Password (again): *your password*
 
 It may warn you if you use a password that is similar to your user name, or if it's too short or too common. You can bypass this warning by typing `Y` and then Enter. It doesn't matter in a development environment, but be sure to use secure credentials when deploying in production.
 
-# Running the server
+## Running the server
 
-## Migrations
+### Migrations
 
 Before you can run the project, you will need to set up the database by running the migrations:
 
@@ -43,7 +63,7 @@ Before you can run the project, you will need to set up the database by running 
 ./manage.py migrate
 ```
 
-## Starting the server
+### Starting the server
 
 You can run the server with
 
@@ -55,7 +75,11 @@ The server will now tell you that it's runnning on http://127.0.0.1:8000/
 
 You can connect to the admin interface at http://127.0.0.1:8000/admin with your newly created superuser account.
 
-## Contributors ✨
+## Have any issues?
+
+Make an issue in [issues](github.com/SustainableUrbanDesign/app/issues), describing what you were doing and the error it gave you. Then, the team will look at the issue and make a fix.
+
+### Contributors ✨
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
