@@ -3,8 +3,8 @@
 [![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 #Table of Contents
-* [Installation](#setting up & installing)
-* [Support](#need help?)
+* [Installation](#settingup&installing)
+* [Support](#needhelp?)
 * [License](#license)
 
 ## What is this?
