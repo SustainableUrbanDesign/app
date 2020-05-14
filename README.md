@@ -82,7 +82,7 @@ You can connect to the admin interface at http://127.0.0.1:8000/admin with your 
 
 # Support
 
-Make an issue in [issues](github.com/SustainableUrbanDesign/app/issues), check if you're having any issues like anyone else. If not then make an issue describing what happened, and what the error says.
+* See [How To Make an Issue](https://github.com/SustainableUrbanDesign/app/issues/35)
 
 ### Contributors ✨
 
@@ -106,4 +106,4 @@ Thanks goes to these awesome people ([emoji key](https://allcontributors.org/doc
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
 
 # License
-[GNU Affero General Public License v3.0](https://github.com/SustainableUrbanDesign/app/blob/ReadmeUpdates/LICENSE)
+* see [GNU Affero General Public License v3.0](https://github.com/SustainableUrbanDesign/app/blob/master/LICENSE)
