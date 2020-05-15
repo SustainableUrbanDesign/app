@@ -3,6 +3,7 @@
 [![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 ## Table of Contents
+
 * [Installation](#Installation)
 * [Support](#Support)
 * [License](#license)
@@ -36,6 +37,7 @@ pip install -r requirements.txt
 ```
 
 #### Move into the Project Folder:
+
 ```
 cd sustainable_urban_design_space
 ```
@@ -84,6 +86,10 @@ You can connect to the admin interface at http://127.0.0.1:8000/admin with your 
 
 * See [How To Make an Issue](https://github.com/SustainableUrbanDesign/app/issues/35)
 
+## Resources
+
+
+
 ### Contributors ✨
 
 Thanks goes to these awesome people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
@@ -106,4 +112,5 @@ Thanks goes to these awesome people ([emoji key](https://allcontributors.org/doc
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
 
 # License
+
 * see [GNU Affero General Public License v3.0](https://github.com/SustainableUrbanDesign/app/blob/master/LICENSE)
