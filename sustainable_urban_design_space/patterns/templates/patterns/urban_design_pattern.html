@@ -1,10 +1,19 @@
 {% extends "base.html" %}
-{% load wagtailcore_tags %}
+{% load wagtailcore_tags wagtailimages_tags %}
 
 {% block content %}
     <h1>{{ page.title }}</h1>
 
     {{ page.description | richtext}}
+
+    {% if page.gallery_images.all %}
+        <h2>Gallery</h2>
+        {% for gallery_image in page.gallery_images.all %}
+            <div class="m-2">
+                {% image gallery_image.image fill-320x240 alt=gallery_image.alt %}
+            </div>
+        {% endfor %}
+    {% endif %}
 
     {% if page.tags.all.count %}
         <div class="tags">
