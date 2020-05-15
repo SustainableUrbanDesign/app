@@ -11,12 +11,13 @@
       "avatar_url": "https://avatars1.githubusercontent.com/u/25856189?v=4",
       "profile": "http://maxthakur.com",
       "contributions": [
-        "translation",
         "code",
         "review",
+        "translation",
         "doc",
         "ideas",
-        "maintenance"
+        "maintenance",
+        "bug"
       ]
     },
     {
@@ -35,11 +36,11 @@
       "profile": "https://bryliechristopheroxley.info",
       "contributions": [
         "code",
-        "projectManagement",
-        "bug",
+        "review",
         "doc",
         "ideas",
-        "review"
+        "projectManagement",
+        "bug"
       ]
     }
   ],
