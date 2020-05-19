@@ -1,32 +1,30 @@
-[provide general introduction to the issue]
+---
+name: Bug report
+about: Create a report to help us improve
 
-## Context
+---
+### Description
 
-[provide more detailed introduction to the issue itself]
+<!-- Description of the issue -->
 
-## Process
+### Steps to Reproduce
 
-[ordered list the process to finding and recreating the issue, example below]
+1. <!-- First Step -->
+2. <!-- Second Step -->
+3. <!-- and so on… -->
 
-1. User goes to delete a dataset (to save space or whatever)
-2. User gets popup modal warning
-3. User deletes and it's lost forever
+**Expected behavior:**
 
-## Expected result
+<!-- What you expect to happen -->
 
-[describe what you would expect to have gotten from this process]
+**Actual behavior:**
 
-## Current result
+<!-- What actually happens -->
 
-[describe what you you currently receive from this process, and thereby explain the bug]
+**Reproduces how often:**
 
-## Possible Fix
+<!-- What percentage of the time does it reproduce? -->
 
-[not required, but suggest fixes or reasons for the bug]
+### Additional Information
 
-* Modal tells the user what dataset is being deleted, like “You are about to delete this dataset: car_crashes_2014.”
-* A temporary "Trashcan" where you can recover a just deleted dataset if you mess up (maybe it's only good for a few hours, and then it cleans the cache assuming you made the right decision).
-
-## `name of issue` screenshot
-
-[if relevant, please include a screenshot]
+<!-- Any additional information, configuration or data that might be necessary to reproduce the issue. -->
