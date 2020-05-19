@@ -1,10 +1,22 @@
 ---
-name: Feature Request Template
-about: "For feature requests. Please search for existing issues first. Also see CONTRIBUTING.md"
+name: Feature request
+about: Suggest an idea for this project
 
 ---
 
-**Please Describe The Idea To Be Added**<br>
-(Replace This Text: Please present a concise description of the problem to be addressed by this feature request. Please be clear what parts of the problem are considered to be in-scope and out-of-scope.)
 
-If there are multiple solutions, please present each one separately. Save comparisons for the very end.)
+## Summary
+
+<!-- One paragraph explanation of the feature. -->
+
+## Motivation
+
+<!-- Why are we doing this? What use cases does it support? What is the expected outcome? -->
+
+## Describe alternatives you've considered
+
+<!-- A clear and concise description of the alternative solutions you've considered. Be sure to explain why Atom's existing customizability isn't suitable for this feature. -->
+
+## Additional context
+
+<!-- Add any other context or screenshots about the feature request here. -->
