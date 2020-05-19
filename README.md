@@ -84,7 +84,7 @@ You can connect to the admin interface at http://127.0.0.1:8000/admin with your 
 
 # Support
 
-* See [How To Make an Issue](https://github.com/SustainableUrbanDesign/app/issues/35)
+* See [CONTRIBUTING.md](https://github.com/SustainableUrbanDesign/app/CONTRIBUTING.md)
 
 ## Resources
 
