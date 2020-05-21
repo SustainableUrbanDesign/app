@@ -11,6 +11,10 @@
 
 This project is an open-source, prototype toolkit for sustainable urban design. Go check out our [website](https://sustainableurbandesign.space/).
 
+Below, you can see a user-interface mockup showing the main components of the toolkit.
+
+![UrbanDesignSpace App UI mockup](design/UI-mockup.png)
+
 ## We your need help!
 
 Our team would love for people to help out in anyway they can, right now we're looking for translators and anyone willing to help out.
