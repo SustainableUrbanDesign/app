@@ -67,6 +67,7 @@ MIDDLEWARE = [
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
+    "django.middleware.locale.LocaleMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
@@ -142,7 +143,7 @@ USE_L10N = True
 
 LANGUAGES = (
     ("en", u"English"),
-    ("zh-cn", u"简体中文"),
+    ("zh-hans", u"简体中文"),
     ('de', u"German"),
 )
 

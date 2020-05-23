@@ -4,10 +4,13 @@ from modelcluster.fields import ParentalKey
 from modelcluster.contrib.taggit import ClusterTaggableManager
 from taggit.models import TaggedItemBase
 
-from wagtail.admin.edit_handlers import FieldPanel
+from wagtail.admin.edit_handlers import FieldPanel, InlinePanel
 from wagtail.core.fields import RichTextField
-from wagtail.core.models import Page
+from wagtail.core.models import Orderable, Page
+from wagtail.images.edit_handlers import ImageChooserPanel
 from wagtail.search import index
+
+from wagtail.images.models import Image
 
 
 class UrbanDesignPatternTag(TaggedItemBase):
@@ -27,6 +30,24 @@ class UrbanDesignPattern(Page):
     content_panels = Page.content_panels + [
         FieldPanel("description", classname="full"),
         FieldPanel("tags"),
+        InlinePanel("gallery_images", label="Gallery images"),
+    ]
+
+
+class UrbanDesignPatternImage(Orderable):
+    design_pattern = ParentalKey(
+        UrbanDesignPattern, on_delete=models.CASCADE, related_name="gallery_images"
+    )
+    image = models.ForeignKey(
+        "wagtailimages.Image", on_delete=models.CASCADE, related_name="design_patterns"
+    )
+    alt = models.CharField(
+        help_text="Alternative text for accessibility.", max_length=250
+    )
+
+    panels = [
+        ImageChooserPanel("image"),
+        FieldPanel("alt"),
     ]
 
 

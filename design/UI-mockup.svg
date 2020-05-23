@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="4837.7954"
+   height="2721.2598"
+   viewBox="0 0 1280 720"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"
+   sodipodi:docname="UI-mockup.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.24748737"
+     inkscape:cx="2152.6167"
+     inkscape:cy="1586.5637"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     inkscape:pagecheckerboard="true"
+     showborder="true"
+     borderlayer="false"
+     inkscape:showpageshadow="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1055"
+     inkscape:window-x="1920"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     showguides="true"
+     inkscape:guide-bbox="true">
+    <sodipodi:guide
+       position="0,692.09446"
+       orientation="1,0"
+       id="guide82"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="343.17406,431.90757"
+       orientation="0,1"
+       id="guide129"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,423)">
+    <rect
+       style="fill:#f9f9f9;fill-opacity:1;stroke:#000000;stroke-width:0.55355954;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4580"
+       width="1202.6697"
+       height="719.91864"
+       x="76.973625"
+       y="-420.78052" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4582"
+       style="fill:black;fill-opacity:1;stroke:none;font-family:Ubuntu;font-style:normal;font-weight:normal;font-size:96px;line-height:1.25;letter-spacing:0px;word-spacing:0px;-inkscape-font-specification:Ubuntu;font-stretch:normal;font-variant:normal;"><flowRegion
+         id="flowRegion4584"
+         style="-inkscape-font-specification:Ubuntu;font-family:Ubuntu;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:96px;"><rect
+           id="rect4586"
+           width="1777.8685"
+           height="707.10675"
+           x="1466.7415"
+           y="862.5791"
+           style="-inkscape-font-specification:Ubuntu;font-family:Ubuntu;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:96px;" /></flowRegion><flowPara
+         id="flowPara4588" /></flowRoot>    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:50.79999924px;line-height:1.25;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="581.61053"
+       y="-134.83334"
+       id="text4592"><tspan
+         sodipodi:role="line"
+         id="tspan4590"
+         x="581.61053"
+         y="-134.83334"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:50.79999924px;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;stroke-width:0.26458332">Map</tspan></text>
+    <rect
+       style="fill:#f9f9f9;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect80"
+       width="275.73856"
+       height="662.84052"
+       x="1003.9047"
+       y="-363.70239" />
+    <rect
+       style="fill:#f9f9f9;fill-opacity:1;stroke:#000000;stroke-width:0.47093609;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4612"
+       width="76.670906"
+       height="661.53143"
+       x="0.31692338"
+       y="-362.37912" />
+    <rect
+       style="fill:#f9f9f9;fill-opacity:1;stroke:#000000;stroke-width:0.64277476;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4520"
+       width="1280.4244"
+       height="59.809353"
+       x="-7.4946993e-14"
+       y="-422.47223" />
+    <g
+       id="g127"
+       transform="translate(-22.050227)">
+      <path
+         inkscape:connector-curvature="0"
+         id="path4522"
+         d="m 339.18865,-389.452 a 18.174328,17.639788 0 0 1 -18.17433,17.63979 18.174328,17.639788 0 0 1 -18.17433,-17.63979 18.174328,17.639788 0 0 1 18.17433,-17.63978 18.174328,17.639788 0 0 1 18.17433,17.63978 z"
+         style="fill:#cccccc;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         style="fill:#cccccc;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 414.97439,-389.452 a 18.174328,17.639788 0 0 1 -18.17433,17.63979 18.174328,17.639788 0 0 1 -18.17433,-17.63979 18.174328,17.639788 0 0 1 18.17433,-17.63978 18.174328,17.639788 0 0 1 18.17433,17.63978 z"
+         id="path4525"
+         inkscape:connector-curvature="0" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path4527"
+         d="m 490.76015,-389.452 a 18.174328,17.639788 0 0 1 -18.17433,17.63979 18.174328,17.639788 0 0 1 -18.17433,-17.63979 18.174328,17.639788 0 0 1 18.17433,-17.63978 18.174328,17.639788 0 0 1 18.17433,17.63978 z"
+         style="fill:#cccccc;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path4527-4"
+         d="m 566.54594,-389.452 a 18.174328,17.639788 0 0 1 -18.17433,17.63979 18.174328,17.639788 0 0 1 -18.17433,-17.63979 18.174328,17.639788 0 0 1 18.17433,-17.63978 18.174328,17.639788 0 0 1 18.17433,17.63978 z"
+         style="fill:#cccccc;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path4527-3"
+         d="m 642.33166,-389.452 a 18.174328,17.639788 0 0 1 -18.17433,17.63979 18.174328,17.639788 0 0 1 -18.17433,-17.63979 18.174328,17.639788 0 0 1 18.17433,-17.63978 18.174328,17.639788 0 0 1 18.17433,17.63978 z"
+         style="fill:#cccccc;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path4527-0"
+         d="m 718.11745,-389.452 a 18.174328,17.639788 0 0 1 -18.17433,17.63979 18.174328,17.639788 0 0 1 -18.17433,-17.63979 18.174328,17.639788 0 0 1 18.17433,-17.63978 18.174328,17.639788 0 0 1 18.17433,17.63978 z"
+         style="fill:#cccccc;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path4527-30"
+         d="m 793.90318,-389.452 a 18.174328,17.639788 0 0 1 -18.17433,17.63979 18.174328,17.639788 0 0 1 -18.17433,-17.63979 18.174328,17.639788 0 0 1 18.17433,-17.63978 18.174328,17.639788 0 0 1 18.17433,17.63978 z"
+         style="fill:#cccccc;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path4527-9"
+         d="m 869.68899,-389.452 a 18.174328,17.639788 0 0 1 -18.17433,17.63979 18.174328,17.639788 0 0 1 -18.17433,-17.63979 18.174328,17.639788 0 0 1 18.17433,-17.63978 18.174328,17.639788 0 0 1 18.17433,17.63978 z"
+         style="fill:#cccccc;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path4527-2"
+         d="m 945.47469,-389.452 a 18.174328,17.639788 0 0 1 -18.17433,17.63979 18.174328,17.639788 0 0 1 -18.17433,-17.63979 18.174328,17.639788 0 0 1 18.17433,-17.63978 18.174328,17.639788 0 0 1 18.17433,17.63978 z"
+         style="fill:#cccccc;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path4527-5"
+         d="m 1021.2605,-389.452 a 18.174328,17.639788 0 0 1 -18.1743,17.63979 18.174328,17.639788 0 0 1 -18.17439,-17.63979 18.174328,17.639788 0 0 1 18.17439,-17.63978 18.174328,17.639788 0 0 1 18.1743,17.63978 z"
+         style="fill:#cccccc;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:50.79999924px;line-height:1.25;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="551.96381"
+       y="-316.58865"
+       id="text4592-0"
+       inkscape:transform-center-x="4.2763126"
+       inkscape:transform-center-y="-3.2072344"><tspan
+         sodipodi:role="line"
+         id="tspan4590-2"
+         x="551.96381"
+         y="-316.58865"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:50.79999924px;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;stroke-width:0.26458332">Toolbar</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:50.79999924px;line-height:1.25;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="-16.705006"
+       y="117.79684"
+       id="text4616"
+       transform="rotate(-90)"><tspan
+         sodipodi:role="line"
+         id="tspan4614"
+         x="-16.705006"
+         y="117.79684"
+         style="stroke-width:0.26458332">Lenses</tspan></text>
+    <rect
+       style="fill:#b3b3b3;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4633"
+       width="53.453903"
+       height="49.177593"
+       x="12.194651"
+       y="-339.71506" />
+    <rect
+       style="fill:#b3b3b3;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4633-1"
+       width="53.453903"
+       height="49.177593"
+       x="12.194651"
+       y="-222.38245" />
+    <rect
+       style="fill:#b3b3b3;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4633-0"
+       width="53.453903"
+       height="49.177593"
+       x="12.194651"
+       y="-105.05178" />
+    <rect
+       style="fill:#b3b3b3;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4633-5"
+       width="53.453903"
+       height="49.177593"
+       x="12.194651"
+       y="12.279541" />
+    <rect
+       style="fill:#b3b3b3;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4633-11"
+       width="53.453903"
+       height="49.177593"
+       x="12.194651"
+       y="129.61148" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4691"
+       style="fill:black;fill-opacity:1;stroke:none;font-family:Ubuntu;font-style:normal;font-weight:normal;font-size:42.66666667px;line-height:1.25;letter-spacing:0px;word-spacing:0px;-inkscape-font-specification:Ubuntu;font-stretch:normal;font-variant:normal"><flowRegion
+         id="flowRegion4693"><rect
+           id="rect4695"
+           width="234.35539"
+           height="670.74127"
+           x="2246.5793"
+           y="1412.1021" /></flowRegion><flowPara
+         id="flowPara4697" /></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4699"
+       style="fill:black;fill-opacity:1;stroke:none;font-family:Ubuntu;font-style:normal;font-weight:normal;font-size:42.66666667px;line-height:1.25;letter-spacing:0px;word-spacing:0px;-inkscape-font-specification:Ubuntu;font-stretch:normal;font-variant:normal"><flowRegion
+         id="flowRegion4701"><rect
+           id="rect4703"
+           width="16.162441"
+           height="492.95444"
+           x="3369.8689"
+           y="1686.8635" /></flowRegion><flowPara
+         id="flowPara4705" /></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4707"
+       style="fill:black;fill-opacity:1;stroke:none;font-family:Ubuntu;font-style:normal;font-weight:normal;font-size:42.66666667px;line-height:1.25;letter-spacing:0px;word-spacing:0px;-inkscape-font-specification:Ubuntu;font-stretch:normal;font-variant:normal"><flowRegion
+         id="flowRegion4709"><rect
+           id="rect4711"
+           width="981.86829"
+           height="423.25394"
+           x="246.4772"
+           y="1699.9955" /></flowRegion><flowPara
+         id="flowPara4713" /></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4715"
+       style="fill:black;fill-opacity:1;stroke:none;font-family:Ubuntu;font-style:normal;font-weight:normal;font-size:42.66666667px;line-height:1.25;letter-spacing:0px;word-spacing:0px;-inkscape-font-specification:Ubuntu;font-stretch:normal;font-variant:normal"><flowRegion
+         id="flowRegion4717"><rect
+           id="rect4719"
+           width="1058.6399"
+           height="509.11688"
+           x="1082.8835"
+           y="648.42676" /></flowRegion><flowPara
+         id="flowPara4721" /></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4723"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.66666794px;line-height:1.25;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       transform="matrix(0.26458333,0,0,0.26458333,118.66767,-281.21582)"><flowRegion
+         id="flowRegion4725"><rect
+           id="rect4727"
+           width="1648.5688"
+           height="480.83255"
+           x="1200.0613"
+           y="591.85822" /></flowRegion><flowPara
+         id="flowPara4729"
+         style="font-size:96px">The Map canvas displays data and the result of analysis. It might also allow <flowSpan
+   style="text-align:justify;text-anchor:start"
+   id="flowSpan4739">for interaction, such as drawing road </flowSpan>networks.</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4731"
+       style="fill:black;fill-opacity:1;stroke:none;font-family:Ubuntu;font-style:normal;font-weight:normal;font-size:42.66666667px;line-height:1.25;letter-spacing:0px;word-spacing:0px;-inkscape-font-specification:Ubuntu;font-stretch:normal;font-variant:normal"><flowRegion
+         id="flowRegion4733"><rect
+           id="rect4735"
+           width="1531.3912"
+           height="176.7767"
+           x="246.4772"
+           y="1699.9955" /></flowRegion><flowPara
+         id="flowPara4737" /></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4754"
+       style="fill:black;fill-opacity:1;stroke:none;font-family:Ubuntu;font-style:normal;font-weight:normal;font-size:64px;line-height:1.25;letter-spacing:0px;word-spacing:0px;-inkscape-font-specification:Ubuntu;font-stretch:normal;font-variant:normal;"><flowRegion
+         id="flowRegion4756"
+         style="font-size:64px;"><rect
+           id="rect4758"
+           width="2816.6655"
+           height="183.46884"
+           x="1171.4286"
+           y="2315.5454"
+           style="font-size:64px;" /></flowRegion><flowPara
+         id="flowPara4760" /></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4762"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96px;line-height:1.25;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       transform="matrix(0.26458333,0,0,0.26458333,58.293301,-915.88095)"><flowRegion
+         id="flowRegion4764"><rect
+           id="rect4766"
+           width="2096.6655"
+           height="229.18311"
+           x="1171.4286"
+           y="2292.6882" /></flowRegion><flowPara
+         id="flowPara4768">Toolbar shows context-specific tools, related to the active lense.</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4779"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96px;line-height:1.25;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       transform="matrix(0.26458333,0,0,0.26458333,1.5119048,-403.09871)"><flowRegion
+         id="flowRegion4781"
+         style="font-size:96px;text-align:start;text-anchor:start"><rect
+           id="rect4783"
+           width="971.42853"
+           height="634.28564"
+           x="508.57144"
+           y="984.11688"
+           style="font-size:96px;text-align:start;text-anchor:start" /></flowRegion><flowPara
+         id="flowPara4785">Lenses allow users to focus on specific urban design tasks, such as transport planning or zoning.</flowPara></flowRoot>    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:50.79999924px;line-height:1.25;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="1031.4875"
+       y="-136.69214"
+       id="text4592-3"><tspan
+         sodipodi:role="line"
+         id="tspan4590-6"
+         x="1031.4875"
+         y="-136.69214"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:50.79999924px;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;stroke-width:0.26458332">Inspector</tspan></text>
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4723-7"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.66666794px;line-height:1.25;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       transform="matrix(0.26458333,0,0,0.26458333,696.55986,-283.42562)"><flowRegion
+         id="flowRegion4725-5"><rect
+           id="rect4727-3"
+           width="977.82733"
+           height="602.05103"
+           x="1200.0613"
+           y="591.85822" /></flowRegion><flowPara
+         id="flowPara4729-5"
+         style="font-size:96px">The Inspector allows users to view and edit properties of selected tools or objects.</flowPara></flowRoot>  </g>
+</svg>

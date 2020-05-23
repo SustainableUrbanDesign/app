@@ -12,46 +12,64 @@
 
 This project is an open-source, prototype toolkit for sustainable urban design. Go check out our [website](https://sustainableurbandesign.space/).
 
+Below, you can see a user-interface mockup showing the main components of the toolkit.
+
+![UrbanDesignSpace App UI mockup](design/UI-mockup.png)
+
 ## We your need help!
 
 Our team would love for people to help out in anyway they can, right now we're looking for translators and anyone willing to help out.
 
-## How to use and install:
-
-### If you dont have the latest version of python then do download it from [here](https://www.python.org/downloads/)
-
-
 ## Installation
 
-#### If you wish to keep the project's python environment separate from your global environment, you should create a [virtual environment](https://docs.python.org/3/library/venv.html)
+### Requirements
+
+If you dont have the latest version of python then do download it from [here](https://www.python.org/downloads/)
+
+
+### Environment
+If you wish to keep the project's python environment separate from your global environment, you should create a [virtual environment](https://docs.python.org/3/library/venv.html)
 
 ```
 python3 -m venv env
 source env/bin/activate
 ```
 
-#### Use [pip](https://pip.pypa.io/en/stable/installing/) to install the requirements:
+### Python dependencies
+Use [pip](https://pip.pypa.io/en/stable/installing/) to install the dependencies:
 
 ```
 pip install -r requirements.txt
 ```
+
 
 #### Move into the Project Folder:
 
 ```
 cd sustainable_urban_design_space
 ```
+=======
+## Running the server
 
-#### Make manage.py excutable on Max OS X:
+### Migrations
+
+
+Before you can run the project, you will need to set up the database by running the migrations:
 
 ```
-chmod +x manage.py
+./manage.py migrate
 ```
 
-#### Move into the Django folder and create a new super user account:
-
+### Create super user
+Move into the Project Folder:
 ```
-./manage.py createsuperuser
+cd sustainable_urban_design_space
+```
+
+Ceate a new super user account:
+```
+python manage.py createsuperuser
+
 Username: *your username*
 Email address: *your email*
 Password: *your password*
@@ -60,29 +78,19 @@ Password (again): *your password*
 
 It may warn you if you use a password that is similar to your user name, or if it's too short or too common. You can bypass this warning by typing `Y` and then Enter. It doesn't matter in a development environment, but be sure to use secure credentials when deploying in production.
 
-## Running the server
-
-### Migrations
-
-Before you can run the project, you will need to set up the database by running the migrations:
-
-```
-./manage.py migrate
-```
-
 ### Starting the server
 
 You can run the server with
 
 ```
-./manage.py runserver
+python manage.py runserver
 ```
 
 The server will now tell you that it's runnning on http://127.0.0.1:8000/
 
 You can connect to the admin interface at http://127.0.0.1:8000/admin with your newly created superuser account.
 
-# Support
+## Support
 
 * See [CONTRIBUTING.md](CONTRIBUTING.md)
 
@@ -90,7 +98,7 @@ You can connect to the admin interface at http://127.0.0.1:8000/admin with your 
 
 
 
-### Contributors ✨
+## Contributors ✨
 
 Thanks goes to these awesome people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
@@ -111,6 +119,11 @@ Thanks goes to these awesome people ([emoji key](https://allcontributors.org/doc
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
 
+
 # License
 
 * see [GNU Affero General Public License v3.0](https://github.com/SustainableUrbanDesign/app/blob/master/LICENSE)
+=======
+## License
+[GNU Affero General Public License v3.0](https://github.com/SustainableUrbanDesign/app/blob/ReadmeUpdates/LICENSE)
+
