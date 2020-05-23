@@ -4,7 +4,7 @@ Hey, thanks for taking your time to help out Sustainable Urban Design :thumbsup:
 
 The following is a set of guidelines for contributing to Sustainable Urban Design. These are mostly guidelines, not rules. Use your best judgment, and feel free to propose changes to any document in a pull request.
 
-### Table Of Contents
+## Table Of Contents
 
 [Code Of Conduct](#code-of-conduct)
 
