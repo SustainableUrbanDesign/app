@@ -3,11 +3,11 @@ name: Bug report
 about: Create a report to help us improve
 
 ---
-### Description
+## Description
 
 <!-- Description of the issue -->
 
-### Steps to Reproduce
+## Steps to Reproduce
 
 1. <!-- First Step -->
 2. <!-- Second Step -->
