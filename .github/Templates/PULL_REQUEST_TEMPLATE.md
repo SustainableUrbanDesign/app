@@ -7,7 +7,7 @@ Please include a summary of the change and which issue is fixed. Please also inc
 
 Fixes #(issuenumber)
 
-# Has this been tested in a local verison of the repo?
+**Has this been tested in a local verison of the repo?**
 
 - [ ] Yes
 - [ ] No
