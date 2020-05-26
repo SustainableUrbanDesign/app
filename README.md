@@ -57,7 +57,7 @@ Move into the Project Folder:
 cd sustainable_urban_design_space
 ```
 
-Ceate a new super user account:
+Create a new super user account:
 ```
 python manage.py createsuperuser
 
@@ -77,7 +77,7 @@ You can run the server with
 python manage.py runserver
 ```
 
-The server will now tell you that it's runnning on http://127.0.0.1:8000/
+The server will now tell you that it's running on http://127.0.0.1:8000/
 
 You can connect to the admin interface at http://127.0.0.1:8000/admin with your newly created superuser account.
 
