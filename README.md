@@ -48,7 +48,6 @@ pip install -r requirements.txt
 ```
 cd sustainable_urban_design_space
 ```
-=======
 ## Running the server
 
 ### Migrations
