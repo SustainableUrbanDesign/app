@@ -3,6 +3,7 @@
 [![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 ## Table of Contents
+
 * [Installation](#Installation)
 * [Support](#Support)
 * [License](#license)
@@ -41,9 +42,16 @@ Use [pip](https://pip.pypa.io/en/stable/installing/) to install the dependencies
 pip install -r requirements.txt
 ```
 
+
+#### Move into the Project Folder:
+
+```
+cd sustainable_urban_design_space
+```
 ## Running the server
 
 ### Migrations
+
 
 Before you can run the project, you will need to set up the database by running the migrations:
 
@@ -83,7 +91,11 @@ You can connect to the admin interface at http://127.0.0.1:8000/admin with your 
 
 ## Support
 
-Make an issue in [issues](github.com/SustainableUrbanDesign/app/issues), check if you're having any issues like anyone else. If not then make an issue describing what happened, and what the error says.
+* See [CONTRIBUTING.md](CONTRIBUTING.md)
+
+## Resources
+
+
 
 ## Contributors ✨
 
@@ -107,5 +119,7 @@ Thanks goes to these awesome people ([emoji key](https://allcontributors.org/doc
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
 
-## License
-[GNU Affero General Public License v3.0](https://github.com/SustainableUrbanDesign/app/blob/ReadmeUpdates/LICENSE)
+
+# License
+
+* see [GNU Affero General Public License v3.0](https://github.com/SustainableUrbanDesign/app/blob/master/LICENSE)
