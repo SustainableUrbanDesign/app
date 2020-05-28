@@ -123,7 +123,3 @@ This project follows the [all-contributors](https://github.com/all-contributors/
 # License
 
 * see [GNU Affero General Public License v3.0](https://github.com/SustainableUrbanDesign/app/blob/master/LICENSE)
-=======
-## License
-[GNU Affero General Public License v3.0](https://github.com/SustainableUrbanDesign/app/blob/ReadmeUpdates/LICENSE)
-
