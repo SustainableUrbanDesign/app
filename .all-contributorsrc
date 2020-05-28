@@ -1,0 +1,61 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "MaxThakurCodes",
+      "name": "Max Thakur",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/25856189?v=4",
+      "profile": "http://maxthakur.com",
+      "contributions": [
+        "translation",
+        "code",
+        "review",
+        "doc",
+        "ideas",
+        "maintenance"
+      ]
+    },
+    {
+      "login": "Nowserep",
+      "name": "Nowserep",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/65257460?v=4",
+      "profile": "https://github.com/Nowserep",
+      "contributions": [
+        "translation"
+      ]
+    },
+    {
+      "login": "brylie",
+      "name": "Brylie Christopher Oxley",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/17307?v=4",
+      "profile": "https://bryliechristopheroxley.info",
+      "contributions": [
+        "code",
+        "projectManagement",
+        "bug",
+        "doc",
+        "ideas",
+        "review"
+      ]
+    },
+    {
+      "login": "pgrimaud",
+      "name": "Pierre Grimaud",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/1866496?v=4",
+      "profile": "https://github.com/pgrimaud",
+      "contributions": [
+        "doc"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "app",
+  "projectOwner": "SustainableUrbanDesign",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
