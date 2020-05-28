@@ -1,6 +1,6 @@
 # Sustainable Urban design
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 ## Table of Contents
 
@@ -65,7 +65,7 @@ Move into the Project Folder:
 cd sustainable_urban_design_space
 ```
 
-Ceate a new super user account:
+Create a new super user account:
 ```
 python manage.py createsuperuser
 
@@ -85,7 +85,7 @@ You can run the server with
 python manage.py runserver
 ```
 
-The server will now tell you that it's runnning on http://127.0.0.1:8000/
+The server will now tell you that it's running on http://127.0.0.1:8000/
 
 You can connect to the admin interface at http://127.0.0.1:8000/admin with your newly created superuser account.
 
@@ -109,6 +109,7 @@ Thanks goes to these awesome people ([emoji key](https://allcontributors.org/doc
     <td align="center"><a href="http://maxthakur.com"><img src="https://avatars1.githubusercontent.com/u/25856189?v=4" width="100px;" alt=""/><br /><sub><b>Max Thakur</b></sub></a><br /><a href="#translation-MaxThakurCodes" title="Translation">🌍</a> <a href="https://github.com/SustainableUrbanDesign/app/commits?author=MaxThakurCodes" title="Code">💻</a> <a href="https://github.com/SustainableUrbanDesign/app/pulls?q=is%3Apr+reviewed-by%3AMaxThakurCodes" title="Reviewed Pull Requests">👀</a> <a href="https://github.com/SustainableUrbanDesign/app/commits?author=MaxThakurCodes" title="Documentation">📖</a> <a href="#ideas-MaxThakurCodes" title="Ideas, Planning, & Feedback">🤔</a> <a href="#maintenance-MaxThakurCodes" title="Maintenance">🚧</a></td>
     <td align="center"><a href="https://github.com/Nowserep"><img src="https://avatars3.githubusercontent.com/u/65257460?v=4" width="100px;" alt=""/><br /><sub><b>Nowserep</b></sub></a><br /><a href="#translation-Nowserep" title="Translation">🌍</a></td>
     <td align="center"><a href="https://bryliechristopheroxley.info"><img src="https://avatars1.githubusercontent.com/u/17307?v=4" width="100px;" alt=""/><br /><sub><b>Brylie Christopher Oxley</b></sub></a><br /><a href="https://github.com/SustainableUrbanDesign/app/commits?author=brylie" title="Code">💻</a> <a href="#projectManagement-brylie" title="Project Management">📆</a> <a href="https://github.com/SustainableUrbanDesign/app/issues?q=author%3Abrylie" title="Bug reports">🐛</a> <a href="https://github.com/SustainableUrbanDesign/app/commits?author=brylie" title="Documentation">📖</a> <a href="#ideas-brylie" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/SustainableUrbanDesign/app/pulls?q=is%3Apr+reviewed-by%3Abrylie" title="Reviewed Pull Requests">👀</a></td>
+    <td align="center"><a href="https://github.com/pgrimaud"><img src="https://avatars1.githubusercontent.com/u/1866496?v=4" width="100px;" alt=""/><br /><sub><b>Pierre Grimaud</b></sub></a><br /><a href="https://github.com/SustainableUrbanDesign/app/commits?author=pgrimaud" title="Documentation">📖</a></td>
   </tr>
 </table>
 
