@@ -24,10 +24,10 @@ The following is a set of guidelines for contributing to Sustainable Urban Desig
 * [Issue and Pull Request Labels](#labels)
 
 ## Code of Conduct
-This project and everyone participating are all governed by the [Code of Conduct](.github/CODE_OF_CONDUCT.md) *dun dun dun*. By participating, you are expected to uphold this code. Please report any unacceptable behavior to [Max Thakur](github.com/maxthakurcodes), or [Christopher Bryile](https://github.com/brylie)
+This project and everyone participating are all governed by the [Code of Conduct](.github/CODE_OF_CONDUCT.md) *dun dun dun*. By participating, you are expected to uphold this code. Please report any unacceptable behavior to [Max Thakur](https://github.com/maxthakurcodes), or [Christopher Bryile](https://github.com/brylie)
 
 ## I Just Have A Question
->***Note:*** please check the [FAQ](sustainableurbandesign.space/faq) to see if your question has already been asked
+>***Note:*** please check the [FAQ](https://sustainableurbandesign.space/faq) to see if your question has already been asked
 
 Please go about making your questiong as an issue, but at the beginning please put `[Question]`.
 
