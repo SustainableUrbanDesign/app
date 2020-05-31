@@ -35,6 +35,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     "home",
     "patterns",
+    "resources",
     "users",
     "django.contrib.admin",
     "django.contrib.auth",
@@ -144,14 +145,13 @@ USE_L10N = True
 LANGUAGES = (
     ("en", u"English"),
     ("zh-hans", u"简体中文"),
-    ('de', u"German"),
+    ("de", u"German"),
 )
 
 USE_TZ = True
 
 # Email Stuff For Django-AllAuth
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
-
 
 
 # Static files (CSS, JavaScript, Images)
