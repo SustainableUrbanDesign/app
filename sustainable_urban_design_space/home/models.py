@@ -14,5 +14,7 @@ class HomePage(Page):
 
     max_count = 1
 
-    subpage_types = ["patterns.UrbanDesignPatternIndex"]
-
+    subpage_types = [
+        "patterns.UrbanDesignPatternIndex",
+        "resources.ResourcesIndex",
+    ]
