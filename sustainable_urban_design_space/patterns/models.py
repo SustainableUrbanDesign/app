@@ -33,6 +33,9 @@ class UrbanDesignPattern(Page):
         InlinePanel("gallery_images", label="Gallery images"),
     ]
 
+    parent_page_types = ["patterns.UrbanDesignPatternIndex"]
+    subpage_types = []
+
 
 class UrbanDesignPatternImage(Orderable):
     design_pattern = ParentalKey(
@@ -54,6 +57,9 @@ class UrbanDesignPatternImage(Orderable):
 class UrbanDesignPatternTagIndex(Page):
     max_count = 1
 
+    parent_page_types = ["patterns.UrbanDesignPatternIndex"]
+    subpage_types = []
+
     def get_context(self, request):
         context = super().get_context(request)
 
@@ -68,6 +74,12 @@ class UrbanDesignPatternTagIndex(Page):
 
 class UrbanDesignPatternIndex(Page):
     max_count = 1
+
+    parent_page_types = ["home.HomePage"]
+    subpage_types = [
+        "patterns.UrbanDesignPatternTagIndex",
+        "patterns.UrbanDesignPattern",
+    ]
 
     def get_context(self, request):
         context = super().get_context(request)
