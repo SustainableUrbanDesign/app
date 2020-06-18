@@ -1,6 +1,6 @@
 <template>
   <q-page class="flex flex-center">
-    <MglMap :mapStyle="style" :zoom="zoom" :hash="true" />
+    <MglMap :mapStyle="style" :zoom="zoom" :hash="true"></MglMap>
   </q-page>
 </template>
 
@@ -26,6 +26,11 @@ export default {
               "https://stamen-tiles.a.ssl.fastly.net/terrain/{z}/{x}/{y}.jpg"
             ],
             tileSize: 256
+          },
+          route: {
+            type: "geojson",
+            data:
+              "https://gist.githubusercontent.com/wavded/1200773/raw/e122cf709898c09758aecfef349964a8d73a83f3/sample.json"
           }
         },
         layers: [
@@ -35,6 +40,20 @@ export default {
             source: "raster-tiles",
             minzoom: 0,
             maxzoom: 22
+          },
+          {
+            id: "route",
+            type: "line",
+            source: "route",
+            filter: ["==", "$type", "LineString"],
+            layout: {
+              "line-join": "round",
+              "line-cap": "round"
+            },
+            paint: {
+              "line-color": "#888",
+              "line-width": 3
+            }
           }
         ]
       }
