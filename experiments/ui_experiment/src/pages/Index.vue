@@ -1,6 +1,6 @@
 <template>
   <q-page class="flex flex-center">
-    <MglMap :mapStyle="style" :zoom="zoom" />
+    <MglMap :mapStyle="style" :zoom="zoom" :hash="true" />
   </q-page>
 </template>
 
