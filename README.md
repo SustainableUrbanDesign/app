@@ -2,10 +2,13 @@
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
+[![Twitter](https://badgen.net/twitter/follow/SustUrbanDesign)](https://twitter.com/SustUrbanDesign) [![Open Collective](https://badgen.net/opencollective/backers/suds)](https://opencollective.com/suds) [![Youtube](https://img.shields.io/badge/Youtube--brightgreen)](https://www.youtube.com/channel/UCrV_KSms3BNStyOFAvx4l1w) [![License](https://img.shields.io/badge/license-GNU-brightgreen)](/LICENSE)
+
 ## Table of Contents
 
-* [Installation](#Installation)
-* [Support](#Support)
+* [Installation](#installation)
+* [Support](#support)
+* [Social Media Links](#links)
 * [License](#license)
 
 ## What is this?
@@ -97,7 +100,11 @@ You can connect to the admin interface at http://127.0.0.1:8000/admin with your 
 
 ## Resources
 
-
+## Links
+[Twitter](https://twitter.com/SustUrbanDesign)
+[YouTube](https://www.youtube.com/channel/UCrV_KSms3BNStyOFAvx4l1w)
+[OpenCollective](https://opencollective.com/suds)
+[Riot/Matrix](https://riot.im/app/#/room/#sud:matrix.org)
 
 ## Contributors ✨
 
