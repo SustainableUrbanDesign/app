@@ -2,7 +2,7 @@
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
-[![Twitter](https://badgen.net/twitter/follow/SustUrbanDesign)](https://twitter.com/SustUrbanDesign) [![Open Collective](https://badgen.net/opencollective/backers/suds)](https://opencollective.com/suds) [![Youtube](https://img.shields.io/badge/Youtube--brightgreen)](https://www.youtube.com/channel/UCrV_KSms3BNStyOFAvx4l1w) [![License](https://img.shields.io/badge/license-GNU-brightgreen)](/LICENSE)
+[![Twitter](https://badgen.net/twitter/follow/SustUrbanDesign)](https://twitter.com/SustUrbanDesign) [![Open Collective](https://badgen.net/opencollective/backers/suds)](https://opencollective.com/suds) [![Youtube](https://img.shields.io/badge/Youtube--brightgreen)](https://www.youtube.com/channel/UCrV_KSms3BNStyOFAvx4l1w) [![License](https://img.shields.io/badge/license-GNU-brightgreen)](/LICENSE) [![Riot](https://img.shields.io/badge/Chat-Join%20our%20discussion%20on%20Matrix-green)](https://riot.im/app/#/room/#sud:matrix.org)
 
 ## Table of Contents
 
