@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load wagtailcore_tags %}
+
+{% block content %}
+
+    {% if request.GET.tag|length %}
+        <h4>Showing pages tagged "{{ request.GET.tag }}"</h4>
+    {% endif %}
+
+    {% for design_pattern in design_patterns %}
+
+        <ul class="list-group">
+            <li class="list-group-item">
+                <a href="{% pageurl design_pattern %}">
+                    {{ design_pattern.title }}
+                </a>
+            </li>
+        </ul>
+
+    {% empty %}
+        </h1>Not found</h1>
+        <p>No design patterns found with that tag.</p>
+    {% endfor %}
+
+{% endblock %}
