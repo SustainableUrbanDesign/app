@@ -17,10 +17,10 @@ class Book(Page):
     ]
 
 class DataSource(Page):
-    url = models.URLField()
+    link = models.URLField()
 
     content_panels = Page.content_panels + [
-        FieldPanel("url"),
+        FieldPanel("link"),
     ]
 
 
