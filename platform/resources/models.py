@@ -16,6 +16,13 @@ class Book(Page):
         FieldPanel("isbn"),
     ]
 
+class DataSource(Page):
+    url = models.URLField()
+
+    content_panels = Page.content_panels + [
+        FieldPanel("url"),
+    ]
+
 
 class ResourcesIndex(Page):
     max_count = 1
