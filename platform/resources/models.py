@@ -2,6 +2,7 @@ from django.core.validators import int_list_validator, MinLengthValidator
 from django.db import models
 
 from wagtail.admin.edit_handlers import FieldPanel
+from wagtail.core.fields import RichTextField
 from wagtail.core.models import Page
 
 class Book(Page):
@@ -16,9 +17,11 @@ class Book(Page):
     ]
 
 class DataSource(Page):
+    description = RichTextField(null=True)
     link = models.URLField()
 
     content_panels = Page.content_panels + [
+        FieldPanel("description"),
         FieldPanel("link"),
     ]
 
