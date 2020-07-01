@@ -11,6 +11,8 @@
 ## What is this?
 
 This project is an open-source, prototype toolkit for sustainable urban design. Go check out our [website](https://sustainableurbandesign.space/).
+To stay updated about progress and events in the community, follow us on [Twitter](https://twitter.com/SustUrbanDesign) and subscribe to our [YouTube channel](https://www.youtube.com/channel/UCrV_KSms3BNStyOFAvx4l1w).
+To chat with community members, check out [Matrix/Riot](https://riot.im/app/#/room/#sud:matrix.org), and if you'd like to support the project financially you can do so on [OpenCollective](https://opencollective.com/suds).
 
 Below, you can see a user-interface mockup showing the main components of the toolkit.
 
