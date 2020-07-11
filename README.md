@@ -18,7 +18,7 @@ Below, you can see a user-interface mockup showing the main components of the to
 
 ![UrbanDesignSpace App UI mockup](design/UI-mockup.png)
 
-## We your need help!
+## We need your help!
 
 Our team would love for people to help out in anyway they can, right now we're looking for translators and anyone willing to help out.
 
