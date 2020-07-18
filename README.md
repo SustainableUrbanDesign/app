@@ -1,6 +1,6 @@
 # Sustainable Urban design
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 ## Table of Contents
 
@@ -113,6 +113,7 @@ Thanks goes to these awesome people ([emoji key](https://allcontributors.org/doc
     <td align="center"><a href="https://bryliechristopheroxley.info"><img src="https://avatars1.githubusercontent.com/u/17307?v=4" width="100px;" alt=""/><br /><sub><b>Brylie Christopher Oxley</b></sub></a><br /><a href="https://github.com/SustainableUrbanDesign/app/commits?author=brylie" title="Code">💻</a> <a href="#projectManagement-brylie" title="Project Management">📆</a> <a href="https://github.com/SustainableUrbanDesign/app/issues?q=author%3Abrylie" title="Bug reports">🐛</a> <a href="https://github.com/SustainableUrbanDesign/app/commits?author=brylie" title="Documentation">📖</a> <a href="#ideas-brylie" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/SustainableUrbanDesign/app/pulls?q=is%3Apr+reviewed-by%3Abrylie" title="Reviewed Pull Requests">👀</a></td>
     <td align="center"><a href="https://github.com/pgrimaud"><img src="https://avatars1.githubusercontent.com/u/1866496?v=4" width="100px;" alt=""/><br /><sub><b>Pierre Grimaud</b></sub></a><br /><a href="https://github.com/SustainableUrbanDesign/app/commits?author=pgrimaud" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/jfinmaniv"><img src="https://avatars2.githubusercontent.com/u/15154823?v=4" width="100px;" alt=""/><br /><sub><b>John Inman</b></sub></a><br /><a href="https://github.com/SustainableUrbanDesign/app/commits?author=jfinmaniv" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/rmk118"><img src="https://avatars1.githubusercontent.com/u/67233373?v=4" width="100px;" alt=""/><br /><sub><b>rmk118</b></sub></a><br /><a href="https://github.com/SustainableUrbanDesign/app/commits?author=rmk118" title="Documentation">📖</a></td>
   </tr>
 </table>
 
