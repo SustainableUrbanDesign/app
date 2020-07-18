@@ -72,7 +72,7 @@ Before you can run the project, you will need to set up the database by running 
 ### Create super user
 Move into the Project Folder:
 ```
-cd sustainable_urban_design_space
+cd platform
 ```
 
 Create a new super user account:
