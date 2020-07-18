@@ -56,7 +56,7 @@ pip install -r requirements.txt
 #### Move into the Project Folder:
 
 ```
-cd sustainable_urban_design_space
+cd platform
 ```
 ## Running the server
 
