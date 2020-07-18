@@ -2,6 +2,11 @@
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
+
+[![Open Collective](https://badgen.net/opencollective/backers/suds)](https://opencollective.com/suds)
+[![Youtube](https://img.shields.io/badge/dynamic/json?label=Youtube&color=brightgreen&query=items[0].statistics.subscriberCount&url=https%3A%2F%2Fwww.googleapis.com%2Fyoutube%2Fv3%2Fchannels%3Fpart%3Dsnippet%252CcontentDetails%252Cstatistics%26id%3DUCrV_KSms3BNStyOFAvx4l1w%26key%3DAIzaSyB2IsPIY-XsnJBwgMaWIZMBROZ283LA29g)](https://www.youtube.com/channel/UCrV_KSms3BNStyOFAvx4l1w)
+[![License](https://img.shields.io/badge/license-GNU-brightgreen)](/LICENSE)
+[![Riot](https://img.shields.io/badge/Chat-Join%20our%20discussion%20on%20Matrix-brightgreen)](https://riot.im/app/#/room/#sud:matrix.org)
 [![Twitter](https://badgen.net/twitter/follow/SustUrbanDesign)](https://twitter.com/SustUrbanDesign) [![Open Collective](https://badgen.net/opencollective/backers/suds)](https://opencollective.com/suds) [![Youtube](https://img.shields.io/badge/dynamic/json?label=Youtube&color=brightgreen&query=items[0].statistics.subscriberCount&url=https%3A%2F%2Fwww.googleapis.com%2Fyoutube%2Fv3%2Fchannels%3Fpart%3Dsnippet%252CcontentDetails%252Cstatistics%26id%3DUCrV_KSms3BNStyOFAvx4l1w%26key%3DAIzaSyB2IsPIY-XsnJBwgMaWIZMBROZ283LA29g)](https://www.youtube.com/channel/UCrV_KSms3BNStyOFAvx4l1w) [![License](https://img.shields.io/badge/license-GNU-brightgreen)](/LICENSE) [![Riot](https://img.shields.io/badge/Chat-Join%20our%20discussion%20on%20Matrix-brightgreen)](https://riot.im/app/#/room/#sud:matrix.org)
 
 ## Table of Contents
