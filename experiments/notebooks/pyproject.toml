@@ -11,6 +11,7 @@ jupyterlab = "^2.2.2"
 geopandas = "^0.8.1"
 folium = "^0.11.0"
 pyproj = "^2.6.1"
+jupyterlab-git = "^0.20.0"
 
 [tool.poetry.dev-dependencies]
 
