@@ -9,12 +9,10 @@ license = "AGPL-3.0-or-later"
 python = "^3.7"
 jupyterlab = "^2.2.2"
 geopandas = "^0.8.1"
-folium = "^0.11.0"
 pyproj = "^2.6.1"
 jupyterlab-git = "^0.20.0"
 matplotlib = "^3.3.0"
 descartes = "^1.1.0"
-bokeh = "^2.1.1"
 
 [tool.poetry.dev-dependencies]
 
