@@ -13,6 +13,7 @@ pyproj = "^2.6.1"
 jupyterlab-git = "^0.20.0"
 matplotlib = "^3.3.0"
 descartes = "^1.1.0"
+osmnx = "^0.15.1"
 
 [tool.poetry.dev-dependencies]
 
