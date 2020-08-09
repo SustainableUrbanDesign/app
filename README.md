@@ -34,8 +34,17 @@ Our team would love for people to help out in anyway they can, right now we're l
 
 ### Requirements
 
-If you dont have the latest version of python then do download it from [here](https://www.python.org/downloads/)
+#### Python
+If you dont have the latest version of python then do download it from [here](https://www.python.org/downloads/).
 
+#### PostGIS
+We are using Postgres/PostGIS for the database backend. For convenience, we have included a Docker compose file that you may use to run a PostGIS container. With Docker installed on your local computer, run the following command from the project root directory in order to start up PostGIS:
+
+```
+docker-compose up
+```
+
+You should then have a Postgres database accessible at port 5432 using the user `postgres` with the password `password`. This service should only be used for local development purposes and not deployed to the web.
 
 ### Environment
 If you wish to keep the project's python environment separate from your global environment, you should create a [virtual environment](https://docs.python.org/3/library/venv.html)
@@ -52,12 +61,12 @@ Use [pip](https://pip.pypa.io/en/stable/installing/) to install the dependencies
 pip install -r requirements.txt
 ```
 
-
-#### Move into the Project Folder:
+Move into the Project Folder:
 
 ```
 cd platform
 ```
+
 ## Running the server
 
 ### Migrations
