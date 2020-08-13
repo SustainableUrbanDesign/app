@@ -1,3 +1,6 @@
-from django.shortcuts import render
+from django.conf import settings
+from django.http import HttpResponse
 
-# Create your views here.
+def get_osm_data(request):
+    html = "<p>Hello</p>"
+    return HttpResponse(html)
