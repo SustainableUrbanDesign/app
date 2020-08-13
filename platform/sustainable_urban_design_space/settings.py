@@ -34,6 +34,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     "home",
+    "openstreetmap",
     "patterns",
     "resources",
     "users",
