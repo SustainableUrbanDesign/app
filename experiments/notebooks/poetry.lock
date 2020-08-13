@@ -345,6 +345,14 @@ test = ["pytest (!=5.3.4)", "pytest-cov", "flaky", "nose"]
 
 [[package]]
 category = "main"
+description = "Interactive ProgressBar natively built with IPython"
+name = "ipypb"
+optional = false
+python-versions = "*"
+version = "0.5.2"
+
+[[package]]
+category = "main"
 description = "IPython: Productive Interactive Computing"
 name = "ipython"
 optional = false
@@ -1179,7 +1187,7 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["jaraco.itertools", "func-timeout"]
 
 [metadata]
-content-hash = "cfce76c0bdfda92df3620a6d0ca8e4f16a4360649aba2662b17389bd7a9b70b1"
+content-hash = "7d1ba2ea9cc70789903a366a4e2fbac477923de0a723c89dc8b029b427360acc"
 lock-version = "1.0"
 python-versions = "^3.7"
 
@@ -1350,6 +1358,10 @@ importlib-metadata = [
 ipykernel = [
     {file = "ipykernel-5.3.4-py3-none-any.whl", hash = "sha256:d6fbba26dba3cebd411382bc484f7bc2caa98427ae0ddb4ab37fe8bfeb5c7dd3"},
     {file = "ipykernel-5.3.4.tar.gz", hash = "sha256:9b2652af1607986a1b231c62302d070bc0534f564c393a5d9d130db9abbbe89d"},
+]
+ipypb = [
+    {file = "ipypb-0.5.2-py3-none-any.whl", hash = "sha256:625a201d4c912ac498fa297f19291959f3dadbd37247d873d0291bf197e0f82d"},
+    {file = "ipypb-0.5.2.tar.gz", hash = "sha256:ce87f3845502ca1e47a69aa79a03fbca13edd8e23fbcdbe608c4c6b243bed2b3"},
 ]
 ipython = [
     {file = "ipython-7.17.0-py3-none-any.whl", hash = "sha256:5a8f159ca8b22b9a0a1f2a28befe5ad2b703339afb58c2ffe0d7c8d7a3af5999"},
