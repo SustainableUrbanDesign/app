@@ -2,8 +2,28 @@ version: '3.5'
 
 services:
   postgres:
+    container_name: suds_postgres
     image: mdillon/postgis
     ports:
       - "5432:5432"
     environment:
-      POSTGRES_PASSWORD: password
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-changeme}
+      PGDATA: /data/postgres
+    networks:
+      - postgres
+  pgadmin:
+    container_name: suds_pgadmin
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL:-pgadmin4@pgadmin.org}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:-admin}
+      PGADMIN_LISTEN_PORT: ${PGADMIN_LISTEN_PORT:-80}
+    ports:
+      - "${PGADMIN_LISTEN_PORT:-80}:${PGADMIN_LISTEN_PORT:-80}"
+    networks:
+      - postgres
+
+networks:
+  postgres:
+    driver: bridge
