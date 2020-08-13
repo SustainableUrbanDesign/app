@@ -28,3 +28,4 @@ def create_osm_to_geojson_query(table=None, fclass=None, limit=10):
             ) inputs
         ) features;
     """
+    
