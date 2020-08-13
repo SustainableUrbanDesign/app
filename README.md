@@ -37,16 +37,18 @@ Our team would love for people to help out in anyway they can, right now we're l
 #### Python
 If you dont have the latest version of python then do download it from [here](https://www.python.org/downloads/).
 
-#### PostGIS / pgAdmin
+#### PostGIS
 We are using Postgres/PostGIS for the database backend. For convenience, we have included a Docker compose file that you may use to run a PostGIS container. With Docker installed on your local computer, run the following command from the project root directory in order to start up PostGIS:
 
 ```
 docker-compose up
 ```
 
-You should then have a Postgres database accessible at port 5432 using the user `postgres` with the password `password`. This service should only be used for local development purposes and not deployed to the web.
+You should then have a Postgres database accessible at port 5432 using the user `postgres` with the password `changeme`. This service should only be used for local development purposes and not deployed to the web.
 
-In addition to PostGIS, you can access the pgAdmin graphical user interface at http://localhost
+It will noe be necessary to create a database named `suds` with the `postgres` user as owner. To make this process easier, please use pgAdmin as described below.
+
+You can access the pgAdmin graphical user interface at http://localhost
 
 The default pgAdmin login credentials are:
 - email: pgadmin4@pgadmin.org
@@ -57,6 +59,11 @@ Once logged in to pgAdmin, you will need to create a connection to the PostGIS d
 - host: postgres
 - user: postgres
 - password: changeme
+
+After connecting pgAdmin to the PostGIS server, you will need to create a database for the Django project. Right click on the **Databases** tree item and then click **Create** > **Database**. Use the following settings:
+
+- Database: suds
+- Owner: postgres
 
 **Note:** you can override PostGIS and pgAdmin configuration prior to running `docker-compose` by creating any of the following environment variables:
 
