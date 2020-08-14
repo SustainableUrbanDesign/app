@@ -3,8 +3,7 @@
 A user-focused app for sustainable urban design and analysis.
 
 ## Install system dependencies
-In order to run this project you will need to install [yarn](https://yarnpkg.com/) and quasar-cli. The quasar-cli project can be installed globally via `npm install -g quasar-cli`.
-
+In order to run this project you will need to install [yarn](https://yarnpkg.com/) and [quasar-cli](https://quasar.dev/quasar-cli/installation).
 ## Install project dependencies
 ```bash
 yarn
