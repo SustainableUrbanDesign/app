@@ -27,10 +27,10 @@ export default {
             ],
             tileSize: 256
           },
-          // "finland-osm": {
-          //   type: "geojson",
-          //   data: "http://localhost:8000/openstreetmap/data",
-          // }
+          "finland-osm": {
+            type: "geojson",
+            data: "http://localhost:8000/openstreetmap/data",
+          }
         },
         layers: [
           {
@@ -40,16 +40,16 @@ export default {
             minzoom: 0,
             maxzoom: 22
           },
-          // {
-          //   id: "finland-osm",
-          //   type: "circle",
-          //   source: "finlandOsm",
-          //   paint: {
-          //     'circle-radius': 6,
-          //     'circle-color': '#B42222'
-          //   },
-          //   filter: ['==', '$type', 'Point']
-          // }
+          {
+            id: "finland-osm",
+            type: "circle",
+            source: "finland-osm",
+            paint: {
+              'circle-radius': 6,
+              'circle-color': 'blue'
+            },
+            filter: ['==', '$type', 'Point']
+          }
         ]
       }
     };
