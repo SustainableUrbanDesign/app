@@ -1,3 +1,5 @@
+import json
+
 from django.conf import settings
 from django.http import HttpResponse
 
@@ -27,6 +29,8 @@ def get_osm_data(request):
 
     cursor.execute(osm_query)
 
-    response = cursor.fetchone()
+    result = cursor.fetchone()
+
+    response = json.dumps(result[0], indent=2)
 
     return HttpResponse(response)
