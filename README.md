@@ -44,9 +44,11 @@ We are using Postgres/PostGIS for the database backend. For convenience, we have
 docker-compose up
 ```
 
-You should then have a Postgres database accessible at port 5432 using the user `postgres` with the password `changeme`. This service should only be used for local development purposes and not deployed to the web.
+You should then have a Postgres database accessible at port 5432 using the user `postgres` with the password `changeme`. 
 
-It will noe be necessary to create a database named `suds` with the `postgres` user as owner. To make this process easier, please use pgAdmin as described below.
+**Note:** The PostGIS database service should only be used for local development purposes and not deployed to the web.
+
+It will now be necessary to create a database named `suds` with the `postgres` user as owner. To make this process easier, please use pgAdmin as described below.
 
 You can access the pgAdmin graphical user interface at http://localhost
 
