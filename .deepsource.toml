@@ -1,9 +1,5 @@
 version = 1
 
-test_patterns = ["**/tests.py"]
-
-exclude_patterns = ["**/migrations/**"]
-
 [[analyzers]]
 name = "python"
 enabled = true
