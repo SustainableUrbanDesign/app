@@ -12,6 +12,8 @@ services:
       PGDATA: /data/postgres
     networks:
       - postgres
+    volumes:
+      - ./postgres_data:/data/postgres
   pgadmin:
     container_name: suds_pgadmin
     image: dpage/pgadmin4
@@ -27,3 +29,6 @@ services:
 networks:
   postgres:
     driver: bridge
+
+volumes:
+  postgres_data:
