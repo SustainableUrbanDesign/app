@@ -1,4 +1,13 @@
-def create_osm_to_geojson_query(table=None, fclass=None, limit=10):
+def create_osm_to_geojson_query(
+    table=None,
+    fclass=None,
+    limit=10,
+    xmin=23.5,
+    ymin=61.45,
+    xmax=23.8,
+    ymax=61.5,
+    epsg=4326,
+    ):
     """
     Create a quuery that returns GeoJSON data from OSM data in PostGIS.
     """
@@ -27,6 +36,13 @@ def create_osm_to_geojson_query(table=None, fclass=None, limit=10):
                     "name",
                     "geometry"
                 FROM { table }
+                WHERE ST_MakeEnvelope (
+                    { xmin }, { ymin },
+                    { xmax }, { ymax },
+                    { epsg }
+                )
+                ~
+                "geometry"
                 limit { limit }
             ) inputs
         ) features;
