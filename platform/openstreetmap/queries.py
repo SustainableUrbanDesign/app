@@ -36,6 +36,8 @@ def create_osm_to_geojson_query(
                     "name",
                     "geometry"
                 FROM { table }
+                -- where bounding box contains geometry
+                -- https://postgis.net/docs/ST_Geometry_Contain.html
                 WHERE ST_MakeEnvelope (
                     { xmin }, { ymin },
                     { xmax }, { ymax },
