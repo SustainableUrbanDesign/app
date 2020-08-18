@@ -40,9 +40,7 @@ def create_osm_to_geojson_query(
                     { xmin }, { ymin },
                     { xmax }, { ymax },
                     { epsg }
-                )
-                ~
-                "geometry"
+                ) ~ "geometry"
                 limit { limit }
             ) inputs
         ) features;
