@@ -32,23 +32,29 @@ Our team would love for people to help out in anyway they can, right now we're l
 
 ## Installation
 
-### Requirements
-
-#### Python
+### Python
 If you dont have the latest version of python then do download it from [here](https://www.python.org/downloads/).
 
-#### PostGIS
+### PostGIS
 We are using Postgres/PostGIS for the database backend. For convenience, we have included a Docker compose file that you may use to run a PostGIS container. With Docker installed on your local computer, run the following command from the project root directory in order to start up PostGIS:
 
 ```
 docker-compose up
 ```
 
-You should then have a Postgres database accessible at port 5432 using the user `postgres` with the password `changeme`. 
+You should then have a Postgres database accessible at port 5432 using the user `postgres` with the password `changeme`.
+
+You can override PostGIS and pgAdmin configuration prior to running `docker-compose` by creating any of the following environment variables:
+
+- `POSTGRES_USER`
+- `POSTGRES_PASSWORD`
+- `PGADMIN_DEFAULT_EMAIL`
+- `PGADMIN_DEFAULT_PASSWORD`
+- `PGADMIN_LISTEN_PORT`
 
 **Note:** The PostGIS database service should only be used for local development purposes and not deployed to the web.
 
-It will now be necessary to create a database named `suds` with the `postgres` user as owner. To make this process easier, please use pgAdmin as described below.
+#### pgAdmin
 
 You can access the pgAdmin graphical user interface at http://localhost
 
@@ -62,20 +68,29 @@ Once logged in to pgAdmin, you will need to create a connection to the PostGIS d
 - user: postgres
 - password: changeme
 
+#### Django database
+
 After connecting pgAdmin to the PostGIS server, you will need to create a database for the Django project. Right click on the **Databases** tree item and then click **Create** > **Database**. Use the following settings:
 
 - Database: suds
 - Owner: postgres
 
-**Note:** you can override PostGIS and pgAdmin configuration prior to running `docker-compose` by creating any of the following environment variables:
+#### OpenStreetMap database
 
-- POSTGRES_USER
-- POSTGRES_PASSWORD
-- PGADMIN_DEFAULT_EMAIL
-- PGADMIN_DEFAULT_PASSWORD
-- PGADMIN_LISTEN_PORT
+We will store OpenStreetMap data in a PostGIS enabled database. First, use pgAdmin create the database with the following settings:
 
-### Environment
+- Database: OpenStreetMap
+- Owner: postgres
+
+Then, enable the PostGIS extension on the `OpenStreetMap` database by running the following query from the pgAdmin Query Tool:
+
+```sql
+CREATE EXTENSION postgis;
+```
+
+Once the OpenStreetMap database is created, refer to the Jupyter notebook in the experiments/notebooks folder in order to import OSM data into PostGIS.
+
+## Environment
 If you wish to keep the project's python environment separate from your global environment, you should create a [virtual environment](https://docs.python.org/3/library/venv.html)
 
 ```
