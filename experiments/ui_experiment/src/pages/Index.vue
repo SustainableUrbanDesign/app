@@ -15,8 +15,8 @@ export default {
   },
   data() {
     return {
-      center: [25.7482, 61.9241],
-      zoom: 4,
+      center: [23.7610, 61.4978],
+      zoom: 10,
       style: {
         version: 8,
         sources: {
