@@ -1,68 +1,93 @@
 <template>
-  <q-page class="flex flex-center">
-    <vl-map
-      :load-tiles-while-animating="true"
-      :load-tiles-while-interacting="true"
-      data-projection="EPSG:4326">
-      <vl-view :zoom.sync="zoom" :center.sync="center"></vl-view>
+  <q-page class="flex">
+    <div>
+      <div class="row q-mx-auto">
+        <q-input
+          label="Buffer distance"
+          v-model.number="bufferDistance"
+          type="number"
+          dense="true"
+          class="q-mx-sm"
+        />
 
-      <vl-layer-tile id="osm">
-        <vl-source-osm></vl-source-osm>
-      </vl-layer-tile>
+        <q-select
 
-      <vl-layer-vector :if="osmData">
-        <vl-source-vector
-          :features="osmData.features"></vl-source-vector>
+          v-model="bufferUnits"
+          :options="bufferUnitsOptions"
+          label="Units"
+          stack-label
+          dense="true"
+          options-dense="true"
+        />
+      </div>
 
-        <vl-style-box>
-          <vl-style-circle :radius="3">
-            <vl-style-fill color="green"></vl-style-fill>
-            <vl-style-stroke color="white"></vl-style-stroke>
-          </vl-style-circle>
-        </vl-style-box>
-      </vl-layer-vector>
-      
-      <vl-layer-vector :if="buffers">
-        <vl-source-vector
-          :features="buffers.features"></vl-source-vector>
+      <div class="row">
+        <vl-map
+          :load-tiles-while-animating="true"
+          :load-tiles-while-interacting="true"
+          data-projection="EPSG:4326"
+        >
+          <vl-view :zoom.sync="zoom" :center.sync="center"></vl-view>
 
-        <vl-style-box>
-          <vl-style-stroke color="green" :width="3"></vl-style-stroke>
-          <vl-style-fill color="rgba(255,255,255,0.5)"></vl-style-fill>
-        </vl-style-box>
-      </vl-layer-vector>
-      
-    </vl-map>
+          <vl-layer-tile id="osm">
+            <vl-source-osm></vl-source-osm>
+          </vl-layer-tile>
+
+          <vl-layer-vector :if="osmData">
+            <vl-source-vector :features="osmData.features"></vl-source-vector>
+
+            <vl-style-box>
+              <vl-style-circle :radius="3">
+                <vl-style-fill color="green"></vl-style-fill>
+                <vl-style-stroke color="white"></vl-style-stroke>
+              </vl-style-circle>
+            </vl-style-box>
+          </vl-layer-vector>
+
+          <vl-layer-vector :if="buffers">
+            <vl-source-vector :features="buffers.features"></vl-source-vector>
+
+            <vl-style-box>
+              <vl-style-stroke color="green" :width="3"></vl-style-stroke>
+
+            </vl-style-box>
+          </vl-layer-vector>
+        </vl-map>
+      </div>
+    </div>
   </q-page>
 </template>
 
 <script>
 import axios from "axios";
 import buffer from "@turf/buffer";
-import Vue from 'vue'
+import Vue from "vue";
 
-import VueLayers from 'vuelayers';
-import 'vuelayers/lib/style.css';
+import VueLayers from "vuelayers";
+import "vuelayers/lib/style.css";
 
-Vue.use(VueLayers)
+Vue.use(VueLayers);
 
 export default {
   name: "PageIndex",
   data() {
     return {
-      center: [23.7610, 61.4978],
+      center: [23.761, 61.4978],
       zoom: 10,
-      osmData: false
-    }
+      osmData: false,
+      bufferDistance: 1,
+      bufferUnits: "kilometers",
+      bufferUnitsOptions: ["kilometers", "miles"],
+    };
   },
   computed: {
     buffers: function () {
       if (this.osmData) {
-        const buffers =buffer(
-          this.osmData,
-          1000,
+        const buffers = buffer(
+          this.osmData, 
+          this.bufferDistance, 
           {
-            units: 'meters'
+            units: this.bufferUnits,
           }
         );
 
@@ -70,15 +95,13 @@ export default {
       }
 
       return false;
-    }
+    },
   },
   mounted() {
-    axios
-      .get('http://localhost:8000/openstreetmap/data')
-      .then((response) => {
-        this.osmData = response.data;
-      });
-  }
+    axios.get("http://localhost:8000/openstreetmap/data").then((response) => {
+      this.osmData = response.data;
+    });
+  },
 };
 </script>
 
