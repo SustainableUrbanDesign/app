@@ -1,65 +1,57 @@
 <template>
   <q-page class="flex flex-center">
-    <MglMap :mapStyle="style" :zoom="zoom" :hash="false" :center="center"></MglMap>
+    <vl-map
+      :load-tiles-while-animating="true"
+      :load-tiles-while-interacting="true"
+      data-projection="EPSG:4326">
+      <vl-view :zoom.sync="zoom" :center.sync="center"></vl-view>
+
+      <vl-layer-tile id="osm">
+        <vl-source-osm></vl-source-osm>
+      </vl-layer-tile>
+
+      <vl-layer-vector>
+        <vl-source-vector
+          url="http://localhost:8000/openstreetmap/data"
+          :features.sync="osmData"></vl-source-vector>
+
+        <vl-style-box>
+          <vl-style-circle :radius="3">
+            <vl-style-fill color="green"></vl-style-fill>
+            <vl-style-stroke color="white"></vl-style-stroke>
+          </vl-style-circle>
+        </vl-style-box>
+      </vl-layer-vector>
+    </vl-map>
   </q-page>
 </template>
 
 <script>
-import Mapbox from "mapbox-gl";
-import { MglMap } from "vue-mapbox";
+import axios from "axios";
+import buffer from "@turf/buffer";
+import Vue from 'vue'
+
+import VueLayers from 'vuelayers';
+import 'vuelayers/lib/style.css';
+
+Vue.use(VueLayers)
 
 export default {
   name: "PageIndex",
-  components: {
-    MglMap
-  },
   data() {
     return {
       center: [23.7610, 61.4978],
       zoom: 10,
-      style: {
-        version: 8,
-        sources: {
-          "raster-tiles": {
-            type: "raster",
-            tiles: [
-              "https://stamen-tiles.a.ssl.fastly.net/terrain/{z}/{x}/{y}.jpg"
-            ],
-            tileSize: 256
-          },
-          "finland-osm": {
-            type: "geojson",
-            data: "http://localhost:8000/openstreetmap/data",
-          }
-        },
-        layers: [
-          {
-            id: "simple-tiles",
-            type: "raster",
-            source: "raster-tiles",
-            minzoom: 0,
-            maxzoom: 22
-          },
-          {
-            id: "finland-osm",
-            type: "circle",
-            source: "finland-osm",
-            paint: {
-              'circle-radius': 6,
-              'circle-color': 'blue'
-            },
-            filter: ['==', '$type', 'Point']
-          }
-        ]
-      }
-    };
-  }
+      osmData: false
+    }
+  },
 };
 </script>
 
 <style>
-.mgl-map-wrapper {
+.vl-map {
   width: 100vw;
-  height: 90vh;
+  height: 100vh;
+  position: absolute;
 }
 </style>

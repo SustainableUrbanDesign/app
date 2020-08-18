@@ -15,10 +15,10 @@
     "@quasar/extras": "^1.0.0",
     "@turf/buffer": "^5.1.5",
     "axios": "^0.19.2",
-    "mapbox-gl": "^1.11.0",
+    "ol": "^6.4.3",
     "quasar": "^1.0.0",
     "vue-i18n": "^8.0.0",
-    "vue-mapbox": "^0.4.1"
+    "vuelayers": "^0.11.27"
   },
   "devDependencies": {
     "@quasar/app": "^1.0.0",
