@@ -10,10 +10,9 @@
         <vl-source-osm></vl-source-osm>
       </vl-layer-tile>
 
-      <vl-layer-vector>
+      <vl-layer-vector :if="osmData">
         <vl-source-vector
-          url="http://localhost:8000/openstreetmap/data"
-          :features.sync="osmData"></vl-source-vector>
+          :features="osmData.features"></vl-source-vector>
 
         <vl-style-box>
           <vl-style-circle :radius="3">
@@ -22,11 +21,23 @@
           </vl-style-circle>
         </vl-style-box>
       </vl-layer-vector>
+      
+      <vl-layer-vector :if="buffers">
+        <vl-source-vector
+          :features="buffers.features"></vl-source-vector>
+
+        <vl-style-box>
+          <vl-style-stroke color="green" :width="3"></vl-style-stroke>
+          <vl-style-fill color="rgba(255,255,255,0.5)"></vl-style-fill>
+        </vl-style-box>
+      </vl-layer-vector>
+      
     </vl-map>
   </q-page>
 </template>
 
 <script>
+import axios from "axios";
 import buffer from "@turf/buffer";
 import Vue from 'vue'
 
@@ -44,6 +55,30 @@ export default {
       osmData: false
     }
   },
+  computed: {
+    buffers: function () {
+      if (this.osmData) {
+        const buffers =buffer(
+          this.osmData,
+          1000,
+          {
+            units: 'meters'
+          }
+        );
+
+        return buffers;
+      }
+
+      return false;
+    }
+  },
+  mounted() {
+    axios
+      .get('http://localhost:8000/openstreetmap/data')
+      .then((response) => {
+        this.osmData = response.data;
+      });
+  }
 };
 </script>
 
