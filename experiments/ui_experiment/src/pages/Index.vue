@@ -27,7 +27,6 @@
 </template>
 
 <script>
-import axios from "axios";
 import buffer from "@turf/buffer";
 import Vue from 'vue'
 
