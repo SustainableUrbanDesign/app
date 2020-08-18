@@ -6,7 +6,7 @@
           label="Buffer distance"
           v-model.number="bufferDistance"
           type="number"
-          dense="true"
+          :dense="true"
           class="q-mx-sm"
         />
 
@@ -16,8 +16,8 @@
           :options="bufferUnitsOptions"
           label="Units"
           stack-label
-          dense="true"
-          options-dense="true"
+          :dense="true"
+          :options-dense="true"
         />
       </div>
 
@@ -27,7 +27,9 @@
           :load-tiles-while-interacting="true"
           data-projection="EPSG:4326"
         >
-          <vl-view :zoom.sync="zoom" :center.sync="center"></vl-view>
+          <vl-view 
+            :zoom.sync="zoom" 
+            :center.sync="center"></vl-view>
 
           <vl-layer-tile id="osm">
             <vl-source-osm></vl-source-osm>
@@ -44,14 +46,10 @@
             </vl-style-box>
           </vl-layer-vector>
 
-          <vl-layer-vector :if="buffers">
-            <vl-source-vector :features="buffers.features"></vl-source-vector>
+          <vl-feature :if="union">
+            <vl-geom-multi-polygon :coordinates="union"></vl-geom-multi-polygon>
+          </vl-feature>
 
-            <vl-style-box>
-              <vl-style-stroke color="green" :width="3"></vl-style-stroke>
-
-            </vl-style-box>
-          </vl-layer-vector>
         </vl-map>
       </div>
     </div>
@@ -61,6 +59,7 @@
 <script>
 import axios from "axios";
 import buffer from "@turf/buffer";
+const polygonClipping = require('polygon-clipping')
 import Vue from "vue";
 
 import VueLayers from "vuelayers";
@@ -96,6 +95,19 @@ export default {
 
       return false;
     },
+    union: function () {
+      if (this.buffers) {
+        const bufferPolygons = this.buffers.features.map(function (buffer) {
+          return buffer.geometry.coordinates;
+        });
+        
+        const union = polygonClipping.union(...bufferPolygons)
+
+        return union;
+      }
+
+      return false;
+    }
   },
   mounted() {
     axios.get("http://localhost:8000/openstreetmap/data").then((response) => {
