@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@quasar/extras": "^1.0.0",
+    "@turf/buffer": "^5.1.5",
     "axios": "^0.18.1",
     "mapbox-gl": "^1.11.0",
     "quasar": "^1.0.0",
