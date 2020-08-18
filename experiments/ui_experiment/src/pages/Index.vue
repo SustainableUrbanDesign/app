@@ -39,7 +39,7 @@
             <vl-source-vector :features="osmData.features"></vl-source-vector>
 
             <vl-style-box>
-              <vl-style-circle :radius="3">
+              <vl-style-circle :radius="5">
                 <vl-style-fill color="green"></vl-style-fill>
                 <vl-style-stroke color="white"></vl-style-stroke>
               </vl-style-circle>
