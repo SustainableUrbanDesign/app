@@ -43,7 +43,8 @@ def create_osm_to_geojson_query(
                     { xmax }, { ymax },
                     { epsg }
                 ) ~ "geometry"
-                limit { limit }
+                AND "fclass" = 'supermarket'
+                --limit { limit }
             ) inputs
         ) features;
     """
