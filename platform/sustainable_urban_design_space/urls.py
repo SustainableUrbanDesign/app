@@ -23,6 +23,7 @@ from wagtail.core import urls as wagtail_urls
 from wagtail.documents import urls as wagtaildocs_urls
 
 from openstreetmap import urls as openstreetmap_urls
+from projects import urls as projects_urls
 
 urlpatterns = [
     path("admin/", admin.site.urls),
@@ -31,5 +32,6 @@ urlpatterns = [
     re_path(r"^documents/", include(wagtaildocs_urls)),
     re_path(r'^i18n/', include('django.conf.urls.i18n')),
     path("openstreetmap/", include(openstreetmap_urls)),
+    path("projects/", include(projects_urls)),
     re_path(r"", include(wagtail_urls)),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
