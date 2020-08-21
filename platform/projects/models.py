@@ -1,4 +1,6 @@
 from django.db import models
+from django.urls import reverse
+
 from wagtail.admin.edit_handlers import (
     FieldPanel,
     RichTextFieldPanel 
@@ -25,3 +27,11 @@ class Project(models.Model):
 
     def __str__(self):
         return self.title
+
+    def get_absolute_url(self):
+        return reverse(
+            "project_view",
+            kwargs={
+                "pk": self.pk,
+            }
+        )
