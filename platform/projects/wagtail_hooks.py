@@ -10,7 +10,6 @@ class ProjectAdmin(ModelAdmin):
     add_to_settings_menu = False
     exclude_from_explorer = False
     list_display = ('title',)
-    list_filter = ('title',)
     search_fields = ('title',)
 
 modeladmin_register(ProjectAdmin)
