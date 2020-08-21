@@ -4,7 +4,11 @@
     <h2>Projects</h2>
     <ul>
         {% for project in projects %}
-            <li>{{ project.title }}</li>
+            <li>
+                <a href="{{ project.get_absolute_url }}">
+                    {{ project.title }}
+                </a>
+            </li>
         {% endfor %}
     </ul>
 {% endblock %}
