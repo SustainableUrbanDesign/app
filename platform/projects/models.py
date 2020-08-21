@@ -8,7 +8,15 @@ from wagtail.core.fields import RichTextField
 
 class Project(models.Model):
     title = models.CharField(max_length=255)
-    description = RichTextField()
+    description = RichTextField(
+        features=[
+            'h2',
+            'h3',
+            'bold',
+            'italic',
+            'link'
+        ]
+    )
 
     panels = [
         FieldPanel("title"),
