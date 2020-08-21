@@ -1,7 +1,9 @@
 from django.db import models
-from wagtail.admin.edit_handlers import FieldPanel
+from wagtail.admin.edit_handlers import (
+    FieldPanel,
+    RichTextFieldPanel 
+)
 from wagtail.core.fields import RichTextField
-from wagtail.core.models import Page
 
 
 class Project(models.Model):
@@ -9,8 +11,8 @@ class Project(models.Model):
     description = RichTextField()
 
     panels = [
-        FieldPanel('title'),
-        FieldPanel('description'),
+        FieldPanel("title"),
+        RichTextFieldPanel("description"),
     ]
 
     def __str__(self):
