@@ -16,6 +16,11 @@ class Book(Page):
         FieldPanel("isbn"),
     ]
 
+    parent_page_types = [
+        "resources.ResourcesIndex"
+    ]
+    subpage_types = []
+
 class DataSource(Page):
     description = RichTextField(null=True)
     link = models.URLField()
@@ -25,6 +30,11 @@ class DataSource(Page):
         FieldPanel("link"),
     ]
 
+    parent_page_types = [
+        "resources.ResourcesIndex"
+    ]
+    subpage_types = []
+
 
 class ResourcesIndex(Page):
     max_count = 1
@@ -32,6 +42,7 @@ class ResourcesIndex(Page):
     parent_page_types = ["home.HomePage"]
     subpage_types = [
         "resources.Book",
+        "resources.DataSource",
     ]
 
     def get_context(self, request):
