@@ -79,7 +79,7 @@ After connecting pgAdmin to the PostGIS server, you will need to create a databa
 
 We will store OpenStreetMap data in a PostGIS enabled database. First, use pgAdmin create the database with the following settings:
 
-- Database: OpenStreetMap
+- Database: openstreetmap
 - Owner: postgres
 
 Then, enable the PostGIS extension on the `OpenStreetMap` database by running the following query from the pgAdmin Query Tool:
