@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
+    "wagtail.contrib.modeladmin",
     "django.contrib.staticfiles",
     "django.contrib.sites",
     "wagtail.contrib.forms",
