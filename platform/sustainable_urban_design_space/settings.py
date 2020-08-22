@@ -105,21 +105,21 @@ WSGI_APPLICATION = "sustainable_urban_design_space.wsgi.application"
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'suds',
-        'USER': 'postgres',
-        'PASSWORD': 'changeme',
-        'HOST': '127.0.0.1',
-        'PORT': '5432',
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "suds",
+        "USER": "postgres",
+        "PASSWORD": "changeme",
+        "HOST": "127.0.0.1",
+        "PORT": "5432",
     },
-    'openstreetmap': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'openstreetmap',
-        'USER': 'postgres',
-        'PASSWORD': 'changeme',
-        'HOST': '127.0.0.1',
-        'PORT': '5432',
+    "openstreetmap": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "openstreetmap",
+        "USER": "postgres",
+        "PASSWORD": "changeme",
+        "HOST": "127.0.0.1",
+        "PORT": "5432",
     },
 }
 

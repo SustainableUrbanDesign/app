@@ -5,6 +5,7 @@ from wagtail.admin.edit_handlers import FieldPanel
 from wagtail.core.fields import RichTextField
 from wagtail.core.models import Page
 
+
 class Book(Page):
     isbn = models.CharField(
         max_length=13,
@@ -16,10 +17,9 @@ class Book(Page):
         FieldPanel("isbn"),
     ]
 
-    parent_page_types = [
-        "resources.ResourcesIndex"
-    ]
+    parent_page_types = ["resources.ResourcesIndex"]
     subpage_types = []
+
 
 class DataSource(Page):
     description = RichTextField(null=True)
@@ -30,9 +30,7 @@ class DataSource(Page):
         FieldPanel("link"),
     ]
 
-    parent_page_types = [
-        "resources.ResourcesIndex"
-    ]
+    parent_page_types = ["resources.ResourcesIndex"]
     subpage_types = []
 
 
