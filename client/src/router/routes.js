@@ -1,4 +1,5 @@
 import MapPage from 'pages/Map.vue';
+import FoodMenu from 'components/FoodMenu.vue';
 
 const routes = [
   {
@@ -7,8 +8,10 @@ const routes = [
     children: [
       {
         path: '',
+        name: 'food',
         components: {
           default: MapPage,
+          inspector: FoodMenu,
         }
       }
     ]
