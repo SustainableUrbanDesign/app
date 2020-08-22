@@ -49,17 +49,6 @@
         </vl-map>
       </div>
     </div>
-
-    <q-footer elevated class="bg-grey-8 text-white">
-      <q-toolbar>
-        <q-toolbar-title>
-          <q-avatar>
-            <img src="https://cdn.quasar.dev/logo/svg/quasar-logo.svg" />
-          </q-avatar>
-          <span>Sustainable Urban Design App</span>
-        </q-toolbar-title>
-      </q-toolbar>
-    </q-footer>
   </q-page>
 </template>
 
