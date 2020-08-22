@@ -7,7 +7,7 @@ def create_osm_to_geojson_query(
     xmax=23.8,
     ymax=61.5,
     epsg=4326,
-    ):
+):
     """
     Create a quuery that returns GeoJSON data from OSM data in PostGIS.
     """

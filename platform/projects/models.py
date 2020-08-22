@@ -1,24 +1,13 @@
 from django.db import models
 from django.urls import reverse
 
-from wagtail.admin.edit_handlers import (
-    FieldPanel,
-    RichTextFieldPanel 
-)
+from wagtail.admin.edit_handlers import FieldPanel, RichTextFieldPanel
 from wagtail.core.fields import RichTextField
 
 
 class Project(models.Model):
     title = models.CharField(max_length=255)
-    description = RichTextField(
-        features=[
-            'h2',
-            'h3',
-            'bold',
-            'italic',
-            'link'
-        ]
-    )
+    description = RichTextField(features=["h2", "h3", "bold", "italic", "link"])
 
     panels = [
         FieldPanel("title"),
@@ -29,9 +18,4 @@ class Project(models.Model):
         return self.title
 
     def get_absolute_url(self):
-        return reverse(
-            "project_view",
-            kwargs={
-                "pk": self.pk,
-            }
-        )
+        return reverse("project_view", kwargs={"pk": self.pk,})

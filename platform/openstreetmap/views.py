@@ -7,11 +7,12 @@ import psycopg2
 
 from .queries import create_osm_to_geojson_query
 
+
 def get_osm_data(request):
     """
     Fetch OSM data from PostGIS in GeoJSON and return it in the response.
     """
-    
+
     osm_db = settings.DATABASES["openstreetmap"]
 
     connection = psycopg2.connect(
@@ -23,9 +24,7 @@ def get_osm_data(request):
 
     cursor = connection.cursor()
 
-    osm_query = create_osm_to_geojson_query(
-        table="osm_points_of_interest"
-    )
+    osm_query = create_osm_to_geojson_query(table="osm_points_of_interest")
 
     cursor.execute(osm_query)
 
