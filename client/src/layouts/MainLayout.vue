@@ -114,8 +114,12 @@
             </q-item-section>
 
             <q-item-section>Inspector</q-item-section>
+          </q-item>
 
-            <router-view name="inspector"></router-view>
+          <q-item>
+            <q-item-section>
+              <router-view name="inspector"></router-view>
+            </q-item-section>
           </q-item>
         </q-list>
       </q-scroll-area>
