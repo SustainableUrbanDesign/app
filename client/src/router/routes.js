@@ -1,10 +1,16 @@
+import MapPage from 'pages/Map.vue';
 
 const routes = [
   {
     path: '/',
     component: () => import('layouts/MainLayout.vue'),
     children: [
-      { path: '', component: () => import('pages/Index.vue') }
+      {
+        path: '',
+        components: {
+          default: MapPage,
+        }
+      }
     ]
   }
 ]
