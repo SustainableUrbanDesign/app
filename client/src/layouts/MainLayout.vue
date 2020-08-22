@@ -114,25 +114,16 @@
             </q-item-section>
 
             <q-item-section>Inspector</q-item-section>
+
+            <router-view name="inspector"></router-view>
           </q-item>
         </q-list>
       </q-scroll-area>
     </q-drawer>
 
     <q-page-container>
-      <router-view />
+      <router-view name="default"></router-view>
     </q-page-container>
-
-    <q-footer elevated class="bg-grey-8 text-white">
-      <q-toolbar>
-        <q-toolbar-title>
-          <q-avatar>
-            <img src="https://cdn.quasar.dev/logo/svg/quasar-logo.svg" />
-          </q-avatar>
-          <span>Sustainable Urban Design App</span>
-        </q-toolbar-title>
-      </q-toolbar>
-    </q-footer>
   </q-layout>
 </template>
 
@@ -141,8 +132,8 @@ export default {
   data() {
     return {
       right: false,
-      miniState: true
+      miniState: true,
     };
-  }
+  },
 };
 </script>
