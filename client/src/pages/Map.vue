@@ -1,25 +1,6 @@
 <template>
   <q-page class="flex">
     <div>
-      <div class="row q-mx-auto">
-        <q-input
-          label="Buffer distance"
-          v-model.number="bufferDistance"
-          type="number"
-          :dense="true"
-          class="q-mx-sm"
-        />
-
-        <q-select
-          v-model="bufferUnits"
-          :options="bufferUnitsOptions"
-          label="Units"
-          stack-label
-          :dense="true"
-          :options-dense="true"
-        />
-      </div>
-
       <div class="row">
         <vl-map
           :load-tiles-while-animating="true"
@@ -32,7 +13,7 @@
             <vl-source-osm></vl-source-osm>
           </vl-layer-tile>
 
-          <vl-layer-vector :if="osmData">
+          <vl-layer-vector :if="osmData != false">
             <vl-source-vector :features="osmData.features"></vl-source-vector>
 
             <vl-style-box>
@@ -43,7 +24,7 @@
             </vl-style-box>
           </vl-layer-vector>
 
-          <vl-feature :if="union">
+          <vl-feature :if="union != false">
             <vl-geom-multi-polygon :coordinates="union"></vl-geom-multi-polygon>
           </vl-feature>
         </vl-map>
@@ -70,14 +51,19 @@ export default {
       center: [23.761, 61.4978],
       zoom: 10,
       osmData: false,
-      bufferDistance: 1,
-      bufferUnits: "kilometers",
       bufferUnitsOptions: ["kilometers", "miles"],
     };
   },
   computed: {
+    bufferDistance() {
+      return this.$store.state.food.bufferDistance;
+    },
+    bufferUnits() {
+      return this.$store.state.food.bufferUnits;
+    },
     buffers: function () {
       if (this.osmData) {
+        console.log("we have osm data");
         const buffers = buffer(this.osmData, this.bufferDistance, {
           units: this.bufferUnits,
         });
@@ -89,6 +75,7 @@ export default {
     },
     union: function () {
       if (this.buffers) {
+        console.log("we have buffers");
         const bufferPolygons = this.buffers.features.map(function (buffer) {
           return buffer.geometry.coordinates;
         });
