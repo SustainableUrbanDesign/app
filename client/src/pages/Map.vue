@@ -13,18 +13,20 @@
             <vl-source-osm></vl-source-osm>
           </vl-layer-tile>
 
-          <vl-layer-vector :if="osmData != false">
-            <vl-source-vector :features="osmData.features"></vl-source-vector>
+          <div v-if="osmData">
+            <vl-layer-vector v-if="osmData.features">
+              <vl-source-vector :features="osmData.features"></vl-source-vector>
 
-            <vl-style-box>
-              <vl-style-circle :radius="5">
-                <vl-style-fill color="green"></vl-style-fill>
-                <vl-style-stroke color="white"></vl-style-stroke>
-              </vl-style-circle>
-            </vl-style-box>
-          </vl-layer-vector>
+              <vl-style-box>
+                <vl-style-circle :radius="5">
+                  <vl-style-fill color="green"></vl-style-fill>
+                  <vl-style-stroke color="white"></vl-style-stroke>
+                </vl-style-circle>
+              </vl-style-box>
+            </vl-layer-vector>
+          </div>
 
-          <vl-feature :if="union != false">
+          <vl-feature v-if="union">
             <vl-geom-multi-polygon :coordinates="union"></vl-geom-multi-polygon>
           </vl-feature>
         </vl-map>
@@ -50,7 +52,7 @@ export default {
     return {
       center: [23.761, 61.4978],
       zoom: 10,
-      osmData: false,
+      osmData: undefined,
       bufferUnitsOptions: ["kilometers", "miles"],
     };
   },
@@ -62,8 +64,7 @@ export default {
       return this.$store.state.food.bufferUnits;
     },
     buffers: function () {
-      if (this.osmData) {
-        console.log("we have osm data");
+      if (this.osmData != undefined) {
         const buffers = buffer(this.osmData, this.bufferDistance, {
           units: this.bufferUnits,
         });
@@ -71,11 +72,10 @@ export default {
         return buffers;
       }
 
-      return false;
+      return undefined;
     },
     union: function () {
-      if (this.buffers) {
-        console.log("we have buffers");
+      if (this.buffers != undefined) {
         const bufferPolygons = this.buffers.features.map(function (buffer) {
           return buffer.geometry.coordinates;
         });
@@ -85,12 +85,14 @@ export default {
         return union;
       }
 
-      return false;
+      return undefined;
     },
   },
   mounted() {
     axios.get("http://localhost:8000/openstreetmap/data").then((response) => {
-      this.osmData = response.data;
+      if (response.data != undefined) {
+        this.osmData = response.data;
+      }
     });
   },
 };
