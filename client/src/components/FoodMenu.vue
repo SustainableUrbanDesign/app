@@ -18,10 +18,26 @@ export default {
   name: "FoodMenu",
   data() {
     return {
-      bufferDistance: 1,
-      bufferUnits: "kilometers",
       bufferUnitsOptions: ["kilometers", "miles"],
     };
+  },
+  computed: {
+    bufferDistance: {
+      get() {
+        return this.$store.state.food.bufferDistance;
+      },
+      set(distance) {
+        this.$store.commit("food/setBufferDistance", distance);
+      },
+    },
+    bufferUnits: {
+      get() {
+        return this.$store.state.food.bufferUnits;
+      },
+      set(units) {
+        this.$store.commit("food/setBufferUnits", units);
+      },
+    },
   },
 };
 </script>
