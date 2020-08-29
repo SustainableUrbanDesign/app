@@ -1,5 +1,5 @@
-site_name: SustainableUrbanDesign.space
+site_name: Sustainable Urban Design Space
 nav:
     - Home: index.md
     - Impact: impact.md
-    - Resources: resources.md
+    #- Resources: resources.md
