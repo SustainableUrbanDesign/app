@@ -1,4 +1,4 @@
-# Welcome to Sustainable Urban Design Space
+# Welcome
 
 > "An Urban Designer's best friend" -- Kyle and Max
 
