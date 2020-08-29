@@ -26,7 +26,7 @@ Urban designers and community stakeholders can share, and collaborate on, design
 Peers and community stakeholders can review design ideas to help find strengths and weaknesses while converging on the best results.
 
 ## Track progress
-Once the design is in development, stakeholders can track the progress of the project to completion with regular updates provided by the developers.
+As the project progresses, the data are kept up-to-date with new observations allowing project stakeholders to track progress towards goals and see the result of their designs.
 
 ## Measure impact
-As the project progresses, the data are kept up-to-date with new observations allowing project stakeholders to track progress towards goals and see the result of their designs.
+An impact report describes how effectively the design improved the urban environment respective to the project goals.
