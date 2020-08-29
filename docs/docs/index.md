@@ -4,8 +4,8 @@
 
 This project is in early stages of research and experimentation.
 
-## Project brief
-The primary mission of this project is to provide a user-centric experience for designing sustainable urban environments.
+## Mission
+The mission of this project is to provide a user-centric platform for urban analysis and design with an emphasis on sustainability.
 
 ## Goals
 This project has several goals to inform the development roadmap:
