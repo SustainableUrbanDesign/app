@@ -42,7 +42,41 @@ We are using Postgres/PostGIS for the database backend. For convenience, we have
 docker-compose up
 ```
 
-You should then have a Postgres database accessible at port 5432 using the user `postgres` with the password `changeme`.
+This should result in the Postgres database management system running in the background.  You can connect to it using the pgAdmin graphical user interface. Navigate your web browser to at http://localhost and enter the default pgAdmin credentials:
+
+- email: pgadmin4@pgadmin.org
+- password: admin
+
+Once logged in to pgAdmin, create a server for this project. Right click on the **Servers** tree item and then click **Create** > **Server**. This will open a dialog box. Use the following settings, overwriting any that are already filled in:
+
+
+- Under the "General" tab:
+    - Name: suds
+- Under the "Connection" tab:
+    - Host: postgres
+    - Username: postgres
+    - Password: changeme
+
+and click Save.
+    
+Next, follow a similar procedure to create a a PostGIS enabled database to store OpenStreetMap data for this project. Right click on the **Databases** tree item under the newly created suds server and then click **Create** > **Database**. This will open another dialog box. Use the following setting:
+- Under the "General" tab:
+    - Database: OpenStreetMap
+    - Owner: postgres
+    
+and click Save.
+    
+Finaly, enable the PostGIS extension on the `OpenStreetMap` database. With the `OpenStreetMap` database highlighted in the tree, select "Query Tool" from the  "Tools" drop-down menu at the top of the window. Enter the following query in the query editor and click the play-shaped "Execute" icon at the top of the editor:
+
+```sql
+CREATE EXTENSION postgis;
+```
+
+Once the OpenStreetMap database is created, refer to the Jupyter notebook in the experiments/notebooks folder in order to import OSM data into PostGIS.
+
+**Notes:** The PostGIS database service should only be used for local development purposes and not deployed to the web.
+
+The Postgres database management system is accessible at port 5432 using the user `postgres` with the password `changeme`.
 
 You can override PostGIS and pgAdmin configuration prior to running `docker-compose` by creating any of the following environment variables:
 
@@ -52,43 +86,19 @@ You can override PostGIS and pgAdmin configuration prior to running `docker-comp
 - `PGADMIN_DEFAULT_PASSWORD`
 - `PGADMIN_LISTEN_PORT`
 
-**Note:** The PostGIS database service should only be used for local development purposes and not deployed to the web.
+If you want to rerun these installation instructions from scratch make sure you clean the docker environment with 
 
-#### pgAdmin
-
-You can access the pgAdmin graphical user interface at http://localhost
-
-The default pgAdmin login credentials are:
-- email: pgadmin4@pgadmin.org
-- password: admin
-
-Once logged in to pgAdmin, you will need to create a connection to the PostGIS database with the following default credentials:
-
-- host: postgres
-- user: postgres
-- password: changeme
-
-#### Django database
-
-After connecting pgAdmin to the PostGIS server, you will need to create a database for the Django project. Right click on the **Databases** tree item and then click **Create** > **Database**. Use the following settings:
-
-- Database: suds
-- Owner: postgres
+```
+docker system prune
+```
 
 #### OpenStreetMap database
 
 We will store OpenStreetMap data in a PostGIS enabled database. First, use pgAdmin create the database with the following settings:
 
 - Database: openstreetmap
-- Owner: postgres
 
-Then, enable the PostGIS extension on the `OpenStreetMap` database by running the following query from the pgAdmin Query Tool:
 
-```sql
-CREATE EXTENSION postgis;
-```
-
-Once the OpenStreetMap database is created, refer to the Jupyter notebook in the experiments/notebooks folder in order to import OSM data into PostGIS.
 
 ## Environment
 If you wish to keep the project's python environment separate from your global environment, you should create a [virtual environment](https://docs.python.org/3/library/venv.html)
