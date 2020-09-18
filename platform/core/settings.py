@@ -32,13 +32,7 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
-INSTALLED_APPS = [
-    "home",
-    "openstreetmap",
-    "patterns",
-    "projects",
-    "resources",
-    "users",
+DJANGO_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -46,6 +40,9 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "django.contrib.sites",
+]
+
+WAGTAIL_APPS = [
     "wagtail.contrib.forms",
     "wagtail.contrib.redirects",
     "wagtail.embeds",
@@ -60,12 +57,26 @@ INSTALLED_APPS = [
     "wagtail.contrib.modeladmin",
     "modelcluster",
     "taggit",
+]
+
+DJANGO_PACKAGE_APPS = [
     "allauth",
     "allauth.account",
     "allauth.socialaccount",
     "allauth.socialaccount.providers.github",
     "corsheaders",
 ]
+
+PROJECT_APPS = [
+    "home",
+    "openstreetmap",
+    "patterns",
+    "projects",
+    "resources",
+    "users",
+]
+
+INSTALLED_APPS = DJANGO_APPS + WAGTAIL_APPS + DJANGO_PACKAGE_APPS + PROJECT_APPS
 
 MIDDLEWARE = [
     "corsheaders.middleware.CorsMiddleware",
@@ -106,7 +117,7 @@ WSGI_APPLICATION = "core.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.postgresql",
+        "ENGINE": "django.contrib.gis.db.backends.postgis",
         "NAME": "suds",
         "USER": "postgres",
         "PASSWORD": "changeme",
