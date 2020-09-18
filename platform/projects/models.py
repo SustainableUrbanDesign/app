@@ -1,4 +1,5 @@
 from django.contrib.gis.db import models
+from django.contrib.gis.forms.widgets import OSMWidget
 from django.urls import reverse
 
 from wagtail.admin.edit_handlers import FieldPanel, RichTextFieldPanel
@@ -13,6 +14,7 @@ class Project(models.Model):
     panels = [
         FieldPanel("title"),
         RichTextFieldPanel("description"),
+        FieldPanel("geographic_area", widget=OSMWidget),
     ]
 
     def __str__(self):
