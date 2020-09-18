@@ -80,7 +80,7 @@ MIDDLEWARE = [
     "wagtail.contrib.redirects.middleware.RedirectMiddleware",
 ]
 
-ROOT_URLCONF = "sustainable_urban_design_space.urls"
+ROOT_URLCONF = "core.urls"
 
 TEMPLATES = [
     {
@@ -98,7 +98,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "sustainable_urban_design_space.wsgi.application"
+WSGI_APPLICATION = "core.wsgi.application"
 
 
 # Database
