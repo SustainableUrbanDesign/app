@@ -1,3 +1,8 @@
-from django.contrib import admin
+from django.contrib.gis import admin
 
-# Register your models here.
+from .models import Project
+
+
+@admin.register(Project)
+class ProjectAdmin(admin.OSMGeoAdmin):
+    pass
