@@ -10,3 +10,6 @@ class ClientAppSettings(BaseSetting):
 
     panels = [FieldPanel("url")]
 
+    class Meta:
+        verbose_name = "Client app"
+
