@@ -75,6 +75,7 @@ PROJECT_APPS = [
     "patterns",
     "projects",
     "resources",
+    "site_settings",
     "users",
 ]
 
