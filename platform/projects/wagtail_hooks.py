@@ -14,7 +14,7 @@ class ProjectAdminButtonHelper(PageButtonHelper):
         client_app_url = client_app_settings.url
 
         return {
-            # "url": client_app_settings.url,
+            # TODO: pass Project ID to client app URL
             "url": client_app_url,
             "label": text,
             "title": text,
