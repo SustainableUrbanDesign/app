@@ -1,14 +1,16 @@
 {% extends "base.html" %}
 
 {% block content %}
+<div class="container">
     <h2>Projects</h2>
     <ul>
         {% for project in projects %}
-            <li>
-                <a href="{{ project.get_absolute_url }}">
-                    {{ project.title }}
-                </a>
-            </li>
+        <li>
+            <a href="{{ project.get_absolute_url }}">
+                {{ project.title }}
+            </a>
+        </li>
         {% endfor %}
     </ul>
+</div>
 {% endblock %}

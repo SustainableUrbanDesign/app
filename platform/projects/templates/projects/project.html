@@ -3,7 +3,9 @@
 {% load wagtailcore_tags %}
 
 {% block content %}
-    <h1>{{ project.title }}</h1>
-    
+<div class="container">
+    <h2>{{ project.title }}</h2>
+
     {{ project.description | richtext }}
+</div>
 {% endblock %}
