@@ -4,48 +4,46 @@
     <a class="navbar-brand" href="/">Sustainable Urban Design Space</a>
 
     <span class="navbar-text">{% trans "An Urban Designer's best friend." %}</span>
-    
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse-section" aria-controls="navbarnavbar-collapse-sectionText" aria-expanded="false" aria-label="Toggle navigation">
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse-section"
+        aria-controls="navbarnavbar-collapse-sectionText" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbar-collapse-section">
         {% if user.is_authenticated %}
-            {% load account %}
+        {% load account %}
 
-            {% user_display user as user_display %}
+        {% user_display user as user_display %}
 
-            <span class="navbar-text ml-auto">
+        <span class="navbar-text ml-auto">
             {% blocktrans %}Welcome {{ user_display }}.{% endblocktrans %}
-            </span>
-            
-            <a
-                href="{% url 'account_logout' %}"
-                class="btn btn-outline-success ml-auto mr-2 mb-2">
-                {% trans "Logout" %}
-            </a>
+        </span>
+
+        <a href="{% url 'account_logout' %}" class="btn btn-outline-success ml-auto mr-2 mb-2">
+            {% trans "Logout" %}
+        </a>
         {% else %}
-            <a
-                href="{% url 'account_login' %}"
-                class="btn btn-outline-success ml-auto mr-2 mb-2">
-                {% trans "Login/Signup" %}
-            </a>
+        <a href="{% url 'account_login' %}" class="btn btn-outline-success ml-auto mr-2 mb-2">
+            {% trans "Login/Signup" %}
+        </a>
         {% endif %}
 
         <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
-          <input name="next" type="hidden" value="{{ redirect_to }}" />
-          <select name="language" onclick="Bonjour">
-              {% get_current_language as LANGUAGE_CODE %}
-              {% get_available_languages as LANGUAGES %}
-              {% get_language_info_list for LANGUAGES as languages %}
-              {% for language in languages %}
-                  <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %}      selected="selected"{% endif %}>
-                      {{ language.name_local }} ({{ language.code }})
-                  </option>
-              {% endfor %}
-          </select>
-          <input type="submit" value="Go" />
-      </form>
+            <input name="next" type="hidden" value="{{ redirect_to }}" />
+            <select name="language" onclick="Bonjour">
+                {% get_current_language as LANGUAGE_CODE %}
+                {% get_available_languages as LANGUAGES %}
+                {% get_language_info_list for LANGUAGES as languages %}
+                {% for language in languages %}
+                <option value="{{ language.code }}" {% if language.code == LANGUAGE_CODE %} selected="selected"
+                    {% endif %}>
+                    {{ language.name_local }} ({{ language.code }})
+                </option>
+                {% endfor %}
+            </select>
+            <input type="submit" value="Go" />
+        </form>
     </div>
 </nav>
