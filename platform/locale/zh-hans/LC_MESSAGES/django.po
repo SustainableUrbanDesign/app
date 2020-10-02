@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: templates/navbar.html:6
-msgid "An Urban Designer's best friend."
+msgid "An urban designer's best friend."
 msgstr "城市设计师最好的朋友"
 
 #: templates/navbar.html:20

@@ -19,8 +19,8 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: templates/navbar.html:6
-msgid "An Urban Designer's best friend."
-msgstr "Der beste Freund des Stadtplaners"
+msgid "An urban designer's best friend."
+msgstr "Der beste freund des stadtplaners"
 
 #: templates/navbar.html:20
 #, python-format
