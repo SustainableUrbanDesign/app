@@ -1,15 +1,21 @@
 {% extends "base.html" %}
+{% load wagtailcore_tags %}
 
 {% block content %}
 <div class="container">
     <h2>Projects</h2>
     <ul>
         {% for project in projects %}
-        <li>
-            <a href="{{ project.get_absolute_url }}">
-                {{ project.title }}
-            </a>
-        </li>
+        <div class="card col-md-4">
+            <div class="card-body">
+                <h2 class="card-title">{{ project.title }}</h2>
+                <p class="card-text">{{ project.description | richtext }}</p>
+                <a href="{% url 'project_view' project.pk %}" class="card-link">
+                    View project
+                </a>
+                <a href="{% url 'project_goals_view' project.pk %}" class="card-link">Edit project goals</a>
+            </div>
+        </div>
         {% endfor %}
     </ul>
 </div>
