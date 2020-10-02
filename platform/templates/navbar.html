@@ -1,10 +1,19 @@
 {% load i18n %}
+{% load account %}
+
+{% user_display user as user_display %}
 
 <nav class="navbar navbar-dark bg-primary navbar-expand-lg">
     <a class="navbar-brand mb-1" href="/">Sustainable Urban Design Space</a>
 
-    <span class="navbar-text text-light font-italic">{% trans "An urban designer's best friend." %}</span>
+    {% if user.is_authenticated %}
+    <span class="navbar-text text-light font-italic">
+        {% blocktrans %}Welcome, {{ user_display }}.{% endblocktrans %}
+    </span>
+    {% else %}
 
+    <span class="navbar-text text-light font-italic">{% trans "An urban designer's best friend." %}</span>
+    {% endif %}
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse-section"
         aria-controls="navbarnavbar-collapse-sectionText" aria-expanded="false" aria-label="Toggle navigation">
@@ -12,20 +21,20 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbar-collapse-section">
+        <ul class="navbar-nav ml-auto mr-auto">
+            <li class="nav-item">
+                <a class="nav-link font-weight-bold text-light" href="#">
+                    View projects
+                </a>
+            </li>
+        </ul>
+
         {% if user.is_authenticated %}
-        {% load account %}
-
-        {% user_display user as user_display %}
-
-        <span class="navbar-text ml-auto">
-            {% blocktrans %}Welcome {{ user_display }}.{% endblocktrans %}
-        </span>
-
-        <a href="{% url 'account_logout' %}" class="btn btn-outline-success ml-auto mr-2">
+        <a href="{% url 'account_logout' %}" class="btn btn-primary mr-2">
             {% trans "Logout" %}
         </a>
         {% else %}
-        <a href="{% url 'account_login' %}" class="btn btn-success ml-auto mr-2">
+        <a href="{% url 'account_login' %}" class="btn btn-primary ml-auto mr-2">
             {% trans "Login/Signup" %}
         </a>
         {% endif %}
