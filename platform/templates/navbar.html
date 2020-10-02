@@ -3,7 +3,7 @@
 <nav class="navbar navbar-dark bg-primary navbar-expand-lg">
     <a class="navbar-brand" href="/">Sustainable Urban Design Space</a>
 
-    <span class="text-light">{% trans "An Urban Designer's best friend." %}</span>
+    <span class="navbar-text text-light">{% trans "An Urban Designer's best friend." %}</span>
 
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse-section"
@@ -25,14 +25,14 @@
             {% trans "Logout" %}
         </a>
         {% else %}
-        <a href="{% url 'account_login' %}" class="btn btn-outline-success ml-auto mr-2 mb-2">
+        <a href="{% url 'account_login' %}" class="btn btn-success ml-auto mr-2 mb-2">
             {% trans "Login/Signup" %}
         </a>
         {% endif %}
 
-        <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
-            <input name="next" type="hidden" value="{{ redirect_to }}" />
-            <select name="language" onclick="Bonjour">
+        <form action="{% url 'set_language' %}" method="post" class="form-inline">{% csrf_token %}
+            <input name="next" type="hidden" value="{{ redirect_to }}" class="form-control mr-sm-2" />
+            <select name=" language" onclick="Bonjour" class="form-control mr-sm-2">
                 {% get_current_language as LANGUAGE_CODE %}
                 {% get_available_languages as LANGUAGES %}
                 {% get_language_info_list for LANGUAGES as languages %}
@@ -43,7 +43,7 @@
                 </option>
                 {% endfor %}
             </select>
-            <input type="submit" value="Go" />
+            <input type="submit" value="Translate" class="btn btn-outline-secondary my-2 my-sm-0" />
         </form>
     </div>
 </nav>
