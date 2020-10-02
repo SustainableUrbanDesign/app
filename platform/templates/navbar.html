@@ -1,7 +1,7 @@
 {% load i18n %}
 
 <nav class="navbar navbar-dark bg-primary navbar-expand-lg">
-    <a class="navbar-brand" href="/">Sustainable Urban Design Space</a>
+    <a class="navbar-brand mb-1" href="/">Sustainable Urban Design Space</a>
 
     <span class="navbar-text text-light">{% trans "An Urban Designer's best friend." %}</span>
 
@@ -21,11 +21,11 @@
             {% blocktrans %}Welcome {{ user_display }}.{% endblocktrans %}
         </span>
 
-        <a href="{% url 'account_logout' %}" class="btn btn-outline-success ml-auto mr-2 mb-2">
+        <a href="{% url 'account_logout' %}" class="btn btn-outline-success ml-auto mr-2">
             {% trans "Logout" %}
         </a>
         {% else %}
-        <a href="{% url 'account_login' %}" class="btn btn-success ml-auto mr-2 mb-2">
+        <a href="{% url 'account_login' %}" class="btn btn-success ml-auto mr-2">
             {% trans "Login/Signup" %}
         </a>
         {% endif %}
