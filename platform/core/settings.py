@@ -197,4 +197,4 @@ MEDIA_URL = "/media/"
 
 WAGTAIL_SITE_NAME = "Sustainable Urban Design Space"
 
-CORS_ORIGIN_ALLOW_ALL = True
+CORS_ORIGIN_ALLOW_ALL = False
