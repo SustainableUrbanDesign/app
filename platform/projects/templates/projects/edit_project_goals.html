@@ -17,7 +17,7 @@
                 <q-scroll-area class="fit">
                     <q-list padding>
                         <q-expansion-item id="identity" group="somegroup" icon="shopping_cart" label="Food"
-                            @show="switchMode">
+                            @show="switchMode" default-opened>
                             <q-card>
                                 <q-card-section>
                                     <q-input label="Buffer distance" v-model.number="bufferDistance" type="number"
@@ -33,7 +33,61 @@
                             @show="switchMode">
                             <q-card>
                                 <q-card-section>
-                                    Environment goals.
+                                    Environment goals like water quality and urban green spaces.
+                                </q-card-section>
+                            </q-card>
+                        </q-expansion-item>
+
+                        <q-expansion-item id="identity" group="somegroup" icon="electrical_services" label="Services"
+                            @show="switchMode">
+                            <q-card>
+                                <q-card-section>
+                                    Municipal services such as recycling or EV recharge stations.
+                                </q-card-section>
+                            </q-card>
+                        </q-expansion-item>
+
+                        <q-expansion-item id="identity" group="somegroup" icon="tram" label="Mobility"
+                            @show="switchMode">
+                            <q-card>
+                                <q-card-section>
+                                    Mobility services and infrastructure such as mass transport or bike routes.
+                                </q-card-section>
+                            </q-card>
+                        </q-expansion-item>
+
+                        <q-expansion-item id="identity" group="somegroup" icon="local_hospital" label="Health"
+                            @show="switchMode">
+                            <q-card>
+                                <q-card-section>
+                                    Access to healthcare.
+                                </q-card-section>
+                            </q-card>
+                        </q-expansion-item>
+
+                        <q-expansion-item id="identity" group="somegroup" icon="school" label="Education"
+                            @show="switchMode">
+                            <q-card>
+                                <q-card-section>
+                                    Access to schools.
+                                </q-card-section>
+                            </q-card>
+                        </q-expansion-item>
+
+                        <q-expansion-item id="identity" group="somegroup" icon="local_fire_department" label="Safety"
+                            @show="switchMode">
+                            <q-card>
+                                <q-card-section>
+                                    Safety from hazards and crime.
+                                </q-card-section>
+                            </q-card>
+                        </q-expansion-item>
+
+                        <q-expansion-item id="identity" group="somegroup" icon="child_care" label="Family"
+                            @show="switchMode">
+                            <q-card>
+                                <q-card-section>
+                                    Services to support families such as playgrounds and daycare.
                                 </q-card-section>
                             </q-card>
                         </q-expansion-item>
@@ -42,7 +96,7 @@
             </q-drawer>
 
 
-            <q-page class="flex">
+            <q-page>
 
                 <vl-map :load-tiles-while-animating="true" :load-tiles-while-interacting="true"
                     data-projection="EPSG:4326">
