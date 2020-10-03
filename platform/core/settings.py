@@ -27,7 +27,7 @@ SECRET_KEY = "-o=7gdw2jx$f-eo+63bqq3kbdy(#%vba2y8cj$u2l4=!b2xznz"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -197,4 +197,4 @@ MEDIA_URL = "/media/"
 
 WAGTAIL_SITE_NAME = "Sustainable Urban Design Space"
 
-CORS_ORIGIN_ALLOW_ALL = False
+CORS_ORIGIN_ALLOW_ALL = True
