@@ -34,12 +34,17 @@
 </head>
 
 <body class="{% block body_class %}{% endblock %}">
+    <div class="h-100 d-flex flex-column">
+        <div class="flex-column">
+            {% include "navbar.html" %}
+        </div>
+        <div class="flex-column flex-grow-1">
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+
     {% wagtailuserbar %}
 
-    {% include "navbar.html" %}
-    <div class="container">
-        {% block content %}{% endblock %}
-    </div>
 
     {# Global javascript #}
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
