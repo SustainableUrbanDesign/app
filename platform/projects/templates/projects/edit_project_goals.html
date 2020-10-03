@@ -124,7 +124,7 @@
         },
         mounted() {
             console.log("mounted")
-            fetch("http://localhost:8000/openstreetmap/data")
+            fetch("/openstreetmap/data")
                 .then(response => response.json())
                 .then((data) => {
                     if (data != undefined) {
