@@ -119,6 +119,14 @@ WSGI_APPLICATION = "core.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
+# TODO: parse DB_URL environment variable, if present
+# from urllib.parse import urlparse
+# parsed = urlparse("postgres://postgres:bed3d04deffd55b0eb5f8b0cc7df236e@dokku-postgres-demo-database:5432/demo_database")
+# parsed.username
+# parsed.password
+# parsed.hostname
+# Use default values somehow
+
 DATABASES = {
     "default": {
         "ENGINE": "django.contrib.gis.db.backends.postgis",
