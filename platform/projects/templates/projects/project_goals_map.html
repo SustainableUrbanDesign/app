@@ -1,0 +1,24 @@
+<vl-map :load-tiles-while-animating="true" :load-tiles-while-interacting="true" data-projection="EPSG:4326">
+    <vl-view :zoom.sync="zoom" :center.sync="center"></vl-view>
+
+    <vl-layer-tile id="osm">
+        <vl-source-osm></vl-source-osm>
+    </vl-layer-tile>
+
+    <div v-if="osmData">
+        <vl-layer-vector v-if="osmData.features">
+            <vl-source-vector :features="osmData.features"></vl-source-vector>
+
+            <vl-style-box>
+                <vl-style-circle :radius="5">
+                    <vl-style-fill color="green"></vl-style-fill>
+                    <vl-style-stroke color="white"></vl-style-stroke>
+                </vl-style-circle>
+            </vl-style-box>
+        </vl-layer-vector>
+    </div>
+
+    <vl-feature v-if="union">
+        <vl-geom-multi-polygon :coordinates="union"></vl-geom-multi-polygon>
+    </vl-feature>
+</vl-map>

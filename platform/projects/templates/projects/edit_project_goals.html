@@ -1,154 +1,30 @@
+{% extends "base.html" %}
 {% block content %}
-<div id="q-app">
-
-    <q-layout>
-        <q-page-container>
-            <q-header class="bg-primary text-white" height-hint="98">
-                <q-toolbar>
-                    <q-toolbar-title>
-                        <q-avatar color="bg-primary" text-color="white" icon="location_city" font-size="0.8em">
-                        </q-avatar>
-                        <span>Sustainable Urban Design</span>
-                    </q-toolbar-title>
-                </q-toolbar>
-            </q-header>
-
-            <q-drawer show-if-above :mini="miniState" :width="200" :breakpoint="500" bordered>
-                <q-scroll-area class="fit">
-                    <q-list padding>
-                        <q-expansion-item id="identity" group="somegroup" icon="shopping_cart" label="Food"
-                            @show="switchMode" default-opened>
-                            <q-card>
-                                <q-card-section>
-                                    <q-input label="Buffer distance" v-model.number="bufferDistance" type="number"
-                                        :dense="false"></q-input>
-
-                                    <q-select v-model="bufferUnits" :options="bufferUnitsOptions" label="Units"
-                                        stack-label :dense="false" :options-dense="false"></q-select>
-                                </q-card-section>
-                            </q-card>
-                        </q-expansion-item>
-
-                        <q-expansion-item id="identity" group="somegroup" icon="eco" label="Environment"
-                            @show="switchMode">
-                            <q-card>
-                                <q-card-section>
-                                    Environment goals like water quality and urban green spaces.
-                                </q-card-section>
-                            </q-card>
-                        </q-expansion-item>
-
-                        <q-expansion-item id="identity" group="somegroup" icon="electrical_services" label="Services"
-                            @show="switchMode">
-                            <q-card>
-                                <q-card-section>
-                                    Municipal services such as recycling or EV recharge stations.
-                                </q-card-section>
-                            </q-card>
-                        </q-expansion-item>
-
-                        <q-expansion-item id="identity" group="somegroup" icon="tram" label="Mobility"
-                            @show="switchMode">
-                            <q-card>
-                                <q-card-section>
-                                    Mobility services and infrastructure such as mass transport or bike routes.
-                                </q-card-section>
-                            </q-card>
-                        </q-expansion-item>
-
-                        <q-expansion-item id="identity" group="somegroup" icon="local_hospital" label="Health"
-                            @show="switchMode">
-                            <q-card>
-                                <q-card-section>
-                                    Access to healthcare.
-                                </q-card-section>
-                            </q-card>
-                        </q-expansion-item>
-
-                        <q-expansion-item id="identity" group="somegroup" icon="school" label="Education"
-                            @show="switchMode">
-                            <q-card>
-                                <q-card-section>
-                                    Access to schools.
-                                </q-card-section>
-                            </q-card>
-                        </q-expansion-item>
-
-                        <q-expansion-item id="identity" group="somegroup" icon="local_fire_department" label="Safety"
-                            @show="switchMode">
-                            <q-card>
-                                <q-card-section>
-                                    Safety from hazards and crime.
-                                </q-card-section>
-                            </q-card>
-                        </q-expansion-item>
-
-                        <q-expansion-item id="identity" group="somegroup" icon="child_care" label="Family"
-                            @show="switchMode">
-                            <q-card>
-                                <q-card-section>
-                                    Services to support families such as playgrounds and daycare.
-                                </q-card-section>
-                            </q-card>
-                        </q-expansion-item>
-                    </q-list>
-                </q-scroll-area>
-            </q-drawer>
-
-
-            <q-page>
-
-                <vl-map :load-tiles-while-animating="true" :load-tiles-while-interacting="true"
-                    data-projection="EPSG:4326">
-                    <vl-view :zoom.sync="zoom" :center.sync="center"></vl-view>
-
-                    <vl-layer-tile id="osm">
-                        <vl-source-osm></vl-source-osm>
-                    </vl-layer-tile>
-
-                    <div v-if="osmData">
-                        <vl-layer-vector v-if="osmData.features">
-                            <vl-source-vector :features="osmData.features"></vl-source-vector>
-
-                            <vl-style-box>
-                                <vl-style-circle :radius="5">
-                                    <vl-style-fill color="green"></vl-style-fill>
-                                    <vl-style-stroke color="white"></vl-style-stroke>
-                                </vl-style-circle>
-                            </vl-style-box>
-                        </vl-layer-vector>
-                    </div>
-
-                    <vl-feature v-if="union">
-                        <vl-geom-multi-polygon :coordinates="union"></vl-geom-multi-polygon>
-                    </vl-feature>
-                </vl-map>
-            </q-page>
-        </q-page-container>
-    </q-layout>
-
+<div id="vue-app">
+    <div class="row h-100 p-0 m-0">
+        <div class="col-sm-3 col-md-4 col-lg-2 p-0" style="background-color: rgba(0,0,0,0.03)">
+            {% include "projects/project_goals_sidebar.html" %}
+        </div>
+        <div class="col-sm-9 col-md-8 col-lg-10 p-0">
+            {% include "projects/project_goals_map.html" %}
+        </div>
+    </div>
 </div>
 {% endblock content %}
 
 {% block extra_css %}
-<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons" rel="stylesheet"
-    type="text/css">
-<link href="https://cdn.jsdelivr.net/npm/quasar@1.14.0/dist/quasar.min.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="https://unpkg.com/vuelayers/lib/style.css">
 
 <style>
-    .vl-map {
-        /* Subtract height of nav menu */
-        height: calc("100vh - 50px");
-        position: absolute;
+    #vue-app {
+        /* For some reason, height of 100% adds browser sidebar */
+        height: 99%
     }
 </style>
 {% endblock extra_css %}
 
 {% block extra_js %}
 <script src="https://cdn.jsdelivr.net/npm/vue@^2.0.0/dist/vue.js"></script>
-<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/quasar@1.14.0/dist/quasar.umd.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v5.3.0/build/ol.js"></script>
 <script src="https://unpkg.com/vuelayers/lib/index.umd.js"></script>
 <script src="/static/js/polygon-clipping.umd.min.js"></script>
@@ -158,7 +34,7 @@
 
 <script>
     new Vue({
-        el: '#q-app',
+        el: '#vue-app',
         data: function () {
             return {
                 center: [23.761, 61.4978],
