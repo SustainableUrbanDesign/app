@@ -1,5 +1,4 @@
 {% extends "base.html" %}
-{% load wagtailcore_tags %}
 
 {% block content %}
 <div class="container">
@@ -9,7 +8,7 @@
         <div class="card col-md-4">
             <div class="card-body">
                 <h2 class="card-title">{{ project.title }}</h2>
-                <p class="card-text">{{ project.description | richtext }}</p>
+                <p class="card-text">{{ project.description }}</p>
                 <a href="{% url 'project_view' project.pk %}" class="card-link">
                     View project
                 </a>

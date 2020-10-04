@@ -2,20 +2,11 @@ from django.contrib.gis.db import models
 from django.contrib.gis.forms.widgets import OSMWidget
 from django.urls import reverse
 
-from wagtail.admin.edit_handlers import FieldPanel, RichTextFieldPanel
-from wagtail.core.fields import RichTextField
-
 
 class Project(models.Model):
     title = models.CharField(max_length=255)
-    description = RichTextField(features=["h2", "h3", "bold", "italic", "link"])
+    description = models.TextField()
     geographic_area = models.PolygonField(geography=True, null=True, blank=True)
-
-    panels = [
-        FieldPanel("title"),
-        RichTextFieldPanel("description"),
-        FieldPanel("geographic_area", widget=OSMWidget),
-    ]
 
     def __str__(self):
         return self.title

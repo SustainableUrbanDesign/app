@@ -1,4 +1,4 @@
-# Wagtail/Django filesystem
+# Django filesystem
 media/
 
 # Docker compose filesystem
