@@ -52,7 +52,6 @@ DJANGO_PACKAGE_APPS = [
 ]
 
 PROJECT_APPS = [
-    "home",
     "openstreetmap",
     "patterns",
     "projects",
