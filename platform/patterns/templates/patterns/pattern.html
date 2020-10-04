@@ -11,16 +11,5 @@
     <div class="m-2">
         <p>Display image here.</p>
     </div>
-
-    {% if pattern.tags.all.count %}
-    <div class="tags">
-        <h2>Tags</h2>
-        {% for tag in pattern.tags.all %}
-            <a href="{% url 'pattern_tag_view' tag %}" class="btn btn-outline-primary btn-sm">
-                {{ tag }}
-            </a>
-        {% endfor %}
-    </div>
-    {% endif %}
 </div>
 {% endblock content %}
