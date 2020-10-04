@@ -1,0 +1,129 @@
+<template>
+    <div class="accordion" id="accordion">
+        <div class="card">
+            <div class="card-header d-flex align-items-center" id="food-header" data-toggle="collapse"
+                data-target="#food-body">
+                <i class="material-icons">shopping_cart</i>
+
+                <span class="ml-2">
+                    Food
+                </span>
+            </div>
+            <div id="food-body" class="collapse show" aria-labelledby="food-header" data-parent="#accordion">
+                <div class="card-body">
+                    <form class="form">
+                        <input label="Buffer distance" v-model.number="bufferDistance" type="number"
+                            class="form-control"></input>
+
+                        <select v-model="bufferUnits" label="Units" class="form-control">
+                            <option value="kilometers">Kilometers</option>
+                            <option value="miles">Miles</option>
+                        </select>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header d-flex align-items-center" id="environment-header" data-toggle="collapse"
+                data-target="#environment-body">
+                <i class="material-icons">eco</i>
+
+                <span class="ml-2">Environment</span>
+            </div>
+            <div id="environment-body" class="collapse" aria-labelledby="environment-header" data-parent="#accordion">
+                <div class="card-body">
+                    <p>Environment goals like water quality and urban green spaces.</p>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header d-flex align-items-center" id="services-header" data-toggle="collapse"
+                data-target="#services-body">
+
+                <i class="material-icons">electrical_services</i>
+
+                <span class="ml-2">
+                    Services
+                </span>
+
+            </div>
+            <div id="services-body" class="collapse" aria-labelledby="services-header" data-parent="#accordion">
+                <div class="card-body">
+                    <p>Municipal services such as recycling or EV recharge stations.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header d-flex align-items-center" id="mobility-header" data-toggle="collapse"
+                data-target="#mobility-body">
+
+                <i class="material-icons">tram</i>
+
+                <span class="ml-2">
+                    Mobility
+                </span>
+
+            </div>
+            <div id="mobility-body" class="collapse" aria-labelledby="mobility-header" data-parent="#accordion">
+                <div class="card-body">
+                    <p>Mobility services and infrastructure such as mass transport or bike routes.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header d-flex align-items-center" id="education-header" data-toggle="collapse"
+                data-target="#education-body">
+
+                <i class="material-icons">school</i>
+
+                <span class="ml-2">
+                    Education
+                </span>
+
+            </div>
+            <div id="education-body" class="collapse" aria-labelledby="education-header" data-parent="#accordion">
+                <div class="card-body">
+                    <p>Access to schools.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header d-flex align-items-center" id="safety-header" data-toggle="collapse"
+                data-target="#safety-body">
+
+                <i class="material-icons">local_fire_department</i>
+
+                <span class="ml-2">
+                    Safety
+                </span>
+
+            </div>
+            <div id="safety-body" class="collapse" aria-labelledby="safety-header" data-parent="#accordion">
+                <div class="card-body">
+                    <p>Safety from hazards and crime.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header d-flex align-items-center" id="family-header" data-toggle="collapse"
+                data-target="#family-body">
+
+                <i class="material-icons">child_care</i>
+
+                <span class="ml-2">
+                    Family
+                </span>
+
+            </div>
+            <div id="family-body" class="collapse" aria-labelledby="family-header" data-parent="#accordion">
+                <div class="card-body">
+                    <p>Services to support families such as playgrounds and daycare.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
