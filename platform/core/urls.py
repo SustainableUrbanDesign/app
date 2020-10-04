@@ -18,6 +18,7 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import include, path, re_path
 
+from front_page.views import FrontPageView
 from openstreetmap import urls as openstreetmap_urls
 from patterns import urls as patterns_urls
 from projects import urls as projects_urls
@@ -29,4 +30,5 @@ urlpatterns = [
     path("openstreetmap/", include(openstreetmap_urls)),
     path("patterns/", include(patterns_urls)),
     path("projects/", include(projects_urls)),
+    path("", FrontPageView.as_view(), name="front_page"),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
