@@ -12,13 +12,20 @@
             <div id="food-body" class="collapse show" aria-labelledby="food-header" data-parent="#accordion">
                 <div class="card-body">
                     <form class="form">
-                        <input label="Buffer distance" v-model.number="bufferDistance" type="number"
-                            class="form-control"></input>
+                        <div class="form-group">
+                            <label for="buffer-distance-select">Distance</label>
+                            <input id="buffer-distance-select" v-model.number="bufferDistance" type="number"
+                                class="form-control"></input>
+                        </div>
 
-                        <select v-model="bufferUnits" label="Units" class="form-control">
-                            <option value="kilometers">Kilometers</option>
-                            <option value="miles">Miles</option>
-                        </select>
+                        <div class="form-group">
+                            <label for="buffer-units-select">Units</label>
+                            <select id="buffer-units-select" v-model="bufferUnits" class="form-control">
+                                <option value="kilometers">Kilometers</option>
+                                <option value="miles">Miles</option>
+                            </select>
+                        </div>
+
                     </form>
                 </div>
             </div>
