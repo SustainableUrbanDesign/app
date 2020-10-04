@@ -27,6 +27,12 @@
                     {% trans "View projects" %}
                 </a>
             </li>
+
+            <li class="nav-item">
+                <a class="nav-link font-weight-bold" href="{% url 'patterns_list' %}">
+                    {% trans "Design Patterns" %}
+                </a>
+            </li>
         </ul>
 
         {% if user.is_authenticated %}

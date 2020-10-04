@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load wagtailcore_tags %}
+
+{% block content %}
+<div class="container">
+    <h1>Urban design patterns</h1>
+
+    {% for design_pattern in design_patterns %}
+
+    <ul class="list-group">
+        <li class="list-group-item">
+            <a href="{% url 'pattern_view' design_pattern.pk %}">
+                {{ design_pattern.title }}
+            </a>
+        </li>
+    </ul>
+
+    {% empty %}
+    </h1>No patterns found</h1>
+    <p>No design patterns found. Please add one.</p>
+    {% endfor %}
+</div>
+{% endblock %}
