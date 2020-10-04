@@ -1,11 +1,9 @@
 {% extends "base.html" %}
 
-{% load wagtailcore_tags %}
-
 {% block content %}
 <div class="container">
     <h2>{{ project.title }}</h2>
 
-    {{ project.description | richtext }}
+    {{ project.description }}
 </div>
 {% endblock %}

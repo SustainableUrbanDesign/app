@@ -43,24 +43,6 @@ DJANGO_APPS = [
     "django.contrib.sites",
 ]
 
-WAGTAIL_APPS = [
-    "wagtail.contrib.forms",
-    "wagtail.contrib.redirects",
-    "wagtail.contrib.settings",
-    "wagtail.embeds",
-    "wagtail.sites",
-    "wagtail.users",
-    "wagtail.snippets",
-    "wagtail.documents",
-    "wagtail.images",
-    "wagtail.search",
-    "wagtail.admin",
-    "wagtail.core",
-    "wagtail.contrib.modeladmin",
-    "modelcluster",
-    "taggit",
-]
-
 DJANGO_PACKAGE_APPS = [
     "allauth",
     "allauth.account",
@@ -79,7 +61,7 @@ PROJECT_APPS = [
     "users",
 ]
 
-INSTALLED_APPS = DJANGO_APPS + WAGTAIL_APPS + DJANGO_PACKAGE_APPS + PROJECT_APPS
+INSTALLED_APPS = DJANGO_APPS + DJANGO_PACKAGE_APPS + PROJECT_APPS
 
 MIDDLEWARE = [
     "corsheaders.middleware.CorsMiddleware",
@@ -91,7 +73,6 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    "wagtail.contrib.redirects.middleware.RedirectMiddleware",
 ]
 
 ROOT_URLCONF = "core.urls"
@@ -107,7 +88,6 @@ TEMPLATES = [
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
-                "wagtail.contrib.settings.context_processors.settings",
             ],
         },
     },
@@ -194,7 +174,5 @@ STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 MEDIA_URL = "/media/"
-
-WAGTAIL_SITE_NAME = "Sustainable Urban Design Space"
 
 CORS_ORIGIN_ALLOW_ALL = True

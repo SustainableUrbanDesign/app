@@ -1,7 +1,5 @@
 {% extends "base.html" %}
 
-{% load wagtailcore_tags%}
-
 {% block content %}
 
 <h1>{{ page.title }}</h1>
@@ -10,7 +8,7 @@
     <ul>
     {% for book in books.all %}
         <li>
-            <a href="{% pageurl book %}">
+            <a href="{% url "book_view" book.pk %}">
                 {{ book.title }}
             </a>
         </li>
