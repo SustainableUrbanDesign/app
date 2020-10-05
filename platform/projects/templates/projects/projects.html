@@ -3,7 +3,8 @@
 {% block content %}
 <div class="container">
     <h2>Projects</h2>
-    <ul>
+    {% if projects %}
+        <ul>
         {% for project in projects %}
         <div class="card col-md-4">
             <div class="card-body">
@@ -17,5 +18,8 @@
         </div>
         {% endfor %}
     </ul>
+    {% else %}
+    <p>No projects found.</p>
+    {% endif %}
 </div>
 {% endblock %}
