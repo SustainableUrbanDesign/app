@@ -2,7 +2,15 @@
 
 {% block content %}
 <div class="container">
-    <h2>Projects</h2>
+    <div class="row mt-3">
+        <h2>
+            Projects
+        </h2>
+        <button type="button" class="btn btn-outline-primary btn-sm ml-auto" data-toggle="modal" data-target="#create-project-modal">
+            Create project
+        </button>
+    </div>
+    
     {% if projects %}
         <ul>
         {% for project in projects %}
@@ -21,5 +29,25 @@
     {% else %}
     <p>No projects found.</p>
     {% endif %}
+</div>
+
+<div class="modal fade" id="create-project-modal" tabindex="-1" role="dialog" aria-labelledby="create-project-modal-label" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="create-project-modal-label">Create project</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
 </div>
 {% endblock %}
