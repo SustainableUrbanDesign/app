@@ -7,5 +7,5 @@ from .models import UrbanDesignPattern
 class UrbanDesignPatternForm(ModelForm):
     class Meta:
         model = UrbanDesignPattern
-        fields = ("title", "description")
+        fields = ("title", "description", "keywords",)
         
