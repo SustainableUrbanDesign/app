@@ -15,10 +15,18 @@
     {% for design_pattern in design_patterns %}
 
     <ul class="list-group">
-        <li class="list-group-item">
+        <li class="list-group-item d-flex justify-content-between">
             <a href="{% url 'pattern_view' design_pattern.pk %}">
                 {{ design_pattern.title }}
             </a>
+
+            {% if design_pattern.keywords %}
+                <div class="ml-auto">
+                    {% for keyword in design_pattern.keywords.all %}
+                        <span class="badge badge-light text-dark ml-1">{{ keyword }}</span>
+                    {% endfor %}
+                </div>
+            {% endif %}
         </li>
     </ul>
 
