@@ -35,6 +35,9 @@ Our team would love for people to help out in anyway they can, right now we're l
 ### Python
 If you dont have the latest version of python then do download it from [here](https://www.python.org/downloads/).
 
+### GDAL
+The [GDAL project](https://gdal.org/) is required as a dependency of GeoDjango. GDAL enables us to handle geospatial data formats, so that we can store information about locations of points of interest in urban environments. Please ensure that you [install GDAL](https://gdal.org/download.html#binaries) on your system.
+
 ### PostGIS
 We are using Postgres/PostGIS for the database backend. For convenience, we have included a Docker compose file that you may use to run a PostGIS container. With Docker installed on your local computer, run the following command from the project root directory in order to start up PostGIS:
 
