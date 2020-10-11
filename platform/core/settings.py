@@ -49,6 +49,7 @@ DJANGO_PACKAGE_APPS = [
     "allauth.socialaccount",
     "allauth.socialaccount.providers.github",
     "corsheaders",
+    "crispy_forms",
 ]
 
 PROJECT_APPS = [
