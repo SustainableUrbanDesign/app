@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from django.views import View
 from django.views.generic import DetailView, ListView
 
@@ -15,6 +15,20 @@ class ProjectListView(ListView):
         context = super().get_context_data(**kwargs)
         context["project_form"] = ProjectForm()
         return context
+
+    def post(self, request, *args, **kwargs):
+        project_form = ProjectForm(request.POST)
+
+        if project_form.is_valid():
+            project = project_form.save()
+
+            return redirect("project_view", pk=project.pk)
+        else:
+            context = {
+                "project_form": project_form,
+            }
+            
+            return render(request, self.template_name, context)
 
 
 class ProjectView(DetailView):
