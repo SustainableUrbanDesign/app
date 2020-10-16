@@ -13,7 +13,7 @@
 {% endblock content %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="https://unpkg.com/vuelayers/lib/style.css">
+{% include "projects/vuelayers_css.html" %}
 
 <style>
     #vue-app {
@@ -24,9 +24,8 @@
 {% endblock extra_css %}
 
 {% block extra_js %}
-<script src="https://cdn.jsdelivr.net/npm/vue@^2.0.0/dist/vue.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v5.3.0/build/ol.js"></script>
-<script src="https://unpkg.com/vuelayers/lib/index.umd.js"></script>
+{% include "projects/vue_js.html" %}
+{% include "projects/vuelayers_js.html" %}
 <script src="/static/js/polygon-clipping.umd.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Turf.js/5.1.6/turf.min.js"
     integrity="sha512-siRTCNQkkHmxAwPkDt8P/TUrtxSBTSxGyD2G+uliEjS7b5uLjAPgQxIwO6JWPaTQ8doAfBHcHPMut84oNdT/2g=="
