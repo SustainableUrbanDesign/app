@@ -38,14 +38,14 @@ var projectExtentMap = new ol.Map({
 
 // Project extent can only be a rectangle (box)
 draw = new ol.interaction.Draw({
-    source: projectExtentSource,
-    type: 'Circle',
-    geometryFunction: ol.interaction.Draw.createBox()
+  source: projectExtentSource,
+  type: 'Circle',
+  geometryFunction: ol.interaction.Draw.createBox()
 });
 projectExtentMap.addInteraction(draw);
 
 // Allow only one project extent
 // by clearing any previous element
-draw.on("drawstart", function(event) {
+draw.on("drawstart", function (event) {
   projectExtentSource.clear();
 });
