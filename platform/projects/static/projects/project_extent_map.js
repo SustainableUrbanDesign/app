@@ -1,3 +1,5 @@
+import Litedom from '//unpkg.com/litedom';
+
 var osmSource = new ol.source.OSM();
 
 var osmBaseMap = new ol.layer.Tile({
@@ -37,15 +39,30 @@ var projectExtentMap = new ol.Map({
 });
 
 // Project extent can only be a rectangle (box)
-draw = new ol.interaction.Draw({
+var draw = new ol.interaction.Draw({
   source: projectExtentSource,
   type: 'Circle',
   geometryFunction: ol.interaction.Draw.createBox()
 });
-projectExtentMap.addInteraction(draw);
 
 // Allow only one project extent
 // by clearing any previous element
 draw.on("drawstart", function (event) {
   projectExtentSource.clear();
 });
+
+Litedom({
+  el: '#editModeToggle',
+  data: {
+    editMode: 'off'
+  },
+  toggleEditMode() {
+    var editMode = this.data.editMode;
+
+    if (editMode === 'on') {
+      projectExtentMap.addInteraction(draw);
+    } else {
+      projectExtentMap.removeInteraction(draw);
+    }
+  }
+})
