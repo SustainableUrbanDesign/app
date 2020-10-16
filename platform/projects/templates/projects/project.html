@@ -27,18 +27,15 @@
 <script src="https://unpkg.com/elm-pep"></script>
 
 <script>
-// OSM base map
-var raster = new ol.layer.Tile({
-  source: new ol.source.OSM(),
+var osmSource = new ol.source.OSM();
+
+var osmBaseMap = new ol.layer.Tile({
+  source: osmSource,
 });
 
-// vector source to contain the project extent
-var source = new ol.source.Vector();
+var projectExtentSource = new ol.source.Vector();
 
-// vector layer to display the project extent
-var vector = new ol.layer.Vector({
-  source: source,
-  style: new ol.style.Style({
+var projectExtentVectorStyle = new ol.style.Style({
     fill: new ol.style.Fill({
       color: 'rgba(255, 255, 255, 0.2)',
     }),
@@ -52,32 +49,34 @@ var vector = new ol.layer.Vector({
         color: '#ffcc33',
       }),
     }),
-  }),
+  })
+
+var projectExtentVector = new ol.layer.Vector({
+  source: projectExtentSource,
+  style: projectExtentVectorStyle,
 });
 
-// combine layers into a map
-// and render into DOM
-var map = new ol.Map({
-  layers: [raster, vector],
+var projectExtentMap = new ol.Map({
+  layers: [osmBaseMap, projectExtentVector],
   target: 'map',
   view: new ol.View({
     center: [0, 0],
-    zoom: 2,
+    zoom: 4,
   }),
 });
 
-// Project extent can be a rectangle (box)
+// Project extent can only be a rectangle (box)
 draw = new ol.interaction.Draw({
-    source: source,
+    source: projectExtentSource,
     type: 'Circle',
     geometryFunction: ol.interaction.Draw.createBox()
 });
-map.addInteraction(draw);
+projectExtentMap.addInteraction(draw);
 
 // Allow only one project extent
 // by clearing any previous element
 draw.on("drawstart", function(event) {
-  source.clear();
-})
+  projectExtentSource.clear();
+});
 </script>
 {% endblock extra_js %}
