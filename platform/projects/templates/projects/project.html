@@ -5,5 +5,79 @@
     <h2>{{ project.title }}</h2>
 
     {{ project.description }}
+
+    <div id="map" class="map"></div>
 </div>
 {% endblock %}
+
+{% block extra_css %}
+{% include "projects/openlayers_css.html" %}
+<style>
+.map {
+    width: 100%;
+    height:400px;
+}
+</style>
+{% endblock extra_css %}
+
+{% block extra_js %}
+{% include "projects/openlayers_js.html" %}
+
+<!-- Pointer events polyfill for old browsers, see https://caniuse.com/#feat=pointer -->
+<script src="https://unpkg.com/elm-pep"></script>
+
+<script>
+// OSM base map
+var raster = new ol.layer.Tile({
+  source: new ol.source.OSM(),
+});
+
+// vector source to contain the project extent
+var source = new ol.source.Vector();
+
+// vector layer to display the project extent
+var vector = new ol.layer.Vector({
+  source: source,
+  style: new ol.style.Style({
+    fill: new ol.style.Fill({
+      color: 'rgba(255, 255, 255, 0.2)',
+    }),
+    stroke: new ol.style.Stroke({
+      color: '#ffcc33',
+      width: 2,
+    }),
+    image: new ol.style.Circle({
+      radius: 7,
+      fill: new ol.style.Fill({
+        color: '#ffcc33',
+      }),
+    }),
+  }),
+});
+
+// combine layers into a map
+// and render into DOM
+var map = new ol.Map({
+  layers: [raster, vector],
+  target: 'map',
+  view: new ol.View({
+    center: [0, 0],
+    zoom: 2,
+  }),
+});
+
+// Project extent can be a rectangle (box)
+draw = new ol.interaction.Draw({
+    source: source,
+    type: 'Circle',
+    geometryFunction: ol.interaction.Draw.createBox()
+});
+map.addInteraction(draw);
+
+// Allow only one project extent
+// by clearing any previous element
+draw.on("drawstart", function(event) {
+  source.clear();
+})
+</script>
+{% endblock extra_js %}
