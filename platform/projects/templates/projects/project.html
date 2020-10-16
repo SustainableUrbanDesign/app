@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block content %}
 <div class="container mt-3">
@@ -26,57 +27,5 @@
 <!-- Pointer events polyfill for old browsers, see https://caniuse.com/#feat=pointer -->
 <script src="https://unpkg.com/elm-pep"></script>
 
-<script>
-var osmSource = new ol.source.OSM();
-
-var osmBaseMap = new ol.layer.Tile({
-  source: osmSource,
-});
-
-var projectExtentSource = new ol.source.Vector();
-
-var projectExtentVectorStyle = new ol.style.Style({
-  fill: new ol.style.Fill({
-    color: 'rgba(255, 255, 255, 0.2)',
-  }),
-  stroke: new ol.style.Stroke({
-    color: '#ffcc33',
-    width: 2,
-  }),
-  image: new ol.style.Circle({
-    radius: 7,
-    fill: new ol.style.Fill({
-      color: '#ffcc33',
-    }),
-  }),
-});
-
-var projectExtentVector = new ol.layer.Vector({
-  source: projectExtentSource,
-  style: projectExtentVectorStyle,
-});
-
-var projectExtentMap = new ol.Map({
-  layers: [osmBaseMap, projectExtentVector],
-  target: 'map',
-  view: new ol.View({
-    center: [0, 0],
-    zoom: 4,
-  }),
-});
-
-// Project extent can only be a rectangle (box)
-draw = new ol.interaction.Draw({
-    source: projectExtentSource,
-    type: 'Circle',
-    geometryFunction: ol.interaction.Draw.createBox()
-});
-projectExtentMap.addInteraction(draw);
-
-// Allow only one project extent
-// by clearing any previous element
-draw.on("drawstart", function(event) {
-  projectExtentSource.clear();
-});
-</script>
+<script src="/static/projects/project_extent_map.js"></script>
 {% endblock extra_js %}
