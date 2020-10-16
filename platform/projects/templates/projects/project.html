@@ -5,9 +5,20 @@
 <div class="container mt-3">
     <h2>{{ project.title }}</h2>
 
-    {{ project.description }}
+    <p>
+      {{ project.description }}
+    </p>
 
-    <div id="map" class="map"></div>
+    <div id="editModeToggle">
+      <span>Edit mode:</span>
+
+          <input type="radio" name="salutation" @bind="editMode" value="off" @change="toggleEditMode"> Off
+
+
+          <input type="radio" name="salutation" @bind="editMode" value="on" @change="toggleEditMode"> On 
+    </div>
+
+    <div id="map" class="map mt-3"></div>
 </div>
 {% endblock %}
 
@@ -27,5 +38,5 @@
 <!-- Pointer events polyfill for old browsers, see https://caniuse.com/#feat=pointer -->
 <script src="https://unpkg.com/elm-pep"></script>
 
-<script src="/static/projects/project_extent_map.js"></script>
+<script src="/static/projects/project_extent_map.js" type="module"></script>
 {% endblock extra_js %}
