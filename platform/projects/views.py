@@ -1,7 +1,7 @@
 from django.shortcuts import redirect, render
 from django.views import View
 from django.views.generic import DetailView, ListView
-from django.views.generic.edit import CreateView, DeleteView, UpdateView
+from django.views.generic.edit import CreateView, UpdateView
 
 from .forms import ProjectForm
 from .models import Project
@@ -28,7 +28,7 @@ class ProjectListView(ListView):
             context = {
                 "project_form": project_form,
             }
-            
+
             return render(request, self.template_name, context)
 
 
@@ -40,7 +40,10 @@ class ProjectDetailView(DetailView):
 
 class ProjectCreateView(CreateView):
     model = Project
-    fields = ["title", "description",]
+    fields = [
+        "title",
+        "description",
+    ]
 
 
 class ProjectUpdateView(UpdateView):
