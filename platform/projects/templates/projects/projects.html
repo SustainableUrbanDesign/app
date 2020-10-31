@@ -19,7 +19,7 @@
             <div class="card-body">
                 <h2 class="card-title">{{ project.title }}</h2>
                 <p class="card-text">{{ project.description }}</p>
-                <a href="{% url 'project_detail_view' project.pk %}" class="card-link">
+                <a href="{% url 'project_view' project.pk %}" class="card-link">
                     View project
                 </a>
                 <a href="{% url 'project_goals_view' project.pk %}" class="card-link">Edit project goals</a>
