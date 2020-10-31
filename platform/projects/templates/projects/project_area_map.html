@@ -1,0 +1,28 @@
+<h2>
+    Project area
+</h2>
+
+<div id="map" class="map mt-3"></div>
+
+
+{% block extra_css %}
+{% include "projects/openlayers_css.html" %}
+<style>
+#map {
+    width: 100%;
+    height: 300px;
+}
+</style>
+{% endblock extra_css %}
+
+{% block extra_js %}
+{% include "projects/openlayers_js.html" %}
+
+<!-- Pointer events polyfill for old browsers, see https://caniuse.com/#feat=pointer -->
+<script src="https://unpkg.com/elm-pep"></script>
+
+<script 
+    src="/static/projects/project_area_map.js" 
+    data-editmode="{{ editmode }}" 
+    data-projectgeographicarea="{{ project.geographic_area.json }}"></script>
+{% endblock extra_js %}
