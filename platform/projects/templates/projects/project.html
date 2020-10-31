@@ -3,40 +3,19 @@
 
 {% block content %}
 <div class="container mt-3">
-    <h2>{{ project.title }}</h2>
+    <h1>
+      <span>
+        {{ project.title }}
+      </span>
+      <a href="{% url 'project_update_view' project.pk %}" class="btn btn-sm btn-outline-primary">
+        Edit
+      </a>
+    </h1>
 
     <p>
       {{ project.description }}
     </p>
 
-    <div id="editModeToggle">
-      <span>Edit mode:</span>
-
-          <input type="radio" name="salutation" @bind="editMode" value="off" @change="toggleEditMode"> Off
-
-
-          <input type="radio" name="salutation" @bind="editMode" value="on" @change="toggleEditMode"> On 
-    </div>
-
-    <div id="map" class="map mt-3"></div>
+    {% include "projects/project_area_map.html" %}
 </div>
 {% endblock %}
-
-{% block extra_css %}
-{% include "projects/openlayers_css.html" %}
-<style>
-.map {
-    width: 100%;
-    height:400px;
-}
-</style>
-{% endblock extra_css %}
-
-{% block extra_js %}
-{% include "projects/openlayers_js.html" %}
-
-<!-- Pointer events polyfill for old browsers, see https://caniuse.com/#feat=pointer -->
-<script src="https://unpkg.com/elm-pep"></script>
-
-<script src="/static/projects/project_extent_map.js" type="module"></script>
-{% endblock extra_js %}
