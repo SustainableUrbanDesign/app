@@ -31,7 +31,7 @@ class ProjectListView(ListView):
             return render(request, self.template_name, context)
 
 
-class ProjectView(DetailView):
+class ProjectDetailView(DetailView):
     model = Project
     context_object_name = "project"
     template_name = "projects/project.html"
