@@ -46,7 +46,7 @@ class ProjectCreateView(CreateView):
 class ProjectUpdateView(UpdateView):
     model = Project
     context_object_name = "project"
-    fields = ["title", "description",]
+    form_class = ProjectForm
 
 
 class EditProjectGoalsView(View):
