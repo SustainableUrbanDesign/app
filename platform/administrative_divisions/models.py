@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
+from django.urls import reverse
 
 from mptt.models import MPTTModel, TreeForeignKey
 
@@ -20,3 +21,6 @@ class AdministrativeDivision(MPTTModel):
 
     def __str__(self):
         return self.name
+
+    def get_absolute_url(self):
+        return reverse("administrative_division_view", kwargs={"pk": self.pk,})
