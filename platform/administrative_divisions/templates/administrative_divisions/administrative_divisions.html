@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="container">
+    <h1>
+        <span>
+            Administrative divisions
+        </span>
+        <a class="btn btn-outline-primary btn-sm ml-auto" href="{% url 'administrative_division_create_view' %}">
+            Create new
+        </a>
+    </h1>
+    
+    {% if administrative_divisions %}
+        <ul class="row">
+            {% for administrative_division in administrative_divisions %}
+            <div class="card col-md-4 mx-2">
+                <div class="card-body">
+                    <h2 class="card-title">{{ administrative_division.name }}</h2>
+                    <p class="card-text">{{ administrative_division.description }}</p>
+                    <a href="{% url 'administrative_division_view' administrative_division.pk %}" class="card-link">
+                        View
+                    </a>
+                    <a href="{% url 'administrative_division_update_view' administrative_division.pk %}" class="card-link">Edit</a>
+                </div>
+            </div>
+            {% endfor %}
+        </ul>
+    {% else %}
+    <p>No administrative divisions found.</p>
+    {% endif %}
+</div>
+{% endblock %}
