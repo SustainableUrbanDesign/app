@@ -50,6 +50,7 @@ DJANGO_PACKAGE_APPS = [
     "allauth.socialaccount.providers.github",
     "corsheaders",
     "crispy_forms",
+    "mptt",
     "taggit",
 ]
 
