@@ -19,6 +19,7 @@ from django.contrib import admin
 from django.urls import include, path, re_path
 
 from front_page.views import FrontPageView
+from administrative_divisions import urls as administrative_divisions_urls
 from openstreetmap import urls as openstreetmap_urls
 from patterns import urls as patterns_urls
 from projects import urls as projects_urls
@@ -27,6 +28,7 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("accounts/", include("allauth.urls")),
     re_path(r"^i18n/", include("django.conf.urls.i18n")),
+    path("administrative_divisions/", include(administrative_divisions_urls)),
     path("openstreetmap/", include(openstreetmap_urls)),
     path("patterns/", include(patterns_urls)),
     path("projects/", include(projects_urls)),
