@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <div class="container">
+        <form action="." method="POST">
+            {% csrf_token %}
+            <h1>
+                {% if administrative_division %}
+                    <span>Edit administrative division</span>
+                {% else %}
+                    <span>Create administrative division</span>
+                {% endif %}
+
+                <button type="submit" class="btn btn-sm btn-outline-success ml-auto">
+                    Save
+                </button>
+            </h1>        
+
+            <div class="row">
+                <div class="col">
+                    {{ form | crispy }}
+                </div>
+            </div>
+        </form>
+    </div>
+{% endblock content %}

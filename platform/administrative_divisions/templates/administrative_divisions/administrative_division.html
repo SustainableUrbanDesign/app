@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-3">
+    <h1>
+      <span>
+        {{ administrative_division.name }}
+      </span>
+      <a href="{% url 'administrative_division_update_view' administrative_division.pk %}" class="btn btn-sm btn-outline-primary">
+        Edit
+      </a>
+    </h1>
+
+    <p>
+      {{ administrative_division.description }}
+    </p>
+</div>
+{% endblock %}
