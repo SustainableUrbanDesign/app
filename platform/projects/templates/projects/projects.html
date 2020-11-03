@@ -3,19 +3,20 @@
 
 {% block content %}
 <div class="container">
-    <div class="row my-3">
-        <h1>
+    <h1>
+        <span>
             Projects
-        </h1>
-        <button type="button" class="btn btn-outline-primary btn-sm ml-auto" data-toggle="modal" data-target="#create-project-modal">
+        </span>
+
+        <a type="button" class="btn btn-outline-primary btn-sm ml-auto" href="{% url 'project_create_view' %}">
             Create project
-        </button>
-    </div>
+        </a>
+    </h1>
     
     {% if projects %}
-        <ul>
+        <ul class="row">
         {% for project in projects %}
-        <div class="card col-md-4">
+        <div class="card col-md-4 mx-2">
             <div class="card-body">
                 <h2 class="card-title">{{ project.title }}</h2>
                 <p class="card-text">{{ project.description }}</p>
@@ -30,30 +31,5 @@
     {% else %}
     <p>No projects found.</p>
     {% endif %}
-</div>
-
-<div class="modal fade" id="create-project-modal" tabindex="-1" role="dialog" aria-labelledby="create-project-modal-label" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="create-project-modal-label">Create project</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <form action="." method="post">
-                <div class="modal-body">
-                    {{ project_form.media }}
-                    
-                    {% csrf_token %}
-                    {{ project_form | crispy }}                
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Save</button>
-                </div>
-            </form>
-        </div>
-    </div>
 </div>
 {% endblock %}
