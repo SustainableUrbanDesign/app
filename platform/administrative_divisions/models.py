@@ -17,3 +17,6 @@ class AdministrativeDivision(MPTTModel):
     parent = TreeForeignKey(
         "self", on_delete=models.PROTECT, null=True, blank=True, related_name="children"
     )
+
+    def __str__(self):
+        return self.name
