@@ -23,6 +23,12 @@
     <div class="collapse navbar-collapse" id="navbar-collapse-section">
         <ul class="navbar-nav ml-auto mr-auto">
             <li class="nav-item">
+                <a class="nav-link font-weight-bold" href="{% url 'administrative_divisions_list' %}">
+                    {% trans "View administrative divisions" %}
+                </a>
+            </li>
+
+            <li class="nav-item">
                 <a class="nav-link font-weight-bold" href="{% url 'projects_list' %}">
                     {% trans "View projects" %}
                 </a>
