@@ -12,25 +12,6 @@ class ProjectListView(ListView):
     context_object_name = "projects"
     template_name = "projects/projects.html"
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context["project_form"] = ProjectForm()
-        return context
-
-    def post(self, request, *args, **kwargs):
-        project_form = ProjectForm(request.POST)
-
-        if project_form.is_valid():
-            project = project_form.save()
-
-            return redirect("project_view", pk=project.pk)
-        else:
-            context = {
-                "project_form": project_form,
-            }
-
-            return render(request, self.template_name, context)
-
 
 class ProjectDetailView(DetailView):
     model = Project
@@ -40,10 +21,7 @@ class ProjectDetailView(DetailView):
 
 class ProjectCreateView(CreateView):
     model = Project
-    fields = [
-        "title",
-        "description",
-    ]
+    form_class = ProjectForm
 
 
 class ProjectUpdateView(UpdateView):
