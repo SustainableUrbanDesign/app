@@ -87,7 +87,7 @@ if (editMode) {
     projectAreaSource.clear();
   });
 
-  var geographicAreaField = document.querySelector("[name='geographic_area'");
+  var geographicAreaField = document.querySelector("[name='geographic_area']");
 
   draw.on("drawend", function (event) {
     var GeoJSON = new ol.format.GeoJSON();
