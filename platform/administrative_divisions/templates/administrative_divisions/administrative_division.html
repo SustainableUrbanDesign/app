@@ -1,21 +1,42 @@
-{% extends "base.html" %}
-{% load static %}
+{% extends "base.html" %} 
+{% load static %} 
 
 {% block content %}
 <div class="container">
-    <h1>
-      <span>
-        {{ administrative_division.name }}
-      </span>
-      <a href="{% url 'administrative_division_update_view' administrative_division.pk %}" class="btn btn-sm btn-outline-primary">
-        Edit
-      </a>
-    </h1>
+  <h1>
+    <span> {{ administrative_division.name }} </span>
+    <a
+      href="{% url 'administrative_division_update_view' administrative_division.pk %}"
+      class="btn btn-sm btn-outline-primary"
+    >
+      Edit
+    </a>
+  </h1>
 
-    <p>
-      {{ administrative_division.description }}
-    </p>
+  <p>{{ administrative_division.description }}</p>
 
-    {% include "maps/area_map.html" with geographic_area=administrative_division.geographic_area %}
+  <div class="row">
+    <div class="col">
+      {% include "maps/area_map.html" with geographic_area=administrative_division.geographic_area %}
+    </div>
+
+    <div class="col">
+      {% if administrative_division.projects.count %}
+      <h2>Sub-projects</h2>
+
+      <ul class="list-group">
+        {% for project in administrative_division.projects.all %} 
+          <li class="list-group-item d-flex align-items-center">
+              <span class="material-icons text-muted">
+                construction
+              </span>
+
+              <a href="{{ project.get_absolute_url }}">{{ project }}</a>
+          </li>
+        {% endfor %}
+      </ul>      
+      {% endif %}
+    </div>
+  </div>
 </div>
 {% endblock %}
