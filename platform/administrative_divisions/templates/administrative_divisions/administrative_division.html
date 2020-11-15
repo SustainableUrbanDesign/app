@@ -15,5 +15,7 @@
     <p>
       {{ administrative_division.description }}
     </p>
+
+    {% include "maps/area_map.html" with geographic_area=administrative_division.geographic_area %}
 </div>
 {% endblock %}
