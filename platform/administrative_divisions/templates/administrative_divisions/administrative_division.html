@@ -16,11 +16,11 @@
   <p>{{ administrative_division.description }}</p>
 
   <div class="row">
-    <div class="col">
+    <div class="col-md-6">
       {% include "maps/area_map.html" with geographic_area=administrative_division.geographic_area %}
     </div>
 
-    <div class="col">
+    <div class="col-md-6">
       {% if administrative_division.projects.count %}
       <h2>Sub-projects</h2>
 
