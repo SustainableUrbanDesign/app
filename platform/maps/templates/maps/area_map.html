@@ -1,0 +1,21 @@
+{% load static %}
+{% include "maps/openlayers.html" %}
+
+<div id="area-map" class="map mt-3"></div>
+
+{% block extra_css %}
+<style>
+#area-map {
+    width: 100%;
+    height: 300px;
+}
+</style>
+{% endblock extra_css %}
+
+<!-- Pointer events polyfill for old browsers, see https://caniuse.com/#feat=pointer -->
+<script src="https://unpkg.com/elm-pep"></script>
+
+<script 
+    src="/static/maps/area_map.js" 
+    data-editmode="{{ editmode }}" 
+    data-geographicarea="{{ geographic_area.json }}"></script>
