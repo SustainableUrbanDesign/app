@@ -51,6 +51,13 @@ We are using Postgres/PostGIS for the database backend. For convenience, we have
 docker-compose up
 ```
 
+**Note:** If you are reinstalling you will need to delete the previous
+instance with the following command:
+
+```
+docker system prune
+```
+
 This should result in the Postgres database management system running in the background.  You can connect to it using the pgAdmin graphical user interface. Navigate your web browser to at http://localhost and enter the default pgAdmin credentials:
 
 - email: pgadmin4@pgadmin.org
@@ -68,20 +75,23 @@ Once logged in to pgAdmin, create a server for this project. Right click on the 
 
 and click Save.
     
-Next, follow a similar procedure to create a a PostGIS enabled database to store OpenStreetMap data for this project. Right click on the **Databases** tree item under the newly created suds server and then click **Create** > **Database**. This will open another dialog box. Use the following setting:
-- Under the "General" tab:
-    - Database: OpenStreetMap
+Next, create a PostGIS enabled database to store OpenStreetMap data for this project. Right click on the **Databases** tree item under the newly created suds server and then click **Create** > **Database**. This will open another dialog box. Use the following settings:
+    - Under the "General" tab:
+    - Database: openstreetmap
     - Owner: postgres
     
 and click Save.
     
-Finaly, enable the PostGIS extension on the `OpenStreetMap` database. With the `OpenStreetMap` database highlighted in the tree, select "Query Tool" from the  "Tools" drop-down menu at the top of the window. Enter the following query in the query editor and click the play-shaped "Execute" icon at the top of the editor:
+Enable the PostGIS extension on the `OpenStreetMap` database. With the `OpenStreetMap` database highlighted in the tree, select "Query Tool" from the  "Tools" drop-down menu at the top of the window. Enter the following query in the query editor and click the play-shaped "Execute" icon at the top of the editor:
 
 ```sql
 CREATE EXTENSION postgis;
 ```
 
-Once the OpenStreetMap database is created, refer to the Jupyter notebook in the experiments/notebooks folder in order to import OSM data into PostGIS.
+Finally, create another database to store projects and design patters. As above, right click on the **Databases** tree item under the newly created suds server and then click **Create** > **Database**. Use the following settings:
+    - Under the "General" tab:
+    - Database: suds
+    - Owner: postgres
 
 **Notes:** The PostGIS database service should only be used for local development purposes and not deployed to the web.
 
@@ -95,19 +105,18 @@ You can override PostGIS and pgAdmin configuration prior to running `docker-comp
 - `PGADMIN_DEFAULT_PASSWORD`
 - `PGADMIN_LISTEN_PORT`
 
-If you want to rerun these installation instructions from scratch make sure you clean the docker environment with 
+### Jupyter Notebook
 
-```
-docker system prune
-```
+The next step is to run through some Jupyter Notebooks that will import
+OpenStreetMap data into PostGIS. First, [download some OpenStreetMap data](http://download.geofabrik.de/) in the \*.shp.zip  format. Then create a the following directory:
 
-#### OpenStreetMap database
+'''
+mkdir -p notebooks/data/OSM
+'''
 
-We will store OpenStreetMap data in a PostGIS enabled database. First, use pgAdmin create the database with the following settings:
+and extract the downloaded archive into this location.
 
-- Database: openstreetmap
-
-
+Refer to the README in the notebooks folder to run through the Notebooks.
 
 ## Environment
 If you wish to keep the project's python environment separate from your global environment, you should create a [virtual environment](https://docs.python.org/3/library/venv.html)
@@ -124,16 +133,15 @@ Use [pip](https://pip.pypa.io/en/stable/installing/) to install the dependencies
 pip install -r requirements.txt
 ```
 
+## Running the server
+
 Move into the Project Folder:
 
 ```
 cd platform
 ```
 
-## Running the server
-
 ### Migrations
-
 
 Before you can run the project, you will need to set up the database by running the migrations:
 
