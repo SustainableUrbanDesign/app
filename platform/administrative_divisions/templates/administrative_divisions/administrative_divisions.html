@@ -14,14 +14,32 @@
     {% if administrative_divisions %}
         <ul class="row">
             {% for administrative_division in administrative_divisions %}
-            <div class="card col-md-4 m-2">
-                <div class="card-body">
-                    <h2 class="card-title">{{ administrative_division.name }}</h2>
-                    <p class="card-text">{{ administrative_division.description }}</p>
-                    <a href="{% url 'administrative_division_view' administrative_division.pk %}" class="card-link">
-                        View
-                    </a>
-                    <a href="{% url 'administrative_division_update_view' administrative_division.pk %}" class="card-link">Edit</a>
+
+            <div class="col col-md-4">
+                <div class="card text-center h-100">
+                    <div class="card-header">
+                        {{ administrative_division.name }}
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <p class="card-text">{{ administrative_division.description }}</p>
+                        
+                        <div class="buttons mt-auto">
+
+                            <a 
+                                class="card-link btn btn-outline-primary"
+                                href="{% url 'administrative_division_view' administrative_division.pk %}">
+                                View
+                            </a>
+                            <a 
+                                class="card-link btn btn-outline-primary"
+                                href="{% url 'administrative_division_update_view' administrative_division.pk %}">Edit</a>
+                        
+                        </div>
+                    </div>
+
+                    <div class="card-footer text-muted">
+                        {{ administrative_division.projects.count }} sub-project(s)
+                    </div>
                 </div>
             </div>
             {% endfor %}
