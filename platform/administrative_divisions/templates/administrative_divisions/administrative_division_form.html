@@ -24,7 +24,7 @@
                     {{ form | crispy }}
 
                     <div class="col">
-                        {% include "maps/area_map.html" with editmode="true" %}
+                        {% include "maps/area_map.html" with editmode="true" geographic_area=administrative_division.geographic_area %}
                     </div>
                 </div>
             </div>
