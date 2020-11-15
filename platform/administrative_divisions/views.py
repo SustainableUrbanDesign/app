@@ -3,6 +3,7 @@ from django.views import View
 from django.views.generic import DetailView, ListView
 from django.views.generic.edit import CreateView, UpdateView
 
+from .forms import AdministrativeDivisionForm
 from .models import AdministrativeDivision
 
 
@@ -21,21 +22,11 @@ class AdministrativeDivisionDetailView(DetailView):
 class AdministrativeDivisionCreateView(CreateView):
     model = AdministrativeDivision
     template_name = "administrative_divisions/administrative_division_form.html"
-    fields = [
-        "name",
-        "description",
-        "website",
-        "division_type",
-    ]
+    form_class = AdministrativeDivisionForm
 
 
 class AdministrativeDivisionUpdateView(UpdateView):
     model = AdministrativeDivision
     context_object_name = "administrative_division"
     template_name = "administrative_divisions/administrative_division_form.html"
-    fields = [
-        "name",
-        "description",
-        "website",
-        "division_type",
-    ]
+    form_class = AdministrativeDivisionForm
