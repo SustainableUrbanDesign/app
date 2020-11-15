@@ -16,6 +16,6 @@
       {{ project.description }}
     </p>
 
-    {% include "projects/project_area_map.html" %}
+    {% include "maps/area_map.html" with geographic_area=project.geographic_area %}
 </div>
 {% endblock %}
