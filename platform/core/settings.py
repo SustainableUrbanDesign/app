@@ -57,6 +57,7 @@ DJANGO_PACKAGE_APPS = [
 PROJECT_APPS = [
     "administrative_divisions.apps.AdministrativeDivisionsConfig",
     "front_page",
+    "maps",
     "openstreetmap",
     "patterns",
     "projects",
