@@ -3,19 +3,29 @@
 
 {% block content %}
 <div class="container mt-3">
-    <h1>
-      <span>
-        {{ project.title }}
-      </span>
-      <a href="{% url 'project_update_view' project.pk %}" class="btn btn-sm btn-outline-primary">
-        Edit
-      </a>
-    </h1>
+  <div class="d-flex align-items-center">
+    <span class="material-icons text-muted">
+      place
+    </span>
 
-    <p>
-      {{ project.description }}
-    </p>
+    <a href="{{ project.administrative_division.get_absolute_url }}">
+        {{ project.administrative_division }}
+    </a>
+  </div>
 
-    {% include "maps/area_map.html" with geographic_area=project.geographic_area %}
+  <h1>
+    <span>
+      {{ project.title }}
+    </span>
+    <a href="{% url 'project_update_view' project.pk %}" class="btn btn-sm btn-outline-primary">
+      Edit
+    </a>
+  </h1>
+
+  <p>
+    {{ project.description }}
+  </p>
+
+  {% include "maps/area_map.html" with geographic_area=project.geographic_area %}
 </div>
 {% endblock %}
