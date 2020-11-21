@@ -1,12 +1,12 @@
 from django import forms
 from django.forms import ModelForm
 
-from .models import AdministrativeDivision
+from .models import Place
 
 
-class AdministrativeDivisionForm(ModelForm):
+class PlaceForm(ModelForm):
     class Meta:
-        model = AdministrativeDivision
+        model = Place
         fields = (
             "name",
             "description",

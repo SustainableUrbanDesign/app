@@ -4,28 +4,28 @@
 {% block content %}
 <div class="container">
   <h1>
-    <span> {{ administrative_division.name }} </span>
+    <span> {{ place.name }} </span>
     <a
-      href="{% url 'administrative_division_update_view' administrative_division.pk %}"
+      href="{% url 'place_update_view' place.pk %}"
       class="btn btn-sm btn-outline-primary"
     >
       Edit
     </a>
   </h1>
 
-  <p>{{ administrative_division.description }}</p>
+  <p>{{ place.description }}</p>
 
   <div class="row">
     <div class="col-md-6">
-      {% include "maps/area_map.html" with geographic_area=administrative_division.geographic_area %}
+      {% include "maps/area_map.html" with geographic_area=place.geographic_area %}
     </div>
 
     <div class="col-md-6">
-      {% if administrative_division.projects.count %}
+      {% if place.projects.count %}
       <h2>Sub-projects</h2>
 
       <ul class="list-group">
-        {% for project in administrative_division.projects.all %} 
+        {% for project in place.projects.all %} 
           <li class="list-group-item d-flex align-items-center">
               <span class="material-icons text-muted">
                 construction

@@ -6,39 +6,39 @@
         <span>
             Administrative divisions
         </span>
-        <a class="btn btn-outline-primary btn-sm ml-auto" href="{% url 'administrative_division_create_view' %}">
+        <a class="btn btn-outline-primary btn-sm ml-auto" href="{% url 'place_create_view' %}">
             Create new
         </a>
     </h1>
     
-    {% if administrative_divisions %}
+    {% if places %}
         <ul class="row">
-            {% for administrative_division in administrative_divisions %}
+            {% for place in places %}
 
             <div class="col col-md-4">
                 <div class="card text-center h-100">
                     <div class="card-header">
-                        {{ administrative_division.name }}
+                        {{ place.name }}
                     </div>
                     <div class="card-body d-flex flex-column">
-                        <p class="card-text">{{ administrative_division.description }}</p>
+                        <p class="card-text">{{ place.description }}</p>
                         
                         <div class="buttons mt-auto">
 
                             <a 
                                 class="card-link btn btn-outline-primary"
-                                href="{% url 'administrative_division_view' administrative_division.pk %}">
+                                href="{% url 'place_view' place.pk %}">
                                 View
                             </a>
                             <a 
                                 class="card-link btn btn-outline-primary"
-                                href="{% url 'administrative_division_update_view' administrative_division.pk %}">Edit</a>
+                                href="{% url 'place_update_view' place.pk %}">Edit</a>
                         
                         </div>
                     </div>
 
                     <div class="card-footer text-muted">
-                        {{ administrative_division.projects.count }} sub-project(s)
+                        {{ place.projects.count }} sub-project(s)
                     </div>
                 </div>
             </div>
