@@ -10,7 +10,7 @@ class DivisionTypeChoices(models.TextChoices):
     MUNICIPALITY = "municipality", _("Municipality")
 
 
-class AdministrativeDivision(MPTTModel):
+class Place(MPTTModel):
     name = models.CharField(max_length=255)
     description = models.TextField()
     website = models.URLField()
@@ -24,4 +24,4 @@ class AdministrativeDivision(MPTTModel):
         return self.name
 
     def get_absolute_url(self):
-        return reverse("administrative_division_view", kwargs={"pk": self.pk,})
+        return reverse("places_view", kwargs={"pk": self.pk,})

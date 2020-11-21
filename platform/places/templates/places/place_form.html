@@ -8,10 +8,10 @@
         <form action="." method="POST">
             {% csrf_token %}
             <h1>
-                {% if administrative_division %}
-                    <span>Edit administrative division</span>
+                {% if place %}
+                    <span>Edit place</span>
                 {% else %}
-                    <span>Create administrative division</span>
+                    <span>Create place</span>
                 {% endif %}
 
                 <button type="submit" class="btn btn-sm btn-outline-success ml-auto">
@@ -24,7 +24,7 @@
                     {{ form | crispy }}
 
                     <div class="col">
-                        {% include "maps/area_map.html" with editmode="true" geographic_area=administrative_division.geographic_area %}
+                        {% include "maps/area_map.html" with editmode="true" geographic_area=place.geographic_area %}
                     </div>
                 </div>
             </div>
