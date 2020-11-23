@@ -11,3 +11,4 @@ class UserProfile(models.Model):
     family_name = models.CharField(max_length=255, null=True, blank=True)
     given_name = models.CharField(max_length=255, null=True, blank=True)
     job_title = models.CharField(max_length=255, null=True, blank=True)
+    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name="profile")
