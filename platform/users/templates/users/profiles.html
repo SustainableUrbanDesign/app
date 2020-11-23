@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h1>
+        <span>
+            People
+        </span>
+        <a class="btn btn-outline-primary btn-sm ml-auto" href="{% url 'user_profile_create_view' %}">
+            Create new
+        </a>
+    </h1>
+    
+    {% if user_profiles %}
+        <ul class="row">
+            {% for user_profile in user_profiles %}
+
+            <div class="col col-md-4">
+                <div class="card text-center h-100">
+                    <div class="card-header">
+                        {{ user_profile.name }}
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <p class="card-text">{{ user_profile.description }}</p>
+                        
+                        <div class="buttons mt-auto">
+
+                            <a 
+                                class="card-link btn btn-outline-primary"
+                                href="{% url 'user_profile_view' user_profile.pk %}">
+                                View
+                            </a>
+                            <a 
+                                class="card-link btn btn-outline-primary"
+                                href="{% url 'user_profile_update_view' user_profile.pk %}">Edit</a>
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </ul>
+    {% else %}
+    <p>No user profiles found.</p>
+    {% endif %}
+</div>
+{% endblock %}

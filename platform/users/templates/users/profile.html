@@ -1,0 +1,18 @@
+{% extends "base.html" %} 
+{% load static %} 
+
+{% block content %}
+<div class="container">
+  <h1>
+    <span> {{ user_profile.given_name }} {{ user_profile.family_name }} </span>
+    <a
+      href="{% url 'user_profile_update_view' user_profile.pk %}"
+      class="btn btn-sm btn-outline-primary"
+    >
+      Edit
+    </a>
+  </h1>
+
+  <p>{{ user_profile.job_title }}</p>
+</div>
+{% endblock %}
