@@ -4,7 +4,7 @@
 <div class="container">
     <h1>
         <span>
-            Administrative divisions
+            Places
         </span>
         <a class="btn btn-outline-primary btn-sm ml-auto" href="{% url 'place_create_view' %}">
             Create new
@@ -45,7 +45,7 @@
             {% endfor %}
         </ul>
     {% else %}
-    <p>No administrative divisions found.</p>
+    <p>No places found.</p>
     {% endif %}
 </div>
 {% endblock %}
