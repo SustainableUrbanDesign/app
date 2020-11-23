@@ -22,6 +22,7 @@ from front_page.views import FrontPageView
 from places import urls as places_urls
 from openstreetmap import urls as openstreetmap_urls
 from patterns import urls as patterns_urls
+from users import urls as users_urls
 from projects import urls as projects_urls
 
 urlpatterns = [
@@ -31,6 +32,7 @@ urlpatterns = [
     path("places/", include(places_urls)),
     path("openstreetmap/", include(openstreetmap_urls)),
     path("patterns/", include(patterns_urls)),
+    path("people/", include(users_urls)),
     path("projects/", include(projects_urls)),
     path("", FrontPageView.as_view(), name="front_page"),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
