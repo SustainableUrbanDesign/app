@@ -2,11 +2,15 @@ from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 from django.utils.translation import gettext, gettext_lazy as _
 
-from .models import User
+from .models import User, UserProfile
+
+
+@admin.register(UserProfile)
+class UserProfileAdmin(admin.ModelAdmin):
+    fields = ("user", "given_name", "family_name", "job_title")
 
 
 class CustomUserAdmin(UserAdmin):
-    # fields = ('name', 'title', 'view_birth_date')
     fieldsets = (
         (None, {"fields": ("username", "password")}),
         (

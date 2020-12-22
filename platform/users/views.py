@@ -1,7 +1,10 @@
+from django.contrib import messages
+from django.contrib.auth.decorators import login_required
+from django.shortcuts import render
 from django.views.generic import DetailView, ListView
 from django.views.generic.edit import CreateView, UpdateView
 
-#from .forms import UserProfileForm
+from .forms import UserProfileForm
 from .models import UserProfile
 
 
@@ -17,16 +20,21 @@ class UserProfileDetailView(DetailView):
     template_name = "users/profile.html"
 
 
-class UserProfileCreateView(CreateView):
-    model = UserProfile
-    template_name = "users/profile_form.html"
-    #form_class = UserProfileForm
-    fields = ("given_name", "family_name", "job_title")
+# TODO: consider whether/how to convert this to a class-based view
+@login_required
+def edit_profile(request):
+    if request.method == "POST":
+        profile_form = UserProfileForm(
+            instance=request.user.profile,
+            data=request.POST,
+        )
 
+        if profile_form.is_valid():
+            profile_form.save()
+            messages.success(request, "Profile saved")
+        else:
+            messages.error(request, "Error saving profile")
+    else:
+        profile_form = UserProfileForm(instance=request.user.profile)
 
-class UserProfileUpdateView(UpdateView):
-    model = UserProfile
-    context_object_name = "profile"
-    template_name = "users/profile_form.html"
-    #form_class = UserProfileForm
-    fields = ("given_name", "family_name", "job_title")
+    return render(request, "users/my_profile.html", {"profile_form": profile_form})
