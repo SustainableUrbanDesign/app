@@ -1,4 +1,6 @@
 {% extends "base.html" %}
+
+{% load i18n %}
 {% load static %}
 
 {% block content %}
@@ -18,7 +20,7 @@
       {{ project.title }}
     </span>
     <a href="{% url 'project_update_view' project.pk %}" class="btn btn-sm btn-outline-primary">
-      Edit
+      {% trans "Edit" %}
     </a>
   </h1>
 

@@ -1,11 +1,12 @@
 {% extends "base.html" %}
 
+{% load i18n %}
 {% load crispy_forms_tags %}
 
 {% block content %}
     <div class="container">
         <h1>
-            My profile
+            {% trans "My profile" %}
         </h1>   
 
         <form action="." method="POST">
@@ -16,7 +17,7 @@
             <button 
                 type="submit" 
                 class="btn btn-sm btn-outline-success mt-2">
-                Save
+                {% trans "Save" %}
             </button>   
         </form>
     </div>

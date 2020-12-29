@@ -1,15 +1,17 @@
-{% extends "base.html" %} 
+{% extends "base.html" %}
+
+{% load i18n %}
 {% load static %} 
 
 {% block content %}
 <div class="container">
   <h1>
-    <span> {{ place.name }} </span>
+    <span>{{ place.name }}</span>
     <a
       href="{% url 'place_update_view' place.pk %}"
       class="btn btn-sm btn-outline-primary"
     >
-      Edit
+      {% trans "Edit" %}
     </a>
   </h1>
 
@@ -22,7 +24,9 @@
 
     <div class="col-md-6">
       {% if place.projects.count %}
-      <h2>Sub-projects</h2>
+      <h2>
+        {% trans "Sub-projects" %}
+      </h2>
 
       <ul class="list-group">
         {% for project in place.projects.all %} 

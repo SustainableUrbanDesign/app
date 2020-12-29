@@ -1,13 +1,15 @@
 {% extends "base.html" %}
 
+{% load i18n %}
+
 {% block content %}
 <div class="container">
     <h1>
         <span>
-            People
+            {% trans "People" %}
         </span>
         <a class="btn btn-outline-primary btn-sm ml-auto" href="{% url 'user_profile_create_view' %}">
-            Create new
+            {% trans "Create new" %}
         </a>
     </h1>
     
@@ -24,16 +26,11 @@
                         <p class="card-text">{{ user_profile.description }}</p>
                         
                         <div class="buttons mt-auto">
-
                             <a 
                                 class="card-link btn btn-outline-primary"
                                 href="{% url 'user_profile_view' user_profile.pk %}">
-                                View
+                                {% trans "View" %}
                             </a>
-                            <a 
-                                class="card-link btn btn-outline-primary"
-                                href="{% url 'user_profile_update_view' user_profile.pk %}">Edit</a>
-                        
                         </div>
                     </div>
                 </div>
@@ -41,7 +38,9 @@
             {% endfor %}
         </ul>
     {% else %}
-    <p>No user profiles found.</p>
+    <p>
+        {% trans "No user profiles found." %}
+    </p>
     {% endif %}
 </div>
 {% endblock %}
