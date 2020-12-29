@@ -54,9 +54,11 @@
         </a>
         {% endif %}
 
-        <form action="{% url 'set_language' %}" method="post" class="form-inline mb-1">{% csrf_token %}
+        <form action="{% url 'set_language' %}" method="post" class="form-inline mb-1">
+            {% csrf_token %}
             <input name="next" type="hidden" value="{{ redirect_to }}" class="form-control mr-sm-2" />
-            <select name=" language" onclick="Bonjour" class="form-control mr-sm-2">
+            
+            <select name="language" class="form-control mr-sm-2">
                 {% get_current_language as LANGUAGE_CODE %}
                 {% get_available_languages as LANGUAGES %}
                 {% get_language_info_list for LANGUAGES as languages %}
@@ -67,6 +69,7 @@
                 </option>
                 {% endfor %}
             </select>
+            
             <input type="submit" value="Translate" class="btn btn-outline-secondary" />
         </form>
     </div>
