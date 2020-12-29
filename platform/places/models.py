@@ -24,4 +24,4 @@ class Place(MPTTModel):
         return self.name
 
     def get_absolute_url(self):
-        return reverse("places_view", kwargs={"pk": self.pk,})
+        return reverse("place_view", kwargs={"pk": self.pk,})
