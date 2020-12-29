@@ -1,5 +1,9 @@
 {% extends "base.html" %}
 
+{% load i18n %}
+
 {% block content %}
-    <p>You are now logged out from Sustainable Urban Design.</p>
+    <p>
+        {% trans "You are now logged out from Sustainable Urban Design." %}
+    </p>
 {% endblock content %}

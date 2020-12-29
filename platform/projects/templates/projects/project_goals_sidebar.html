@@ -1,3 +1,5 @@
+{% load i18n %}
+
 <template>
     <div class="accordion" id="accordion">
         <div class="card">
@@ -6,23 +8,31 @@
                 <i class="material-icons">shopping_cart</i>
 
                 <span class="ml-2">
-                    Food
+                    {% trans "Food" %}
                 </span>
             </div>
             <div id="food-body" class="collapse show" aria-labelledby="food-header" data-parent="#accordion">
                 <div class="card-body">
                     <form class="form">
                         <div class="form-group">
-                            <label for="buffer-distance-select">Distance</label>
+                            <label for="buffer-distance-select">
+                                {% trans "Distance" %}
+                            </label>
                             <input id="buffer-distance-select" v-model.number="bufferDistance" type="number"
                                 class="form-control"></input>
                         </div>
 
                         <div class="form-group">
-                            <label for="buffer-units-select">Units</label>
+                            <label for="buffer-units-select">
+                                {% trans "Units" %}
+                            </label>
                             <select id="buffer-units-select" v-model="bufferUnits" class="form-control">
-                                <option value="kilometers">Kilometers</option>
-                                <option value="miles">Miles</option>
+                                <option value="kilometers">
+                                    {% trans "Kilometers" %}
+                                </option>
+                                <option value="miles">
+                                    {% trans "Miles" %}
+                                </option>
                             </select>
                         </div>
 
@@ -35,11 +45,15 @@
                 data-target="#environment-body">
                 <i class="material-icons">eco</i>
 
-                <span class="ml-2">Environment</span>
+                <span class="ml-2">
+                    {% trans "Environment" %}
+                </span>
             </div>
             <div id="environment-body" class="collapse" aria-labelledby="environment-header" data-parent="#accordion">
                 <div class="card-body">
-                    <p>Environment goals like water quality and urban green spaces.</p>
+                    <p>
+                        {% trans "Environment goals like water quality and urban green spaces." %}
+                    </p>
                 </div>
             </div>
         </div>
@@ -50,13 +64,15 @@
                 <i class="material-icons">electrical_services</i>
 
                 <span class="ml-2">
-                    Services
+                    {% trans "Services" %}
                 </span>
 
             </div>
             <div id="services-body" class="collapse" aria-labelledby="services-header" data-parent="#accordion">
                 <div class="card-body">
-                    <p>Municipal services such as recycling or EV recharge stations.</p>
+                    <p>
+                        {% trans "Municipal services such as recycling or EV recharge stations." %}
+                    </p>
                 </div>
             </div>
         </div>
@@ -68,13 +84,15 @@
                 <i class="material-icons">tram</i>
 
                 <span class="ml-2">
-                    Mobility
+                    {% trans "Mobility" %}
                 </span>
 
             </div>
             <div id="mobility-body" class="collapse" aria-labelledby="mobility-header" data-parent="#accordion">
                 <div class="card-body">
-                    <p>Mobility services and infrastructure such as mass transport or bike routes.</p>
+                    <p>
+                        {% trans "Mobility services and infrastructure such as mass transport or bike routes." %}
+                    </p>
                 </div>
             </div>
         </div>
@@ -86,13 +104,15 @@
                 <i class="material-icons">school</i>
 
                 <span class="ml-2">
-                    Education
+                    {% trans "Education" %}
                 </span>
 
             </div>
             <div id="education-body" class="collapse" aria-labelledby="education-header" data-parent="#accordion">
                 <div class="card-body">
-                    <p>Access to schools.</p>
+                    <p>
+                        {% trans "Access to schools." %}
+                    </p>
                 </div>
             </div>
         </div>
@@ -104,13 +124,15 @@
                 <i class="material-icons">local_fire_department</i>
 
                 <span class="ml-2">
-                    Safety
+                    {% trans "Safety" %}
                 </span>
 
             </div>
             <div id="safety-body" class="collapse" aria-labelledby="safety-header" data-parent="#accordion">
                 <div class="card-body">
-                    <p>Safety from hazards and crime.</p>
+                    <p>
+                        {% trans "Safety from hazards and crime." %}
+                    </p>
                 </div>
             </div>
         </div>
@@ -122,13 +144,15 @@
                 <i class="material-icons">child_care</i>
 
                 <span class="ml-2">
-                    Family
+                    {% trans "Family" %}
                 </span>
 
             </div>
             <div id="family-body" class="collapse" aria-labelledby="family-header" data-parent="#accordion">
                 <div class="card-body">
-                    <p>Services to support families such as playgrounds and daycare.</p>
+                    <p>
+                        {% trans "Services to support families such as playgrounds and daycare." %}
+                    </p>
                 </div>
             </div>
         </div>

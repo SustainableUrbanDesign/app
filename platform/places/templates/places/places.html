@@ -1,13 +1,15 @@
 {% extends "base.html" %}
 
+{% load i18n %}
+
 {% block content %}
 <div class="container">
     <h1>
         <span>
-            Places
+            {% trans "Places" %}
         </span>
         <a class="btn btn-outline-primary btn-sm ml-auto" href="{% url 'place_create_view' %}">
-            Create new
+            {% trans "Create new" %}
         </a>
     </h1>
     
@@ -28,24 +30,28 @@
                             <a 
                                 class="card-link btn btn-outline-primary"
                                 href="{% url 'place_view' place.pk %}">
-                                View
+                                {% trans "View" %}
                             </a>
                             <a 
                                 class="card-link btn btn-outline-primary"
-                                href="{% url 'place_update_view' place.pk %}">Edit</a>
+                                href="{% url 'place_update_view' place.pk %}">
+                                {% trans "Edit" %}
+                            </a>
                         
                         </div>
                     </div>
 
                     <div class="card-footer text-muted">
-                        {{ place.projects.count }} sub-project(s)
+                        {% blocktrans with count=place.projects.count %}
+                            {{ count }} sub-project(s)
+                        {% endblocktrans %}
                     </div>
                 </div>
             </div>
             {% endfor %}
         </ul>
     {% else %}
-    <p>No places found.</p>
+    <p>{% trans "No places found." %}</p>
     {% endif %}
 </div>
 {% endblock %}

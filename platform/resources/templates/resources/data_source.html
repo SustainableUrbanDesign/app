@@ -1,11 +1,15 @@
 {% extends "base.html" %}
 
+{% load i18n %}
+
 {% block content %}
 
 <h1>{{ page.title }}</h1>
 
 {{ page.description }}
 
-<a href="{{page.link}}">Link</a>
+<a href="{{page.link}}">
+    {% trans "Link" %}
+</a>
 
 {% endblock content %}

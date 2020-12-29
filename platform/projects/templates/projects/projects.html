@@ -1,15 +1,17 @@
 {% extends "base.html" %}
+
+{% load i18n %}
 {% load crispy_forms_tags %}
 
 {% block content %}
 <div class="container">
     <h1>
         <span>
-            Projects
+            {% trans "Projects" %}
         </span>
 
         <a type="button" class="btn btn-outline-primary btn-sm ml-auto" href="{% url 'project_create_view' %}">
-            Create project
+            {% trans "Create project" %}
         </a>
     </h1>
     
@@ -18,18 +20,26 @@
         {% for project in projects %}
         <div class="card col-md-4 m-2">
             <div class="card-body">
-                <h2 class="card-title">{{ project.title }}</h2>
-                <p class="card-text">{{ project.description }}</p>
+                <h2 class="card-title">
+                    {{ project.title }}
+                </h2>
+                <p class="card-text">
+                    {{ project.description }}
+                </p>
                 <a href="{% url 'project_view' project.pk %}" class="card-link">
-                    View project
+                    {% trans "View project" %}
                 </a>
-                <a href="{% url 'project_goals_view' project.pk %}" class="card-link">Edit project goals</a>
+                <a href="{% url 'project_goals_view' project.pk %}" class="card-link">
+                    {% trans "Edit project goals" %}
+                </a>
             </div>
         </div>
         {% endfor %}
     </ul>
     {% else %}
-    <p>No projects found.</p>
+    <p>
+        {% trans "No projects found." %}
+    </p>
     {% endif %}
 </div>
 {% endblock %}

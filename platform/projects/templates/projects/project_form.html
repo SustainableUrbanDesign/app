@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 
+{% load i18n %}
 {% load crispy_forms_tags %}
 
 {% block content %}
@@ -8,13 +9,17 @@
             {% csrf_token %}
             <h1>
                 {% if project %}
-                    <span>Edit project</span>
+                    <span>
+                        {% trans "Edit project" %}
+                    </span>
                 {% else %}
-                    <span>Create project</span>
+                    <span>
+                        {% trans "Create project" %}
+                    </span>
                 {% endif %}
 
                 <button type="submit" class="btn btn-sm btn-outline-success ml-auto">
-                    Save
+                    {% trans "Save" %}
                 </button>
             </h1>        
 
