@@ -28,7 +28,7 @@ from projects import urls as projects_urls
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("accounts/", include("allauth.urls")),
-    re_path(r"^i18n/", include("django.conf.urls.i18n")),
+    path("i18n/", include("django.conf.urls.i18n")),
     path("places/", include(places_urls)),
     path("openstreetmap/", include(openstreetmap_urls)),
     path("patterns/", include(patterns_urls)),
