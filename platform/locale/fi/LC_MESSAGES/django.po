@@ -1,0 +1,293 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-12-29 19:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: front_page/templates/front_page/front_page.html:7
+msgid "Welcome."
+msgstr ""
+
+#: patterns/templates/patterns/patterns.html:10
+msgid "Urban design patterns"
+msgstr ""
+
+#: patterns/templates/patterns/patterns.html:13
+msgid "Add pattern"
+msgstr ""
+
+#: patterns/templates/patterns/patterns.html:37
+msgid "No design patterns found. Please add one."
+msgstr ""
+
+#: patterns/templates/patterns/patterns.html:47
+msgid "Create pattern"
+msgstr ""
+
+#: patterns/templates/patterns/patterns.html:60
+msgid "Close"
+msgstr ""
+
+#: patterns/templates/patterns/patterns.html:63
+#: places/templates/places/place_form.html:23
+#: projects/templates/projects/project_form.html:22
+#: users/templates/users/my_profile.html:20
+msgid "Save"
+msgstr ""
+
+#: places/models.py:9
+msgid "District"
+msgstr ""
+
+#: places/models.py:10
+msgid "Municipality"
+msgstr ""
+
+#: places/templates/places/place.html:14 places/templates/places/places.html:38
+#: projects/templates/projects/project.html:23
+msgid "Edit"
+msgstr ""
+
+#: places/templates/places/place.html:28
+msgid "Sub-projects"
+msgstr ""
+
+#: places/templates/places/place_form.html:14
+msgid "Edit place"
+msgstr ""
+
+#: places/templates/places/place_form.html:18
+msgid "Create place"
+msgstr ""
+
+#: places/templates/places/places.html:9 templates/navbar.html:27
+msgid "Places"
+msgstr ""
+
+#: places/templates/places/places.html:12
+#: users/templates/users/profiles.html:12
+msgid "Create new"
+msgstr ""
+
+#: places/templates/places/places.html:33
+#: users/templates/users/profiles.html:32
+msgid "View"
+msgstr ""
+
+#: places/templates/places/places.html:45
+#, python-format
+msgid ""
+"\n"
+"                            %(count)s sub-project(s)\n"
+"                        "
+msgstr ""
+
+#: places/templates/places/places.html:54
+msgid "No places found."
+msgstr ""
+
+#: projects/templates/projects/project_form.html:13
+msgid "Edit project"
+msgstr ""
+
+#: projects/templates/projects/project_form.html:17
+#: projects/templates/projects/projects.html:14
+msgid "Create project"
+msgstr ""
+
+#: projects/templates/projects/project_goals_sidebar.html:11
+msgid "Food"
+msgstr ""
+
+#: projects/templates/projects/project_goals_sidebar.html:19
+msgid "Distance"
+msgstr ""
+
+#: projects/templates/projects/project_goals_sidebar.html:27
+msgid "Units"
+msgstr ""
+
+#: projects/templates/projects/project_goals_sidebar.html:31
+msgid "Kilometers"
+msgstr ""
+
+#: projects/templates/projects/project_goals_sidebar.html:34
+msgid "Miles"
+msgstr ""
+
+#: projects/templates/projects/project_goals_sidebar.html:49
+msgid "Environment"
+msgstr ""
+
+#: projects/templates/projects/project_goals_sidebar.html:55
+msgid "Environment goals like water quality and urban green spaces."
+msgstr ""
+
+#: projects/templates/projects/project_goals_sidebar.html:67
+msgid "Services"
+msgstr ""
+
+#: projects/templates/projects/project_goals_sidebar.html:74
+msgid "Municipal services such as recycling or EV recharge stations."
+msgstr ""
+
+#: projects/templates/projects/project_goals_sidebar.html:87
+msgid "Mobility"
+msgstr ""
+
+#: projects/templates/projects/project_goals_sidebar.html:94
+msgid ""
+"Mobility services and infrastructure such as mass transport or bike routes."
+msgstr ""
+
+#: projects/templates/projects/project_goals_sidebar.html:107
+msgid "Education"
+msgstr ""
+
+#: projects/templates/projects/project_goals_sidebar.html:114
+msgid "Access to schools."
+msgstr ""
+
+#: projects/templates/projects/project_goals_sidebar.html:127
+msgid "Safety"
+msgstr ""
+
+#: projects/templates/projects/project_goals_sidebar.html:134
+msgid "Safety from hazards and crime."
+msgstr ""
+
+#: projects/templates/projects/project_goals_sidebar.html:147
+msgid "Family"
+msgstr ""
+
+#: projects/templates/projects/project_goals_sidebar.html:154
+msgid "Services to support families such as playgrounds and daycare."
+msgstr ""
+
+#: projects/templates/projects/projects.html:10 templates/navbar.html:33
+msgid "Projects"
+msgstr ""
+
+#: projects/templates/projects/projects.html:30
+msgid "View project"
+msgstr ""
+
+#: projects/templates/projects/projects.html:33
+msgid "Edit project goals"
+msgstr ""
+
+#: projects/templates/projects/projects.html:41
+msgid "No projects found."
+msgstr ""
+
+#: resources/templates/resources/data_source.html:12
+msgid "Link"
+msgstr ""
+
+#: resources/templates/resources/resources_index.html:21
+msgid "No books."
+msgstr ""
+
+#: templates/navbar.html:11
+#, python-format
+msgid "Welcome, %(user_display)s."
+msgstr ""
+
+#: templates/navbar.html:15
+msgid "An urban designer's best friend."
+msgstr ""
+
+#: templates/navbar.html:39
+msgid "Patterns"
+msgstr ""
+
+#: templates/navbar.html:46
+msgid "Logout"
+msgstr ""
+
+#: templates/navbar.html:49
+msgid "My Profile"
+msgstr ""
+
+#: templates/navbar.html:53
+msgid "Login/Signup"
+msgstr ""
+
+#: templates/registration/ password_reset_form.html:8
+msgid "Password reset"
+msgstr ""
+
+#: templates/registration/ password_reset_form.html:16
+msgid "Reset password"
+msgstr ""
+
+#: templates/registration/logged_out.html:7
+msgid "You are now logged out from Sustainable Urban Design."
+msgstr ""
+
+#: templates/registration/login.html:8
+msgid "Login"
+msgstr ""
+
+#: templates/registration/login.html:16
+msgid "login"
+msgstr ""
+
+#: templates/registration/login.html:20
+msgid "Lost password?"
+msgstr ""
+
+#: templates/registration/password_reset_complete.html:7
+msgid "Password reset success."
+msgstr ""
+
+#: templates/registration/password_reset_complete.html:11
+msgid "Log in again?"
+msgstr ""
+
+#: templates/registration/password_reset_done.html:7
+msgid "Please check your email for password reset instructions."
+msgstr ""
+
+#: templates/registration/password_reset_email.html:4
+#, python-format
+msgid ""
+"\n"
+"        Someone asked for password reset for %(email)s. If this was you, "
+"please follow the link below.\n"
+"    "
+msgstr ""
+
+#: users/admin.py:17
+msgid "Permissions"
+msgstr ""
+
+#: users/admin.py:28
+msgid "Important dates"
+msgstr ""
+
+#: users/templates/users/my_profile.html:9
+msgid "My profile"
+msgstr ""
+
+#: users/templates/users/profiles.html:9
+msgid "People"
+msgstr ""
+
+#: users/templates/users/profiles.html:42
+msgid "No user profiles found."
+msgstr ""
