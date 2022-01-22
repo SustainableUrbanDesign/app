@@ -30,8 +30,6 @@ class ProjectUpdateView(UpdateView):
     form_class = ProjectForm
 
 
-class EditProjectGoalsView(View):
+class EditProjectGoalsView(DetailView):
     template_name = "projects/edit_project_goals.html"
-
-    def get(self, request, *args, **kwargs):
-        return render(request, self.template_name)
+    model = Project

@@ -1,0 +1,96 @@
+{% extends "account/base.html" %}
+
+{% load i18n %}
+{% load account socialaccount %}
+{% load crispy_forms_tags %}
+
+{% block head_title %}{% trans "Sign In" %}{% endblock %}
+
+{% block inner %}
+
+<h1>{% trans "Sign In" %}</h1>
+
+{% get_providers as socialaccount_providers %}
+
+{% if socialaccount_providers %}
+<p>{% blocktrans with site.name as site_name %}Please sign in with one
+of your existing third party accounts. Or, <a href="{{ signup_url }}">sign up</a>
+for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
+
+<div class="socialaccount_ballot">
+
+  <ul class="socialaccount_providers">
+    {% include "socialaccount/snippets/provider_list.html" with process="login" %}
+  </ul>
+
+  <div class="login-or">{% trans 'or' %}</div>
+
+</div>
+
+{% include "socialaccount/snippets/login_extra.html" %}
+
+{% else %}
+<p>{% blocktrans %}If you have not created an account yet, then please
+<a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
+{% endif %}
+
+<form id="f_login" class="login" method="POST" action="{% url 'account_login' %}">
+  <div id="f_login_error" class="alert alert-block alert-danger" style="display:none;">
+    <ul class="m-0">
+      <li id="f_login_error_txt"></li>
+    </ul>
+  </div>
+  {% csrf_token %}
+  {{ form|crispy }}
+  {% if redirect_field_value %}
+  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+  {% endif %}
+  <a class="button secondaryAction" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
+  <button class="primaryAction btn btn-primary" type="submit">{% trans "Sign In" %}</button>
+</form>
+
+{% endblock %}
+
+{% block js_extra %}
+<script type="text/javascript">
+  let api_login = "{% url 'rest_login' %}";
+  let login_error_txt="{% trans 'El usuario y/o la contraseña que especificaste no son correctos' %}.";
+  let is_logged = false;
+  $(document).ready(function () {
+      $('#f_login').on("submit", function(ev){
+        $("#f_login_error").hide();
+        ev.preventDefault();
+        const data={ "username": $("#id_login").val(), 'password': $("#id_password").val()}
+        fetch(api_login, {
+          method: 'POST', // or 'PUT'
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data),
+        })
+          .then(response => {
+            if (response.status==400){
+              $("#f_login_error_txt").html(login_error_txt);
+              $("#f_login_error").show();
+            } else {
+              is_logged = true;
+            }
+            response.json()
+          })
+          .then(data => {
+            if ((data) || (is_logged)) {
+              let next = $("input[name=next]").val();
+              if (next === undefined) {
+                next = "/"
+              }
+              window.location.href=next;
+            }
+          })
+          .catch((error) => {
+            $("#f_login_error_txt").html(error);
+            $("#f_login_error").show();
+          });
+      })
+  });
+</script>
+{% endblock %}
