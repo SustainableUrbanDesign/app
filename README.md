@@ -45,7 +45,9 @@ sudo apt install gdal-bin
 ```
 
 ### PostGIS
-We are using Postgres/PostGIS for the database backend. For convenience, we have included a Docker compose file that you may use to run a PostGIS container. With Docker installed on your local computer, run the following command from the project root directory in order to start up PostGIS:
+We are using Postgres/PostGIS for the database backend. You can use a standard docker image like https://registry.hub.docker.com/r/postgis/postgis or you can build your own image using the [Docker compose file](docker-compose.yml):
+
+With Docker installed on your local computer, run the following command from the project root directory in order to start up PostGIS:
 
 ```
 docker-compose up
@@ -110,13 +112,13 @@ You can override PostGIS and pgAdmin configuration prior to running `docker-comp
 The next step is to run through some Jupyter Notebooks that will import
 OpenStreetMap data into PostGIS. First, [download some OpenStreetMap data](http://download.geofabrik.de/) in the \*.shp.zip  format. Then create a the following directory:
 
-'''
+```bash
 mkdir -p notebooks/data/OSM
-'''
+```
 
 and extract the downloaded archive into this location.
 
-Refer to the README in the notebooks folder to run through the Notebooks.
+Refer to the [README](notebooks/README.md) in the notebooks folder to run through the Notebooks.
 
 ## Environment
 If you wish to keep the project's python environment separate from your global environment, you should create a [virtual environment](https://docs.python.org/3/library/venv.html)
@@ -129,8 +131,17 @@ source env/bin/activate
 ### Python dependencies
 Use [pip](https://pip.pypa.io/en/stable/installing/) to install the dependencies:
 
+
+* **Local development**
+
 ```
-pip install -r requirements.txt
+pip install -r requirements/local.txt
+```
+
+* **Production**
+
+```
+pip install -r requirements/production.txt
 ```
 
 ## Running the server
@@ -139,6 +150,18 @@ Move into the Project Folder:
 
 ```
 cd platform
+```
+
+## Tunning settings
+
+Set the file `platform/.env` You can take a look [platform/env.template](platform/env.template) 
+```
+# Main Database:
+DATABASE_URL=postgres://postgres:changeme@postgres:5432/suds
+
+# Open Street Maps Database
+DATABASE_OSM_URL=postgres://postgres:changeme@postgres:5432/openstreetmap
+
 ```
 
 ### Migrations
@@ -171,6 +194,8 @@ It may warn you if you use a password that is similar to your user name, or if i
 
 You can run the server with
 
+* **Local development**
+
 ```
 python manage.py runserver
 ```
@@ -178,6 +203,17 @@ python manage.py runserver
 The server will now tell you that it's running on http://127.0.0.1:8000/
 
 You can connect to the admin interface at http://127.0.0.1:8000/admin with your newly created superuser account.
+
+Note that if you log in to the Django for the very first time, you will see a message that says "Verify Your E-mail Address". As django-yubin don't send any email until configure its [django command](https://django-yubin.readthedocs.io/en/latest/queue.html#command-extensions) you won't receive any verification email. You can verify the email via admin reading the email at http://127.0.0.1:8000/admin/django_yubin/message/mail/1/ and continuing the process or clicking on `Verified` checkbox at http://127.0.0.1:8000/admin/account/emailaddress/1/change/
+
+
+* **Production**
+
+```
+export DJANGO_SETTINGS_MODULE=core.settings.production
+python manage.py runserver
+```
+
 
 ## Support
 

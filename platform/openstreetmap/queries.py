@@ -1,7 +1,7 @@
 def create_osm_to_geojson_query(
     table=None,
-    fclass=None,
-    limit=10,
+    fclass="",
+    limit="",
     xmin=23.5,
     ymin=61.45,
     xmax=23.8,
@@ -16,6 +16,13 @@ def create_osm_to_geojson_query(
 
     # TODO: determine how best to allow WHERE clause
     # to filter based on fclass and possibly geometry.
+    
+    if limit:
+        limit = f"LIMIT {limit}"
+        
+    if fclass:
+        fclass = f"""AND "fclass" = '{fclass}'"""
+        
     return f"""
         SELECT jsonb_build_object(
             'type',     'FeatureCollection',
@@ -43,8 +50,8 @@ def create_osm_to_geojson_query(
                     { xmax }, { ymax },
                     { epsg }
                 ) ~ "geometry"
-                AND "fclass" = 'supermarket'
-                --limit { limit }
+                { fclass }
+                { limit }
             ) inputs
         ) features;
     """

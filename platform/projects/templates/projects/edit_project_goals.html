@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load i18n %}
 {% block content %}
 <div id="vue-app">
     <div class="row h-100 p-0 m-0">
@@ -32,33 +33,80 @@
     crossorigin="anonymous"></script>
 
 <script>
+    let lon = "{{ object.geographic_area.centroid.x|default:'23.761' }}";                                   
+    let lat = "{{ object.geographic_area.centroid.y|default:'61.4978' }}";
+    let km = "{% trans 'kilometers' %}";
+    let mi = "{% trans 'miles' %}";
+    let url_fetch_osm = "{% url 'get_osm_data' %}";
     new Vue({
         el: '#vue-app',
         data: function () {
             return {
-                center: [23.761, 61.4978],
+                center: [lon, lat],
                 zoom: 10,
                 osmData: undefined,
                 right: false,
                 miniState: false,
                 bufferDistance: 1,
-                bufferUnits: "kilometers",
-                bufferUnitsOptions: ["kilometers", "miles"]
+                bufferUnits: km,
+                bufferUnitsOptions: [km, mi],
+                isFetching: false,
             }
         },
         methods: {
             switchMode: function (event) {
                 console.log(event.target.parentElement.parentElement.parentElement.parentElement.id)
-            }
+            },
+            onMapPostCompose({ vectorContext, frameState }) {
+            },
+            fetchOsmData: function () {
+                this.isFetching = true;
+                let map = this.$refs.map.$map;
+                let url = url_fetch_osm;
+                let currentExtent = map.getView().calculateExtent(map.getSize());
+                let projectionCode = map.getView().getProjection().getCode();
+                let transformExtent = ol.proj.transformExtent(currentExtent, projectionCode, 'EPSG:4326');
+                url += "?ext=" + transformExtent.toString()
+                //console.log(url);
+                fetch(url)
+                    .then(response => response.json())
+                    .then((data) => {
+                        if (data.features) {
+                            this.osmData = data;
+                        } else {
+                            console.log("There is no features")
+                        }
+                        this.isFetching = false;
+                    });               
+            },            
+            onMapMoveStart() {
+                
+            },
+            onMapMoveEnd() {                                                
+                if (this.isFetching) {
+                    return
+                }
+                this.fetchOsmData();                
+            },
+            onMapMounted() {                
+                // now ol.Map instance is ready and we can work with it directly                     
+                this.$refs.map.$map.getControls().extend([
+                    new ol.control.ScaleLine(),
+                    new ol.control.FullScreen(),
+                    new ol.control.OverviewMap({
+                        collapsed: true,
+                        collapsible: true,
+                    }),
+                    new ol.control.ZoomSlider(),
+                ]);
+                this.$refs.map.$map.updateSize();                                    
+            },
+            onMapClicked(e) {
+                console.log(e.coordinate);
+            },
         },
-        mounted() {
-            fetch("/openstreetmap/data")
-                .then(response => response.json())
-                .then((data) => {
-                    if (data != undefined) {
-                        this.osmData = data;
-                    }
-                });
+        mounted() {           
+            
         },
         computed: {
             buffers: function () {
